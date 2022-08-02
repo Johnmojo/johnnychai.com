@@ -1,13 +1,16 @@
 import { NextPage, GetStaticProps } from "next";
 import { BlogIndex } from "../../lib/types";
 import getBlogs from "../../lib/getBlogs";
+import Template from "../../components/Layout/Template";
 
 const Blog: NextPage<BlogIndex> = ({ blogs }) => {
   return (
-    <div>
-      <h1>Blog</h1>
-      {JSON.stringify(blogs, null, 2)}
-    </div>
+    <Template title="Johnny Chai - Blog">
+      <div>
+        <h1>Blog</h1>
+        {JSON.stringify(blogs)}
+      </div>
+    </Template>
   );
 };
 
