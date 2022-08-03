@@ -1,40 +1,45 @@
-import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+import { NextPage } from "next";
 import { useState, useEffect } from "react";
 
-const Template = (props) => {
-  const [theme, setTheme] = useState(true);
+interface Props {
+  children: string;
+}
 
-  const { children, ...customMeta } = props;
-
-  const meta = {
-    title: "Johnny Chai | Front End Developer",
-    description: "Johnny Chai's personal website",
-    type: "website",
-    ...customMeta
-  };
-
+const Template: NextPage<Props> = ({ children, pageClass, title }) => {
   const [scroll, setScroll] = useState(false);
   const [edge, setEdge] = useState(true);
+  const [transparent, setTransparent] = useState(true);
+  const [darkMode, setDarkMode] = useState(true);
 
   let oldScrollY: number = 0;
 
   const handleScroll = () => {
-    // Detect if scrolling reached top edge
+    // Reach edge
     if (window.scrollY === 0) {
       setEdge(true);
-      setScroll(false);
+      // setDarkMode(true);
     } else {
+      // setDarkMode(false);
       setEdge(false);
-      setScroll(true);
     }
 
-    // Detect which scrolling direction
-    if (window.scrollY > oldScrollY) {
-      setScroll(true);
+    // Initiate transparent when nearing edge
+    if (window.scrollY > 100) {
+      setTransparent(false);
     } else {
-      setScroll(false);
+      console.log("yes");
+      setTransparent(true);
+    }
+
+    // Scrolling direction
+    if (window.scrollY > oldScrollY && window.scrollY > 0) {
+      // Scroll down
+      setScroll(true); // Show header
+    } else {
+      // Scroll up
+      setScroll(false); // Hide header
     }
     oldScrollY = window.scrollY;
   };
@@ -48,21 +53,11 @@ const Template = (props) => {
   }, []);
 
   return (
-    <>
-      <Head>
-        <title>{meta.title}</title>
-        <meta content={meta.description} name="description" />
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Johnny Chai" />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-      </Head>
-      <>
-        <Header scroll={scroll} edge={edge} />
-        <main>{children}</main>
-        <Footer />
-      </>
-    </>
+    <div className={`${edge && "dark"}`}>
+      <Header scroll={scroll} edge={edge} transparent={transparent} />
+      <main>{children}</main>
+      <Footer />
+    </div>
   );
 };
 

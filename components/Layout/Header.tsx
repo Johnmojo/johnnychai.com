@@ -5,17 +5,19 @@ import { NextPage } from "next";
 interface Props {
   scroll: Boolean;
   edge: Boolean;
+  transparent: Boolean;
 }
 
-const Header: NextPage<Props> = ({ scroll, edge }) => {
+const Header: NextPage<Props> = ({ scroll, edge, transparent }) => {
   return (
     <header>
       <div
-        className={`header-desktop fixed w-full bg-white py-5 transition duration-500 ease-in-out  ${
-          scroll && "-translate-y-full"
-        } ${edge && "translate-y-8 bg-transparent"}`}
+        className={`fixed w-full transition-all duration-100 ease-out ${
+          scroll && "-translate-y-full transition-all"
+        } ${transparent ? "bg-transparent pt-16 pb-5" : "bg-white pt-5 pb-5"} 
+        `}
       >
-        <div className="mx-auto flex max-w-screen-xl items-center justify-between">
+        <div className="flex items-center justify-between max-w-screen-xl mx-auto">
           <div className="cursor-pointer">
             <Link href="/">
               <a>
@@ -30,17 +32,17 @@ const Header: NextPage<Props> = ({ scroll, edge }) => {
           </div>
           <nav>
             <ul>
-              <li className="ml-16 inline-block">
+              <li className="inline-block ml-16 text-black dark:text-white">
                 <Link href="/work">
                   <a>Work</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block">
+              <li className="inline-block ml-16 text-black dark:text-white">
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block">
+              <li className="inline-block ml-16 text-black dark:text-white">
                 <Link href="/about">
                   <a>About</a>
                 </Link>
@@ -49,7 +51,7 @@ const Header: NextPage<Props> = ({ scroll, edge }) => {
           </nav>
         </div>
       </div>
-      <div className="header-mobile hidden"></div>
+      <div className="hidden header-mobile"></div>
     </header>
   );
 };
