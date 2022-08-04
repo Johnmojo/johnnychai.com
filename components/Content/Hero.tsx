@@ -2,15 +2,19 @@ import { NextPage } from "next";
 
 interface Props {
   title: string;
+  intro: string;
+  status: string;
 }
 
-const Hero: NextPage<Props> = ({ title }) => {
+const Hero: NextPage<Props> = ({ title, intro, status }) => {
   return (
-    <section className="bg-white pt-60 pb-40 transition-all duration-500 ease-in-out dark:bg-black">
+    <section className="bg-white pt-60 pb-48 transition-all duration-500 ease-in-out dark:bg-black">
       <div className="mx-auto max-w-screen-xl">
-        <h1 className="text-8xl text-black transition-all duration-500 ease-in-out dark:text-white">
-          {title}
-        </h1>
+        <h1 className="text-8xl text-black dark:text-white">{title}</h1>
+        <h3 className="my-12 text-3xl leading-relaxed text-black dark:text-white">
+          {intro} <br />
+          {status}
+        </h3>
       </div>
     </section>
   );

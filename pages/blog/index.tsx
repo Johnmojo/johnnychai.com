@@ -16,7 +16,6 @@ const Blog: NextPage<BlogIndex> = ({ blogs }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = getBlogs();
-
   return {
     props: {
       blogs: data

@@ -7,11 +7,10 @@ interface Props {
   children: string;
 }
 
-const Template: NextPage<Props> = ({ children, pageClass, title }) => {
+const Template: NextPage<Props> = ({ children }) => {
   const [scroll, setScroll] = useState(false);
   const [edge, setEdge] = useState(true);
   const [transparent, setTransparent] = useState(true);
-  const [darkMode, setDarkMode] = useState(true);
 
   let oldScrollY: number = 0;
 
@@ -29,7 +28,6 @@ const Template: NextPage<Props> = ({ children, pageClass, title }) => {
     if (window.scrollY > 100) {
       setTransparent(false);
     } else {
-      console.log("yes");
       setTransparent(true);
     }
 
@@ -54,7 +52,7 @@ const Template: NextPage<Props> = ({ children, pageClass, title }) => {
 
   return (
     <div className={`${edge && "dark"}`}>
-      <Header scroll={scroll} edge={edge} transparent={transparent} />
+      <Header scroll={scroll} transparent={transparent} />
       <main>{children}</main>
       <Footer />
     </div>

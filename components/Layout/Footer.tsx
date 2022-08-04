@@ -11,7 +11,7 @@ const Footer = () => {
               hello@johnnychai.com
             </a>
             <br />
-            or stay in touch at
+            or stay in touch
             <br />
           </h1>
         </section>
