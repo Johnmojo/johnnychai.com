@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { NextPage } from "next";
 import Image from "next/image";
-// import Images from "../../public/static/images/slideshows";
 
-const Slideshow: NextPage = () => {
+const Slideshow = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
   const slideshowsArray = [
@@ -29,7 +27,7 @@ const Slideshow: NextPage = () => {
   });
 
   return (
-    <section>
+    <section className="z-10">
       {slideshowsArray.map((slideshow, index) => (
         <div
           className={`${slideIndex === index ? "block" : "hidden"}`}

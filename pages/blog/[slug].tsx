@@ -1,19 +1,12 @@
 import { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import getBlog from "../../lib/getBlog";
 import getBlogs from "../../lib/getBlogs";
-import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { BlogSlug } from "../../lib/types";
+import BlogLayout from "../../components/Layout/BlogLayout";
 
 const Blog: NextPage<BlogSlug> = ({ data, content }) => {
-  return (
-    <div>
-      <div className="title">{data.title}</div>
-      <div className="main">
-        <MDXRemote {...content} />
-      </div>
-    </div>
-  );
+  return <BlogLayout data={data} content={content} />;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

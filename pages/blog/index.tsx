@@ -1,24 +1,21 @@
-import { NextPage, GetStaticProps } from "next";
-import { BlogIndex } from "../../lib/types";
+import { GetStaticProps } from "next";
+// import { BlogIndex } from "../../lib/types";
 import getBlogs from "../../lib/getBlogs";
-import Template from "../../components/Layout/Template";
 
-const Blog: NextPage<BlogIndex> = ({ blogs }) => {
+const Blog = ({ blogsData }) => {
   return (
-    <Template title="Johnny Chai - Blog">
-      <div>
-        <h1>Blog</h1>
-        {JSON.stringify(blogs)}
-      </div>
-    </Template>
+    <div>
+      <h1>Blog</h1>
+      {JSON.stringify(blogsData)}
+    </div>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = getBlogs();
+  const blogsData = getBlogs();
   return {
     props: {
-      blogs: data
+      blogsData
     }
   };
 };

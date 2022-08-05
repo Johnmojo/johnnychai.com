@@ -1,14 +1,23 @@
-import { NextPage, GetStaticProps } from "next";
-import Template from "../../components/Layout/Template";
+import { GetStaticProps } from "next";
+// import { BlogIndex } from "../../lib/types";
+import getWorks from "../../lib/getWorks";
 
-const Work: NextPage = () => {
+const Work = ({ worksData }) => {
   return (
-    <Template title="Johnny Chai | Work">
-      <div>
-        <h1>Work</h1>
-      </div>
-    </Template>
+    <div>
+      <h1>Work</h1>
+      {JSON.stringify(worksData)}
+    </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const worksData = getWorks();
+  return {
+    props: {
+      worksData
+    }
+  };
 };
 
 export default Work;

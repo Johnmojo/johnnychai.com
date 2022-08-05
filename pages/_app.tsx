@@ -1,13 +1,12 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import Template from "../components/Layout/Template";
 
-function App({ Component, pageProps }: AppProps) {
+import type { AppProps } from "next/app";
+import TemplateLayout from "../components/Layout/TemplateLayout";
+
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Template pageClass={Component.pageClass} title="Johnny Chai | Dev">
+    <TemplateLayout>
       <Component {...pageProps} />
-    </Template>
+    </TemplateLayout>
   );
 }
-
-export default App;

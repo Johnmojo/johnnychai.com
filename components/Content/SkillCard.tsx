@@ -1,10 +1,8 @@
-import { NextPage } from "next";
-
 interface Props {
   text: String;
 }
 
-const SkillCard: NextPage<Props> = ({ text }) => {
+const SkillCard = ({ text }: Props) => {
   return (
     <section className="mx-auto max-w-screen-xl">
       <div className="py-40">

@@ -1,17 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import { NextPage } from "next";
 
 interface Props {
-  scroll: Boolean;
-  transparent: Boolean;
+  scroll: boolean;
+  transparent: boolean;
 }
 
-const Header: NextPage<Props> = ({ scroll, transparent }) => {
+const Header = ({ scroll, transparent }: Props) => {
   return (
     <header>
       <div
-        className={`z-100 fixed w-full transition-all duration-100 ease-out ${
+        className={`fixed z-50 w-full transition-all duration-100 ease-out ${
           scroll && "-translate-y-full transition-all"
         } ${transparent ? "bg-transparent pt-16 pb-5" : "bg-white pt-5 pb-5"} 
         `}

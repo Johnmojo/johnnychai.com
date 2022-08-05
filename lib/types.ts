@@ -4,7 +4,7 @@ export interface Blog {
   title: string;
   date: Date;
   description: string;
-  featuredImg: string;
+  hero: string;
 }
 
 export interface BlogIndex {
@@ -17,7 +17,7 @@ export interface BlogData {
   title: string;
   date: Date;
   description: string;
-  featuredImg: string;
+  hero: string;
 }
 
 export type BlogContent<
@@ -32,4 +32,40 @@ export type BlogContent<
 export interface BlogSlug {
   data: BlogData;
   content: BlogContent;
+}
+
+export interface WorksData {
+  title: string;
+  description: string;
+  date: string;
+  slug: string;
+  postType: string;
+  hero: string;
+}
+
+export interface BlogsData {
+  title: string;
+  description: string;
+  date: string;
+  slug: string;
+  postType: string;
+  hero: string;
+}
+
+export interface WorkType {
+  title: string;
+  description: string;
+  date: string;
+  slug: string;
+  postType: string;
+  hero: string;
+}
+
+export interface BlogType {
+  title: string;
+  description: string;
+  date: string;
+  slug: string;
+  postType: string;
+  hero: string;
 }

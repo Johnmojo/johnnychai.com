@@ -1,13 +1,12 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import { NextPage } from "next";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode } from "react";
 
-interface Props {
-  children: string;
-}
+type Props = {
+  children: ReactNode;
+};
 
-const Template: NextPage<Props> = ({ children }) => {
+const TemplateLayout = ({ children }: Props) => {
   const [scroll, setScroll] = useState(false);
   const [edge, setEdge] = useState(true);
   const [transparent, setTransparent] = useState(true);
@@ -59,4 +58,4 @@ const Template: NextPage<Props> = ({ children }) => {
   );
 };
 
-export default Template;
+export default TemplateLayout;

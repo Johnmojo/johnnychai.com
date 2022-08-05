@@ -1,12 +1,10 @@
-import { NextPage } from "next";
-
 interface Props {
   title: string;
-  intro: string;
-  status: string;
+  intro?: string;
+  status?: string;
 }
 
-const Hero: NextPage<Props> = ({ title, intro, status }) => {
+const Hero = ({ title, intro, status }: Props) => {
   return (
     <section className="bg-white pt-60 pb-48 transition-all duration-500 ease-in-out dark:bg-black">
       <div className="mx-auto max-w-screen-xl">

@@ -1,12 +1,19 @@
 import getWorks from "../lib/getWorks";
 import getBlogs from "../lib/getBlogs";
-import { NextPage, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import Hero from "../components/Content/Hero";
 import Slideshow from "../components/Content/Slideshow";
 import SkillCard from "../components/Content/SkillCard";
+import WorkPreview from "../components/Content/WorkPreview";
 import BlogPreview from "../components/Content/BlogPreview";
+import { WorksData, BlogsData } from "../lib/types";
 
-const Home: NextPage = ({ blogsData }) => {
+type Props = {
+  worksData: WorksData[];
+  blogsData: BlogsData[];
+};
+
+const Home = ({ worksData, blogsData }: Props) => {
   return (
     <>
       <Hero
@@ -16,6 +23,7 @@ const Home: NextPage = ({ blogsData }) => {
       />
       <Slideshow />
       <SkillCard text="I do digital products (Apps, Websites, Mockups) Specifically on Front-End Web development." />
+      <WorkPreview data={worksData} />
       <BlogPreview data={blogsData} />
     </>
   );

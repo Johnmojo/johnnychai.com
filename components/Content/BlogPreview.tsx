@@ -1,24 +1,12 @@
-import { NextPage } from "next";
 import Link from "next/link";
 import dayjs from "dayjs";
+import { BlogType } from "../../lib/types";
 
-interface Props {
-  title: string;
-  description: string;
-  slug: string;
-  date: Date;
-  data: {
-    map: any;
-    postType: string;
-    slug: number;
-    title: string;
-    date: Date;
-    description: string;
-    featuredImg: string;
-  };
-}
+type Props = {
+  data: BlogType[];
+};
 
-const BlogPreview: NextPage<Props> = ({ data }) => {
+const BlogPreview = ({ data }: Props) => {
   return (
     <section className="mx-auto max-w-screen-xl">
       <div className="py-40">
@@ -26,7 +14,7 @@ const BlogPreview: NextPage<Props> = ({ data }) => {
           <h1 className="text-5xl leading-snug">What I&apos;ve written</h1>
         </div>
         <div>
-          {data.map((blog: Props, index: number) => (
+          {data.map((blog, index) => (
             <Link href={"blog/" + blog.slug} key={index}>
               <a>
                 <div key={index}>

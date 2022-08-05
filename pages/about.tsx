@@ -1,12 +1,12 @@
-import Template from "../components/Layout/Template";
+import TemplateLayout from "../components/Layout/TemplateLayout";
 
 const About = () => {
   return (
-    <Template title="Johnny Chai - About">
+    <TemplateLayoutLayout title="Johnny Chai - About">
       <div>
         <h1>About</h1>
       </div>
-    </Template>
+    </TemplateLayoutLayout>
   );
 };
 
