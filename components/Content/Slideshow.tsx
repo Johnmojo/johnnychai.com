@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { slideshowType } from "../../lib/types";
+import { SlideshowType } from "../../lib/types";
 
 interface Props {
-  data: slideshowType[];
+  data: SlideshowType[];
 }
 
 const Slideshow = ({ data }: Props) => {

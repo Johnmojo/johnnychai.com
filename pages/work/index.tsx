@@ -1,8 +1,12 @@
 import { GetStaticProps } from "next";
-// import { BlogIndex } from "../../lib/types";
+import { WorksData } from "../../lib/types";
 import getWorks from "../../lib/getWorks";
 
-const Work = ({ worksData }) => {
+interface Props {
+  worksData: WorksData[];
+}
+
+const Work = ({ worksData }: Props) => {
   return (
     <div>
       <h1>Work</h1>

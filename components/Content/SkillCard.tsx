@@ -1,5 +1,5 @@
 interface Props {
-  text: String;
+  text: string;
 }
 
 const SkillCard = ({ text }: Props) => {

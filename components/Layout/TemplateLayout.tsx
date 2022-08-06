@@ -11,7 +11,7 @@ const TemplateLayout = ({ children }: Props) => {
   const [edge, setEdge] = useState(true);
   const [transparent, setTransparent] = useState(true);
 
-  let oldScrollY: number = 0;
+  let oldScrollY = 0;
 
   const handleScroll = () => {
     // Reach edge

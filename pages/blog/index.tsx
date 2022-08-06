@@ -1,8 +1,12 @@
 import { GetStaticProps } from "next";
-// import { BlogIndex } from "../../lib/types";
+import { BlogsData } from "../../lib/types";
 import getBlogs from "../../lib/getBlogs";
 
-const Blog = ({ blogsData }) => {
+interface Props {
+  blogsData: BlogsData[];
+}
+
+const Blog = ({ blogsData }: Props) => {
   return (
     <div>
       <h1>Blog</h1>

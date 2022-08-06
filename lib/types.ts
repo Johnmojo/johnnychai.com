@@ -70,6 +70,12 @@ export interface BlogType {
   hero: string;
 }
 
-export interface slideshowType {
+export interface SlideshowType {
   image: string;
+}
+
+export interface MDXContentType {
+  compiledSource: string;
+  frontmatter?: object;
+  scope?: object;
 }
