@@ -69,3 +69,7 @@ export interface BlogType {
   postType: string;
   hero: string;
 }
+
+export interface slideshowType {
+  image: string;
+}

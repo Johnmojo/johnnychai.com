@@ -14,6 +14,19 @@ type Props = {
 };
 
 const Home = ({ worksData, blogsData }: Props) => {
+  // Images for slideshow
+  const slideshowsData = [
+    {
+      image: "/static/images/slideshows/slideshow-1.png"
+    },
+    {
+      image: "/static/images/slideshows/slideshow-2.png"
+    },
+    {
+      image: "/static/images/slideshows/slideshow-3.png"
+    }
+  ];
+
   return (
     <>
       <Hero
@@ -21,7 +34,7 @@ const Home = ({ worksData, blogsData }: Props) => {
         intro="I'm a front-end developer and a multimedia designer."
         status="Currently exploring opportunities and side projects."
       />
-      <Slideshow />
+      <Slideshow data={slideshowsData} />
       <SkillCard text="I do digital products (Apps, Websites, Mockups) Specifically on Front-End Web development." />
       <WorkPreview data={worksData} />
       <BlogPreview data={blogsData} />

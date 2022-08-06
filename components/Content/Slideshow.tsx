@@ -1,22 +1,16 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { slideshowType } from "../../lib/types";
 
-const Slideshow = () => {
-  const [slideIndex, setSlideIndex] = useState(1);
+interface Props {
+  data: slideshowType[];
+}
 
-  const slideshowsArray = [
-    {
-      image: "/static/images/slideshows/slideshow-1.png"
-    },
-    {
-      image: "/static/images/slideshows/slideshow-2.png"
-    },
-    {
-      image: "/static/images/slideshows/slideshow-3.png"
-    }
-  ];
+const Slideshow = ({ data }: Props) => {
+  const [slideIndex, setSlideIndex] = useState(0);
 
   useEffect(() => {
+    // Max 3 slides
     const slideShowInterval = setInterval(() => {
       setSlideIndex(slideIndex + 1);
       if (slideIndex === 2) {
@@ -28,7 +22,7 @@ const Slideshow = () => {
 
   return (
     <section className="z-10">
-      {slideshowsArray.map((slideshow, index) => (
+      {data.map((slideshow, index) => (
         <div
           className={`${slideIndex === index ? "block" : "hidden"}`}
           key={index}

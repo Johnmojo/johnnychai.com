@@ -4,7 +4,9 @@ import Hero from "../../components/Content/Hero";
 
 const BlogLayout = ({ data, content }) => {
   const mdxComponents = {
-    img: (props) => <Image width="600" height="460" {...props} />
+    img: (props) => (
+      <Image alt={data.title} width="600" height="460" {...props} />
+    )
   };
 
   return (
