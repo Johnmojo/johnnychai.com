@@ -37,7 +37,7 @@ export interface BlogSlug {
 export interface WorksData {
   title: string;
   description: string;
-  date: string;
+  date: Date;
   slug: string;
   postType: string;
   hero: string;
@@ -46,7 +46,7 @@ export interface WorksData {
 export interface BlogsData {
   title: string;
   description: string;
-  date: string;
+  date: Date;
   slug: string;
   postType: string;
   hero: string;
@@ -55,7 +55,7 @@ export interface BlogsData {
 export interface WorkType {
   title: string;
   description: string;
-  date: string;
+  date: Date;
   slug: string;
   postType: string;
   hero: string;
@@ -64,7 +64,7 @@ export interface WorkType {
 export interface BlogType {
   title: string;
   description: string;
-  date: string;
+  date: Date;
   slug: string;
   postType: string;
   hero: string;
@@ -75,7 +75,7 @@ export interface SlideshowType {
 }
 
 export interface MDXContentType {
-  compiledSource: string;
+  compiledSource?: string;
   frontmatter?: object;
   scope?: object;
 }

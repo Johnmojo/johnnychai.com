@@ -24,7 +24,9 @@ const Slideshow = ({ data }: Props) => {
     <section className="z-10">
       {data.map((slideshow, index) => (
         <div
-          className={`${slideIndex === index ? "block" : "hidden"}`}
+          className={`w-hero mx-auto ${
+            slideIndex === index ? "block" : "hidden"
+          }`}
           key={index}
         >
           <Image

@@ -21,7 +21,7 @@ const BlogPreview = ({ data }: Props) => {
                   <h3 className="mt-12 mb-3 text-2xl">{blog.title}</h3>
                   <p className="text-base text-black">{blog.description}</p>
                   <p className="mt-3 text-sm font-medium text-gray-400">
-                    {dayjs(blog.date).format("DD / MMMM / YYYY")}
+                    {dayjs(blog.date).format("D MMMM, YYYY")}
                   </p>
                 </div>
               </a>

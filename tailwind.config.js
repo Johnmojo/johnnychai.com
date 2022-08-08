@@ -7,6 +7,9 @@ module.exports = {
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      width: {
+        hero: "1500px"
+      },
       animation: {
         fade: "fading 3s infinite"
       },

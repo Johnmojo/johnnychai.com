@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "prismjs/themes/prism-tomorrow.css";
 
 import type { AppProps } from "next/app";
 import TemplateLayout from "../components/Layout/TemplateLayout";

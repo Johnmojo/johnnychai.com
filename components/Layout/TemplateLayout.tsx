@@ -17,17 +17,10 @@ const TemplateLayout = ({ children }: Props) => {
     // Reach edge
     if (window.scrollY === 0) {
       setEdge(true);
-      // setDarkMode(true);
-    } else {
-      // setDarkMode(false);
-      setEdge(false);
-    }
-
-    // Initiate transparent when nearing edge
-    if (window.scrollY > 100) {
-      setTransparent(false);
-    } else {
       setTransparent(true);
+    } else {
+      setEdge(false);
+      setTransparent(false);
     }
 
     // Scrolling direction

@@ -10,7 +10,7 @@ const Header = ({ scroll, transparent }: Props) => {
   return (
     <header>
       <div
-        className={`fixed z-50 w-full transition-all duration-100 ease-out ${
+        className={`fixed z-50 w-full transition-all duration-300 ease-out ${
           scroll && "-translate-y-full transition-all"
         } ${transparent ? "bg-transparent pt-16 pb-5" : "bg-white pt-5 pb-5"} 
         `}
@@ -30,17 +30,17 @@ const Header = ({ scroll, transparent }: Props) => {
           </div>
           <nav>
             <ul>
-              <li className="ml-16 inline-block text-black dark:text-white">
+              <li className="ml-16 inline-block">
                 <Link href="/work">
                   <a>Work</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block text-black dark:text-white">
+              <li className="ml-16 inline-block">
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block text-black dark:text-white">
+              <li className="ml-16 inline-block">
                 <Link href="/about">
                   <a>About</a>
                 </Link>

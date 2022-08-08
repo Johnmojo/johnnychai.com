@@ -4,6 +4,8 @@ import getBlogs from "../../lib/getBlogs";
 import { serialize } from "next-mdx-remote/serialize";
 import { BlogType, MDXContentType } from "../../lib/types";
 import BlogLayout from "../../components/Layout/BlogLayout";
+import RemarkUnwrapImages from "remark-unwrap-images";
+import Prism from "remark-prism";
 
 interface Props {
   data: BlogType[];
@@ -28,7 +30,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const slug = context.params?.slug as string;
 
   const blog = getBlog(slug);
-  const mdxSource = await serialize(blog.content);
+  const mdxSource = await serialize(blog.content, {
+    mdxOptions: {
+      remarkPlugins: [Prism, RemarkUnwrapImages]
+    }
+  });
 
   return {
     props: {
