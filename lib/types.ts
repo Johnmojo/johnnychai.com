@@ -35,11 +35,17 @@ export interface BlogSlug {
 }
 
 export interface WorksData {
-  title: string;
-  description: string;
-  date: Date;
-  slug: string;
   postType: string;
+  title: string;
+  slug: string;
+  date: Date;
+  category: string;
+  tool: string;
+  link?: string;
+  github?: string;
+  summary: string;
+  description: string;
+  thumbnail: string;
   hero: string;
 }
 
@@ -53,11 +59,17 @@ export interface BlogsData {
 }
 
 export interface WorkType {
-  title: string;
-  description: string;
-  date: Date;
-  slug: string;
   postType: string;
+  title: string;
+  slug: string;
+  date: Date;
+  category: string;
+  tool: string;
+  link?: string;
+  github?: string;
+  summary: string;
+  description: string;
+  thumbnail: string;
   hero: string;
 }
 

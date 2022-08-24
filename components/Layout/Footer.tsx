@@ -2,12 +2,17 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-black pt-28 pb-20">
-      <div className="mx-auto max-w-screen-xl">
-        <section className="my-12 text-white">
-          <h1 className="text-5xl leading-snug">
+    <footer className="border-t pt-28 pb-20">
+      <div className="mx-auto max-w-screen-xl px-8">
+        <section className="my-12">
+          <h1 className="text-5xl">
             Say hi at <br />
-            <a href="mailto:hello@johnnychai.com" className="underline">
+            <a
+              href="mailto:hello@johnnychai.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-black underline hover:text-blue-700"
+            >
               hello@johnnychai.com
             </a>
             <br />
@@ -15,10 +20,14 @@ const Footer = () => {
             <br />
           </h1>
         </section>
-        <section className="mb-36 mt-12 flex text-base text-white">
+        <section className="mb-36 mt-12 flex text-lg text-black">
           <ul className="flex">
             <li className="mr-6">
-              <a href="https://www.linkedin.com/in/johchai">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/johchai"
+              >
                 <Image
                   alt="Logo"
                   src="/../../../static/icons/linkedin.svg"
@@ -28,7 +37,11 @@ const Footer = () => {
               </a>
             </li>
             <li className="mr-6">
-              <a href="https://www.github.com/johnmojo">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.github.com/johnmojo"
+              >
                 <Image
                   alt="Logo"
                   src="/../../../static/icons/github.svg"
@@ -38,7 +51,11 @@ const Footer = () => {
               </a>
             </li>
             <li className="mr-6">
-              <a href="https://www.instagram.com/johnsaaz">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.instagram.com/johnsaaz"
+              >
                 <Image
                   alt="Logo"
                   src="/../../../static/icons/instagram.svg"
@@ -49,7 +66,7 @@ const Footer = () => {
             </li>
           </ul>
         </section>
-        <div className="text-base text-white">
+        <div className="text-base text-black">
           © 2022 Johnny Chai. Built with NextJS and TailwindCSS.
         </div>
       </div>

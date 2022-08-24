@@ -24,7 +24,7 @@ const Slideshow = ({ data }: Props) => {
     <section className="z-10">
       {data.map((slideshow, index) => (
         <div
-          className={`w-hero mx-auto ${
+          className={`mx-auto max-w-screen-xl px-8 ${
             slideIndex === index ? "block" : "hidden"
           }`}
           key={index}
@@ -37,6 +37,7 @@ const Slideshow = ({ data }: Props) => {
             height={800}
             quality={100}
             className="animate-fade"
+            priority
           />
         </div>
       ))}

@@ -1,12 +1,12 @@
+import { GetStaticProps } from "next";
+import { WorksData, BlogsData } from "../lib/types";
 import getWorks from "../lib/getWorks";
 import getBlogs from "../lib/getBlogs";
-import { GetStaticProps } from "next";
-import Hero from "../components/Content/Hero";
+import Hero from "../components/Content/Hero/HeroPage";
 import Slideshow from "../components/Content/Slideshow";
 import SkillCard from "../components/Content/SkillCard";
 import WorkPreview from "../components/Content/WorkPreview";
 import BlogPreview from "../components/Content/BlogPreview";
-import { WorksData, BlogsData } from "../lib/types";
 
 type Props = {
   worksData: WorksData[];
@@ -29,14 +29,14 @@ const Home = ({ worksData, blogsData }: Props) => {
 
   return (
     <>
-      <Hero
-        title="I craft solid websites with great user experiences."
-        intro="I'm a front-end developer and a multimedia designer."
-        status="Currently exploring opportunities and side projects."
-      />
+      <Hero title="I'm a Front End Developer passionate about web technologies." />
       <Slideshow data={slideshowsData} />
-      <SkillCard text="I do digital products (Apps, Websites, Mockups) Specifically on Front-End Web development." />
-      <WorkPreview data={worksData} />
+      <SkillCard />
+      <WorkPreview
+        data={worksData}
+        title="Some of the recent projects that I've worked on include designs, websites, and many more."
+        limit={4}
+      />
       <BlogPreview data={blogsData} />
     </>
   );

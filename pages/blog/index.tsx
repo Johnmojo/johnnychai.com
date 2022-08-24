@@ -1,6 +1,8 @@
 import { GetStaticProps } from "next";
 import { BlogsData } from "../../lib/types";
 import getBlogs from "../../lib/getBlogs";
+import Hero from "../../components/Content/Hero/HeroPage";
+import BlogFull from "../../components/Content/BlogFull";
 
 interface Props {
   blogsData: BlogsData[];
@@ -8,10 +10,10 @@ interface Props {
 
 const Blog = ({ blogsData }: Props) => {
   return (
-    <div>
-      <h1>Blog</h1>
-      {JSON.stringify(blogsData)}
-    </div>
+    <>
+      <Hero title="Blog" intro="Here's where I write to reflect and learn" />
+      <BlogFull data={blogsData} />
+    </>
   );
 };
 

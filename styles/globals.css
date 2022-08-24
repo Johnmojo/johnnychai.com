@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clip-active {
+    clip-path: inset(2.5%);
+    transition: ease 0.5s;
+  }
+  .clip-inactive {
+    clip-path: inset(0);
+    transition: ease 0.5s;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -19,4 +30,26 @@ a {
 
 * {
   box-sizing: border-box;
+  border-color: black;
+}
+
+.facebook-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin: 3em 0;
+}
+
+.facebook-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.remark-highlight {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }

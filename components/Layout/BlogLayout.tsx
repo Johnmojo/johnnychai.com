@@ -1,6 +1,6 @@
 import Image from "next/future/image";
 import { MDXRemote } from "next-mdx-remote";
-import Hero from "../../components/Content/Hero";
+import { HeroBlog } from "../Content/Hero";
 import { BlogType, MDXContentType } from "../../lib/types";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 const BlogLayout = ({ data, content }: Props) => {
   const MDXComponents = {
     p: (props: { children: string }) => (
-      <p className="text-base leading-10 text-black" {...props} />
+      <p className="text-lg leading-10 text-black" {...props} />
     ),
     img: (props: { src: string; alt: string }) => (
       <div className="pb-4">
@@ -22,7 +22,7 @@ const BlogLayout = ({ data, content }: Props) => {
           height={768}
           className="pt-8 pb-4"
         />
-        <figcaption className="text-center text-xs text-neutral-800">
+        <figcaption className="pt-8 text-center text-sm">
           {props.alt}
         </figcaption>
       </div>
@@ -31,8 +31,8 @@ const BlogLayout = ({ data, content }: Props) => {
 
   return (
     <>
-      <Hero date={data.date} title={data.title} intro={data.description} />
-      <section className="mb-48">
+      <HeroBlog date={data.date} title={data.title} intro={data.description} />
+      <section className="mb-48 px-8">
         <div className="mx-auto max-w-screen-xl">
           <Image
             src={data.hero}
