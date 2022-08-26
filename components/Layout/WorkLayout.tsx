@@ -1,37 +1,34 @@
 import Image from "next/future/image";
 import { MDXRemote } from "next-mdx-remote";
 import { HeroWork } from "../Content/Hero";
-import { WorkType, MDXContentType } from "../../lib/types";
+import { WorkType } from "../../lib/types";
+import { ReactNode } from "react";
+import type { serialize } from "next-mdx-remote/serialize";
 import dayjs from "dayjs";
 
 interface Props {
-  data: WorkType[];
-  content: MDXContentType[];
+  data: WorkType;
+  content: Awaited<ReturnType<typeof serialize>>;
 }
 
 const WorkLayout = ({ data, content }: Props) => {
   const MDXComponents = {
-    h1: (props: { children: string }) => (
-      <h1
-        className="mt-12 mb-4 text-2xl font-medium leading-relaxed text-black"
-        {...props}
-      />
+    h1: ({ children }: { children?: ReactNode }) => (
+      <h1 className="mt-12 mb-4 text-2xl font-medium text-black">{children}</h1>
     ),
-    p: (props: { children: string }) => (
-      <p className="my-6 text-lg leading-10 text-black" {...props} />
+    p: ({ children }: { children?: ReactNode }) => (
+      <p className="my-6 text-lg text-black">{children}</p>
     ),
-    img: (props: { src: string; alt: string }) => (
+    img: ({ src, alt }: { src?: string; alt?: string }) => (
       <div className="pb-4">
         <Image
-          src={props.src}
-          alt={props.alt}
-          width={1000}
-          height={1000}
+          src={src as string}
+          width="1000"
+          height="1000"
           className="w-full pt-8 pb-4"
+          alt={alt}
         />
-        <figcaption className="text-center text-xs text-neutral-800">
-          {props.alt}
-        </figcaption>
+        <figcaption className="pt-8 text-center text-sm">{alt}</figcaption>
       </div>
     )
   };
@@ -44,9 +41,9 @@ const WorkLayout = ({ data, content }: Props) => {
           <div className="mx-auto max-w-screen-xl">
             <Image
               src={data.hero}
-              alt={data.alt}
-              width={1000}
-              height={1000}
+              alt={data.title}
+              width={1280}
+              height={1280}
               className="w-full pt-8 pb-4"
             />
           </div>
@@ -55,9 +52,7 @@ const WorkLayout = ({ data, content }: Props) => {
           <div className="mb-32">
             <div>
               <div>
-                <h3 className="mb-6 text-3xl leading-relaxed text-black">
-                  {data.summary}
-                </h3>
+                <h3 className="mb-6 text-3xl text-black">{data.summary}</h3>
                 <div className="flex w-full flex-col justify-between gap-8 pt-8 md:w-3/4 md:flex-row">
                   <div>
                     <span className="text-base text-gray-500">Category</span>

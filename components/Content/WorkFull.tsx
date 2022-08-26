@@ -11,15 +11,16 @@ const WorkFull = ({ data }: Props) => {
   const [category, setCategory] = useState("all");
   const [loading, setLoading] = useState(false);
 
-  const setClick = (e) => {
+  // Onclick handler for the category buttons
+  const setClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!loading) {
-      setCategory(e.target.value);
+      setCategory(e.currentTarget.value);
     }
   };
 
+  // Loading animation handler
   useEffect(() => {
     setLoading(true);
-
     setTimeout(() => {
       setLoading(false);
     }, 300);

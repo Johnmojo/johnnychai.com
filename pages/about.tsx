@@ -120,7 +120,9 @@ const About = () => {
                   <p className="font-semibold">Tools</p>
                 </div>
                 <div className="w-full md:w-3/5">
-                  <p>Adobe Creative Cloud, Autodesk Maya, Blender, Git</p>
+                  <p>
+                    Adobe Creative Cloud, Autodesk Maya, Blender, Unity, Git
+                  </p>
                 </div>
               </div>
             </div>

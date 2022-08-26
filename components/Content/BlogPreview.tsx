@@ -10,9 +10,7 @@ const BlogPreview = ({ data }: Props) => {
     <section className="mx-auto max-w-screen-xl px-8">
       <div className="my-40">
         <div className="w-full md:w-7/12">
-          <h1 className="pb-12 text-5xl font-medium leading-snug">
-            What I&apos;ve written
-          </h1>
+          <h1 className="pb-12 font-medium text-5xl">What I&apos;ve written</h1>
         </div>
         <div className="divide-y divide-solid">
           {data.map((blog, index) => (
@@ -21,10 +19,10 @@ const BlogPreview = ({ data }: Props) => {
                 <a className="group">
                   <div className="flex justify-between">
                     <div className="space-y-3">
-                      <h3 className="text-2xl font-medium underline-offset-2 group-hover:underline">
+                      <h3 className="font-medium underline-offset-2 text-2xl group-hover:underline">
                         {blog.title}
                       </h3>
-                      <p className="text-lg text-black">{blog.description}</p>
+                      <p className="text-black text-lg">{blog.description}</p>
                     </div>
                     <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
                       <svg

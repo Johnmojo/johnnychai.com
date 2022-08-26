@@ -32,7 +32,7 @@ const Header = ({ scroll, transparent }: Props) => {
             </Link>
           </div>
           <nav>
-            <ul>
+            <ul className="text-base">
               <li className="ml-16 inline-block font-semibold underline-offset-8 hover:underline">
                 <Link href="/work">
                   <a>Work</a>

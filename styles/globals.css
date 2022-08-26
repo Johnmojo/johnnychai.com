@@ -53,3 +53,10 @@ a {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
+code {
+  color: #ffffff;
+  padding: 0.25rem;
+  white-space: normal;
+  background: #2d2d2d;
+}

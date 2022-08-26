@@ -2,14 +2,14 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import getWork from "../../lib/getWork";
 import getWorks from "../../lib/getWorks";
 import { serialize } from "next-mdx-remote/serialize";
-import { WorkType, MDXContentType } from "../../lib/types";
+import { WorkType } from "../../lib/types";
 import WorkLayout from "../../components/Layout/WorkLayout";
 import RemarkUnwrapImages from "remark-unwrap-images";
 import Prism from "remark-prism";
 
 interface Props {
-  data: WorkType[];
-  content: MDXContentType[];
+  data: WorkType;
+  content: Awaited<ReturnType<typeof serialize>>;
 }
 
 const Work = ({ data, content }: Props) => {

@@ -14,8 +14,8 @@ const WorkPreview = ({ data, title, limit }: Props) => {
       <div className="my-40 px-8">
         <div className="pb-40">
           <div className="w-full md:w-7/12">
-            <h1 className="pb-12 text-5xl font-medium md:w-3/4">Work</h1>
-            <h3 className="text-3xl leading-snug">{title}</h3>
+            <h1 className="pb-12 font-medium text-5xl md:w-3/4">Work</h1>
+            <h3 className="text-3xl">{title}</h3>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
@@ -34,10 +34,10 @@ const WorkPreview = ({ data, title, limit }: Props) => {
                     />
                   </div>
                   <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">
-                    <h3 className="text-2xl font-medium group-hover:underline">
+                    <h3 className="font-medium text-2xl group-hover:underline">
                       {work.title}
                     </h3>
-                    <p className="text-lg text-gray-600">{work.description}</p>
+                    <p className="text-gray-600 text-lg">{work.description}</p>
                   </div>
                 </a>
               </Link>
@@ -45,7 +45,7 @@ const WorkPreview = ({ data, title, limit }: Props) => {
         </div>
         <div className="flex justify-center pt-40">
           <Link href="/work">
-            <a className="text-2xl font-semibold underline underline-offset-8">
+            <a className="font-semibold underline underline-offset-8 text-2xl">
               See more work
             </a>
           </Link>

@@ -1,30 +1,33 @@
 import Image from "next/future/image";
 import { MDXRemote } from "next-mdx-remote";
 import { HeroBlog } from "../Content/Hero";
-import { BlogType, MDXContentType } from "../../lib/types";
+import { BlogType } from "../../lib/types";
+import type { serialize } from "next-mdx-remote/serialize";
+import { ReactNode } from "react";
 
 interface Props {
-  data: BlogType[];
-  content: MDXContentType[];
+  data: BlogType;
+  content: Awaited<ReturnType<typeof serialize>>;
 }
 
 const BlogLayout = ({ data, content }: Props) => {
   const MDXComponents = {
-    p: (props: { children: string }) => (
-      <p className="text-lg leading-10 text-black" {...props} />
+    h1: ({ children }: { children?: ReactNode }) => (
+      <h1 className="mt-12 mb-4 text-2xl font-medium text-black">{children}</h1>
     ),
-    img: (props: { src: string; alt: string }) => (
+    p: ({ children }: { children?: ReactNode }) => (
+      <p className="my-6 text-lg text-black">{children}</p>
+    ),
+    img: ({ src, alt }: { src?: string; alt?: string }) => (
       <div className="pb-4">
         <Image
-          src={props.src}
-          alt={props.alt}
-          width={768}
-          height={768}
-          className="pt-8 pb-4"
+          src={src as string}
+          width="1000"
+          height="1000"
+          className="w-full pt-8 pb-4"
+          alt={alt}
         />
-        <figcaption className="pt-8 text-center text-sm">
-          {props.alt}
-        </figcaption>
+        <figcaption className="pt-8 text-center text-sm">{alt}</figcaption>
       </div>
     )
   };
@@ -36,7 +39,7 @@ const BlogLayout = ({ data, content }: Props) => {
         <div className="mx-auto max-w-screen-xl">
           <Image
             src={data.hero}
-            alt={data.alt}
+            alt={data.title}
             width={1280}
             height={1280}
             className="py-8"

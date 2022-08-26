@@ -11,11 +11,9 @@ const HeroBlog = ({ date, title, intro, status }: Props) => {
   return (
     <section className="transition-all duration-300 ease-in-out">
       <div className="mx-auto flex h-[80vh] max-w-screen-xl animate-elastic flex-col justify-center space-y-8 px-8 pt-96 pb-64 text-center">
-        <h1 className="w-full text-7xl font-medium leading-normal md:w-5/6">
-          {title}
-        </h1>
+        <h1 className="mx-auto text-7xl font-medium md:w-5/6">{title}</h1>
         {intro || status ? (
-          <h3 className="w-full text-3xl md:w-2/4">
+          <h3 className="w-full text-3xl">
             {intro} <br />
             {status}
           </h3>

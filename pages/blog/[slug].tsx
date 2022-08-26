@@ -2,14 +2,14 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import getBlog from "../../lib/getBlog";
 import getBlogs from "../../lib/getBlogs";
 import { serialize } from "next-mdx-remote/serialize";
-import { BlogType, MDXContentType } from "../../lib/types";
+import { BlogType } from "../../lib/types";
 import BlogLayout from "../../components/Layout/BlogLayout";
 import RemarkUnwrapImages from "remark-unwrap-images";
 import Prism from "remark-prism";
 
 interface Props {
-  data: BlogType[];
-  content: MDXContentType[];
+  data: BlogType;
+  content: Awaited<ReturnType<typeof serialize>>;
 }
 
 const Blog = ({ data, content }: Props) => {
