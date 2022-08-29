@@ -5,6 +5,7 @@ import { WorkType } from "../../lib/types";
 import { ReactNode } from "react";
 import type { serialize } from "next-mdx-remote/serialize";
 import dayjs from "dayjs";
+import Instagram from "../Widget/Instagram/Instagram";
 
 interface Props {
   data: WorkType;
@@ -30,7 +31,8 @@ const WorkLayout = ({ data, content }: Props) => {
         />
         <figcaption className="pt-8 text-center text-sm">{alt}</figcaption>
       </div>
-    )
+    ),
+    Instagram: ({ postID }: { postID: string }) => <Instagram postID={postID} />
   };
 
   return (
@@ -44,6 +46,7 @@ const WorkLayout = ({ data, content }: Props) => {
               alt={data.title}
               width={1280}
               height={1280}
+              priority
               className="w-full pt-8 pb-4"
             />
           </div>

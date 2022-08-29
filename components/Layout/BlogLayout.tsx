@@ -25,6 +25,7 @@ const BlogLayout = ({ data, content }: Props) => {
           width="1000"
           height="1000"
           className="w-full pt-8 pb-4"
+          priority
           alt={alt}
         />
         <figcaption className="pt-8 text-center text-sm">{alt}</figcaption>

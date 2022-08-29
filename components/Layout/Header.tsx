@@ -13,7 +13,7 @@ const Header = ({ scroll, transparent }: Props) => {
   return (
     <header>
       <div
-        className={`fixed z-50 hidden w-full transition-all duration-300 ease-out md:block ${
+        className={`fixed z-50 hidden w-full border-b transition-all duration-300 ease-out md:block ${
           scroll && "-translate-y-full transition-all"
         } ${transparent ? "bg-transparent pt-16 pb-5" : "bg-white pt-5 pb-5"} 
         `}

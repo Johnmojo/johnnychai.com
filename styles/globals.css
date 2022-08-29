@@ -49,14 +49,47 @@ a {
   position: absolute;
 }
 
+// Codeblock
 .remark-highlight {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
+// Individual codeblock
 code {
   color: #ffffff;
   padding: 0.25rem;
   white-space: normal;
   background: #2d2d2d;
+}
+
+// Video embed
+.video_embed {
+  margin: 3em 0;
+}
+
+.video_embed div {
+  padding: 56.25% 0 0 0 !important;
+  position: relative !important;
+}
+
+// Vimeo iframe styling
+iframe {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.instagram-media {
+  background: white;
+  width: calc(100% - 2px);
+  border-radius: 3px;
+  border: 1px solid rgb(219, 219, 219);
+  box-shadow: none;
+  display: block;
+  margin: 0px 0px 12px;
+  min-width: 326px;
+  padding: 0px;
 }
