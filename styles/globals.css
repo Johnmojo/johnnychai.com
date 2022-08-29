@@ -72,3 +72,15 @@ code {
   padding: 56.25% 0 0 0 !important;
   position: relative !important;
 }
+
+.instagram-media {
+  background: white;
+  width: calc(100% - 2px);
+  border-radius: 3px;
+  border: 1px solid rgb(219, 219, 219);
+  box-shadow: none;
+  display: block;
+  margin: 0px 0px 12px;
+  min-width: 326px;
+  padding: 0px;
+}
