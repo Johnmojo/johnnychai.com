@@ -5,6 +5,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { BlogType } from "../../lib/types";
 import BlogLayout from "../../components/Layout/BlogLayout";
 import RemarkUnwrapImages from "remark-unwrap-images";
+import ReadingTime from "reading-time";
 import Prism from "remark-prism";
 
 interface Props {
@@ -30,6 +31,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const slug = context.params?.slug as string;
 
   const blog = getBlog(slug);
+  // Update front matter to have reading time
+  const data = { ...blog.data, readingTime: ReadingTime(blog.content) };
   const mdxSource = await serialize(blog.content, {
     mdxOptions: {
       remarkPlugins: [Prism, RemarkUnwrapImages]
@@ -38,7 +41,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      data: blog.data,
+      data: data,
       content: mdxSource
     }
   };

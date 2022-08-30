@@ -48,7 +48,8 @@ const BlogLayout = ({ data, content }: Props) => {
             {data.description}
           </h3>
           <p className="text-lg font-medium">
-            Published on {dayjs(data.date).format("MMMM, YYYY")}
+            Published on {dayjs(data.date).format("D MMMM, YYYY")} •{" "}
+            {data.readingTime.text}
           </p>
         </div>
         <div className="mx-auto max-w-screen-xl">
