@@ -25,7 +25,9 @@ const About = () => {
             </div>
           </div>
           <div className="gap-10 space-y-4 py-24 text-lg">
-            <p className="font-semibold">Summary</p>
+            <p className="w-1/3 py-12 text-xl font-semibold underline md:no-underline">
+              Summary
+            </p>
             <p></p>
             <p>
               As someone with a non-traditional background, I approach problems
@@ -44,7 +46,9 @@ const About = () => {
           </div>
           <div className="flex flex-col py-24 md:flex-row">
             <div className="w-1/3 py-12">
-              <h1 className="text-lg font-semibold">Experience</h1>
+              <h1 className="text-xl font-semibold underline md:no-underline">
+                Experience
+              </h1>
             </div>
             <div className="w-full divide-y divide-solid text-lg md:w-2/3">
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
@@ -79,7 +83,9 @@ const About = () => {
           </div>
           <div className="flex flex-col py-24 md:flex-row">
             <div className="w-1/3 py-12">
-              <h1 className="text-lg font-semibold">Education</h1>
+              <h1 className="text-xl font-semibold underline md:no-underline">
+                Education
+              </h1>
             </div>
             <div className="w-full space-y-4 py-12 text-lg md:w-2/3">
               <div className="space-y-1">
@@ -96,7 +102,9 @@ const About = () => {
           </div>
           <div className="flex flex-col py-24 md:flex-row">
             <div className="w-full py-12 md:w-1/3">
-              <h1 className="text-lg font-semibold">Skills</h1>
+              <h1 className="text-xl font-semibold underline md:no-underline">
+                Skills
+              </h1>
             </div>
             <div className="w-full divide-y divide-solid text-lg md:w-2/3">
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
@@ -129,7 +137,9 @@ const About = () => {
           </div>
           <div className="flex flex-col py-24 md:flex-row">
             <div className="w-full py-12 md:w-1/3">
-              <h1 className="text-lg font-semibold">Certificate</h1>
+              <h1 className="text-xl font-semibold underline md:no-underline">
+                Certificate
+              </h1>
             </div>
             <div className="w-full divide-y divide-solid text-lg md:w-2/3">
               <div className="space-y-1 py-12">
