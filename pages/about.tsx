@@ -17,7 +17,7 @@ const About = () => {
               />
             </div> */}
             <div className="w-full space-y-4 md:w-3/4">
-              <h3 className="text-5xl">
+              <h3 className="text-3xl leading-snug md:text-5xl md:leading-snug">
                 Hi, I&apos;m Johnny. I studied at Swinburne University Sarawak,
                 graduated with a multimedia design degree, and recently worked
                 as a Multimedia Designer.

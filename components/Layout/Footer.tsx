@@ -5,13 +5,13 @@ const Footer = () => {
     <footer className="border-t pt-28 pb-20">
       <div className="mx-auto max-w-screen-xl px-8">
         <section className="my-12">
-          <h1 className="text-5xl">
+          <h1 className="text-3xl leading-snug md:text-5xl md:leading-snug">
             Say hi at <br />
             <a
               href="mailto:hello@johnnychai.com"
               target="_blank"
               rel="noreferrer"
-              className="text-black underline hover:text-blue-700"
+              className="break-words text-black underline hover:text-blue-700"
             >
               hello@johnnychai.com
             </a>
@@ -66,7 +66,7 @@ const Footer = () => {
             </li>
           </ul>
         </section>
-        <div className="text-base text-black">
+        <div className="text-sm text-black">
           © 2022 Johnny Chai. Built with NextJS and TailwindCSS.
         </div>
       </div>

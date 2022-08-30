@@ -15,13 +15,13 @@ const BlogFull = ({ data }: Props) => {
             <Link href={"blog/" + blog.slug} key={index}>
               <a className="group">
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-semibold group-hover:underline">
-                    {blog.title}
-                  </h3>
-                  <p className="text-sm font-medium text-gray-400">
+                  <p className="text-base font-medium">
                     {Dayjs(blog.date).format("D MMMM, YYYY")}
                   </p>
-                  <p className="text-lg text-black">{blog.description}</p>
+                  <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
+                    {blog.title}
+                  </h3>
+                  <p className="text-lg md:text-xl">{blog.description}</p>
                 </div>
               </a>
             </Link>

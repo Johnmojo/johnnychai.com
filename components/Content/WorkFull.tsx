@@ -30,7 +30,7 @@ const WorkFull = ({ data }: Props) => {
     <section className="mb-40">
       <div className="mx-auto max-w-screen-xl px-8">
         <div className="my-20 border-b">
-          <ul className="flex space-x-8 pb-8 text-lg font-medium text-gray-400 underline-offset-8">
+          <ul className="flex flex-col space-y-4 pb-8 text-lg font-medium leading-relaxed text-gray-400 underline-offset-8 md:flex-row md:space-y-0 md:space-x-8">
             <li>
               <button
                 value="all"
@@ -89,10 +89,10 @@ const WorkFull = ({ data }: Props) => {
                     />
                   </div>
                   <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">
-                    <h3 className="text-2xl font-medium group-hover:underline">
+                    <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
                       {work.title}
                     </h3>
-                    <p className="text-lg text-gray-600">{work.description}</p>
+                    <p className="text-lg md:text-xl">{work.description}</p>
                   </div>
                 </a>
               </Link>
