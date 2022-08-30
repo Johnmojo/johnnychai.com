@@ -67,7 +67,7 @@ const Footer = () => {
           </ul>
         </section>
         <div className="text-sm text-black">
-          © 2022 Johnny Chai. Built with NextJS and TailwindCSS.
+          © 2022 Johnny Chai.⚡Built with NextJS and TailwindCSS.
         </div>
       </div>
     </footer>
