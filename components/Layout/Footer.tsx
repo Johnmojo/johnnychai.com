@@ -6,7 +6,7 @@ const Footer = () => {
           <h1 className="pb-12 text-3xl font-medium leading-snug md:text-5xl md:leading-snug">
             Say hi at
           </h1>
-          <h1 className="text-xl leading-snug md:text-3xl md:leading-snug">
+          <h1 className="inline-block text-xl leading-snug md:text-3xl md:leading-snug">
             <a
               target="_blank"
               rel="noreferrer"
