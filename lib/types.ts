@@ -56,6 +56,12 @@ export interface BlogsData {
   slug: string;
   postType: string;
   hero: string;
+  readingTime: {
+    text: string;
+    minutes: number;
+    time: number;
+    words: { total: number };
+  };
 }
 
 export interface WorkType {
@@ -80,7 +86,7 @@ export interface BlogType {
   slug: string;
   postType: string;
   hero: string;
-  readingTime?: {
+  readingTime: {
     text: string;
     minutes: number;
     time: number;
