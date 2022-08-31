@@ -15,10 +15,12 @@ interface Props {
 const WorkLayout = ({ data, content }: Props) => {
   const MDXComponents = {
     h1: ({ children }: { children?: ReactNode }) => (
-      <h1 className="mt-12 mb-4 text-2xl font-medium text-black">{children}</h1>
+      <h1 className="mt-12 mb-4 text-xl font-medium leading-loose text-black md:text-2xl md:leading-loose">
+        {children}
+      </h1>
     ),
     p: ({ children }: { children?: ReactNode }) => (
-      <p className="my-6 text-lg text-black">{children}</p>
+      <p className="my-6 text-lg leading-loose text-black">{children}</p>
     ),
     img: ({ src, alt }: { src?: string; alt?: string }) => (
       <div className="pb-4">
@@ -29,7 +31,7 @@ const WorkLayout = ({ data, content }: Props) => {
           className="w-full pt-8 pb-4"
           alt={alt}
         />
-        <figcaption className="pt-8 text-center text-sm">{alt}</figcaption>
+        <figcaption className="pt-4 text-center text-sm">{alt}</figcaption>
       </div>
     ),
     Instagram: ({ postID }: { postID: string }) => <Instagram postID={postID} />
@@ -38,9 +40,9 @@ const WorkLayout = ({ data, content }: Props) => {
   return (
     <>
       <HeroWork title={data.title} />
-      <section className="mb-48 space-y-32 px-8">
+      <section className="mb-48 space-y-32">
         {data.hero && (
-          <div className="mx-auto max-w-screen-xl">
+          <div className="mx-auto max-w-screen-xl px-8">
             <Image
               src={data.hero}
               alt={data.title}
@@ -52,10 +54,12 @@ const WorkLayout = ({ data, content }: Props) => {
           </div>
         )}
         <div className="mx-auto max-w-screen-xl">
-          <div className="mb-32">
+          <div className="mb-32 px-8">
             <div>
               <div>
-                <h3 className="mb-6 text-3xl text-black">{data.summary}</h3>
+                <h3 className="mb-6 text-2xl leading-snug text-black md:text-3xl md:leading-snug">
+                  {data.summary}
+                </h3>
                 <div className="flex w-full flex-col justify-between gap-8 pt-8 md:w-3/4 md:flex-row">
                   <div>
                     <span className="text-base text-gray-500">Category</span>

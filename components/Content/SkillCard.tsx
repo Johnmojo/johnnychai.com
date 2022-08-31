@@ -2,7 +2,7 @@ const SkillCard = () => {
   return (
     <section className=" mx-auto max-w-screen-xl px-8">
       <div className="mx-auto my-40 max-w-screen-xl space-y-12 border-t border-b py-40 ">
-        <div className="w-full space-y-12 text-5xl md:w-3/4">
+        <div className="w-full space-y-12 text-3xl md:w-3/4 md:text-5xl">
           <h3 className="leading-snug">
             <span className="font-medium">
               Hi, I&apos;m Johnny 👋 - a Front End Developer
