@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Logo, Arrow } from "../Content/Svg";
 
 interface Props {
   scroll: boolean;
@@ -9,25 +9,36 @@ interface Props {
 
 const Header = ({ scroll, transparent }: Props) => {
   const [menu, setMenu] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 768 && menu) {
+      setMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    if (menu) {
+      document.body.classList.add("noScroll");
+    } else {
+      document.body.classList.remove("noScroll");
+    }
+    window.addEventListener("resize", handleResize);
+  }, [menu]);
 
   return (
     <header>
       <div
         className={`fixed z-50 hidden w-full border-b transition-all duration-300 ease-out md:block ${
           scroll && "-translate-y-full transition-all"
-        } ${transparent ? "bg-transparent pt-16 pb-5" : "bg-white pt-5 pb-5"} 
+        } ${transparent ? "bg-transparent pt-5 pb-5" : "bg-white pt-5 pb-5"} 
         `}
       >
         <div className="mx-auto flex max-w-screen-xl items-center justify-between px-8">
           <div className="cursor-pointer">
             <Link href="/">
               <a>
-                <Image
-                  alt="Logo"
-                  src="/static/icons/logo.svg"
-                  width={60}
-                  height={60}
-                />
+                <Logo />
               </a>
             </Link>
           </div>
@@ -55,24 +66,17 @@ const Header = ({ scroll, transparent }: Props) => {
       <div
         className={`fixed z-50 block w-full border-b px-8 transition-all duration-300 ease-out md:hidden ${
           scroll && "-translate-y-full transition-all"
-        } ${transparent ? "bg-transparent pt-16 pb-5" : "bg-white pt-5 pb-5"} `}
+        } ${transparent ? "bg-transparent pt-5 pb-5" : "bg-white pt-5 pb-5"} `}
       >
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
-          <div className="cursor-pointer">
+          <div className="z-50 cursor-pointer">
             <Link href="/">
-              <a>
-                <Image
-                  alt="Logo"
-                  src="/static/icons/logo.svg"
-                  width={60}
-                  height={60}
-                />
-              </a>
+              <Logo />
             </Link>
           </div>
           <div className="z-50 cursor-pointer">
             <button
-              className="flex h-14 w-14 flex-col items-center justify-center rounded-full border border-black"
+              className="flex h-12 w-12 flex-col items-center justify-center rounded-full border border-black"
               onClick={() => setMenu(!menu)}
             >
               <span
@@ -88,14 +92,20 @@ const Header = ({ scroll, transparent }: Props) => {
             </button>
           </div>
           <div
-            className={`fixed top-0 -right-2/4 flex h-screen w-2/4 flex-col justify-center bg-white transition-all duration-300 ease-in-out ${
+            className={`fixed top-0 -right-2/4 flex h-screen w-2/4 flex-col justify-center bg-white transition-all duration-500 ease-in-out ${
               menu && "right-0 !w-full"
             }`}
           >
             <nav>
               <ul className="flex flex-col space-y-6 text-4xl">
+                <div className="ml-8 mr-auto text-sm">Navigation</div>
+                <div className="relative my-20 flex items-center px-8">
+                  <div className="flex-grow border-t"></div>
+                </div>
                 <li
-                  className="ml-16 mr-auto underline-offset-8"
+                  className={`ml-8 mr-auto underline-offset-8 ${
+                    menu && "animate-[menu_0.5s_ease-in-out] duration-100"
+                  }`}
                   onClick={() => setMenu(!menu)}
                 >
                   <Link href="/work">
@@ -103,7 +113,9 @@ const Header = ({ scroll, transparent }: Props) => {
                   </Link>
                 </li>
                 <li
-                  className="ml-16 mr-auto underline-offset-8"
+                  className={`ml-8 mr-auto underline-offset-8 ${
+                    menu && "animate-[menu_0.75s_ease-in-out] duration-300"
+                  }`}
                   onClick={() => setMenu(!menu)}
                 >
                   <Link href="/blog">
@@ -111,7 +123,9 @@ const Header = ({ scroll, transparent }: Props) => {
                   </Link>
                 </li>
                 <li
-                  className="ml-16 mr-auto underline-offset-8"
+                  className={`ml-8 mr-auto underline-offset-8 ${
+                    menu && "animate-[menu_1s_ease-in-out] duration-1000"
+                  }`}
                   onClick={() => setMenu(!menu)}
                 >
                   <Link href="/about">
@@ -119,6 +133,88 @@ const Header = ({ scroll, transparent }: Props) => {
                   </Link>
                 </li>
               </ul>
+              <div className="mt-12 flex flex-col space-y-6 text-4xl">
+                <div className="ml-8 mr-auto text-sm">Say hi at</div>
+                <div className="relative my-20 flex items-center px-8">
+                  <div className="flex-grow border-t"></div>
+                </div>
+                <div
+                  className={`ml-8 mr-auto text-xl underline-offset-8 ${
+                    menu && "animate-[menu_1.25s_ease-in-out] duration-1000"
+                  }`}
+                >
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="hello@johnnychai.com"
+                    className="group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>hello@johnnychai.com</div>
+                      <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <Arrow />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  className={`ml-8 mr-auto text-xl underline-offset-8 ${
+                    menu && "animate-[menu_1.5s_ease-in-out] duration-1000"
+                  }`}
+                >
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.linkedin.com/in/johchai"
+                    className="group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>LinkedIn</div>
+                      <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <Arrow />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  className={`ml-8 mr-auto text-xl underline-offset-8 ${
+                    menu && "animate-[menu_1.75s_ease-in-out] duration-1000"
+                  }`}
+                >
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.github.com/johnmojo"
+                    className="group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>Github</div>
+                      <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <Arrow />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div
+                  className={`ml-8 mr-auto text-xl underline-offset-8 ${
+                    menu && "animate-[menu_2s_ease-in-out] duration-1000"
+                  }`}
+                >
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.instagram.com/johnsaaz"
+                    className="group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>Instagram</div>
+                      <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <Arrow />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </nav>
           </div>
         </div>

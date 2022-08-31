@@ -43,6 +43,7 @@ const TemplateLayout = ({ children }: Props) => {
   }, []);
 
   return (
+    // Unused dark mode
     <div className={`${edge && "dark"}`}>
       <Header scroll={scroll} transparent={transparent} />
       <main>{children}</main>

@@ -17,9 +17,32 @@ module.exports = {
         elastic: "elastic 0.5s",
         slowElastic: "slowElastic 0.3s",
         push: "push 0.5s",
-        jump: "jump 0.5s"
+        jump: "jump 0.5s",
+        logo: "logo 1s infinite ease",
+        menu: "menu 1s ease"
       },
       keyframes: {
+        menu: {
+          "0%": {
+            transform: "translateY(-30px)",
+            opacity: "0"
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "100"
+          }
+        },
+        logo: {
+          "0%": {
+            transform: "translateY(0)"
+          },
+          "50%": {
+            transform: "translateY(15px)"
+          },
+          "100%": {
+            transform: "translateY(0)"
+          }
+        },
         jump: {
           "0%": {
             transform: "translateY(0)"
