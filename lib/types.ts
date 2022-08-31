@@ -80,7 +80,7 @@ export interface BlogType {
   slug: string;
   postType: string;
   hero: string;
-  readingTime: {
+  readingTime?: {
     text: string;
     minutes: number;
     time: number;
