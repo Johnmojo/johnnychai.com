@@ -12,7 +12,7 @@ const HeroPage = ({ date, title, intro, status }: Props) => {
     <section className="transition-all duration-300 ease-in-out">
       <div className="mx-auto flex h-[80vh] max-w-screen-xl animate-elastic flex-col justify-center space-y-8 px-8 pt-96 pb-64">
         {date && <p>Published on {dayjs(date).format("MMMM D, YYYY")}</p>}
-        <h1 className="w-full text-4xl font-medium leading-snug md:w-5/6 md:text-7xl md:leading-snug">
+        <h1 className="w-full text-4xl font-medium leading-relaxed md:w-5/6 md:text-7xl md:leading-relaxed">
           {title}
         </h1>
         {intro || status ? (

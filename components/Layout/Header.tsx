@@ -4,19 +4,19 @@ import { Logo, Arrow } from "../Content/Svg";
 
 interface Props {
   scroll: boolean;
-  transparent: boolean;
 }
 
-const Header = ({ scroll, transparent }: Props) => {
+const Header = ({ scroll }: Props) => {
   const [menu, setMenu] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
 
+  // If user resize the window, close the menu
   const handleResize = () => {
     if (window.innerWidth < 768 && menu) {
       setMenu(false);
     }
   };
 
+  // Detect toggler click
   useEffect(() => {
     if (menu) {
       document.body.classList.add("noScroll");
@@ -29,10 +29,9 @@ const Header = ({ scroll, transparent }: Props) => {
   return (
     <header>
       <div
-        className={`fixed z-50 hidden w-full border-b transition-all duration-300 ease-out md:block ${
+        className={`fixed z-50 hidden w-full border-b bg-white pt-5 pb-5 transition-all duration-300 ease-out md:block ${
           scroll && "-translate-y-full transition-all"
-        } ${transparent ? "bg-transparent pt-5 pb-5" : "bg-white pt-5 pb-5"} 
-        `}
+        }`}
       >
         <div className="mx-auto flex max-w-screen-xl items-center justify-between px-8">
           <div className="cursor-pointer">
@@ -44,17 +43,17 @@ const Header = ({ scroll, transparent }: Props) => {
           </div>
           <nav>
             <ul className="text-base">
-              <li className="ml-16 inline-block font-semibold underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/work">
                   <a>Work</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block font-semibold underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block font-semibold underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/about">
                   <a>About</a>
                 </Link>
@@ -64,14 +63,16 @@ const Header = ({ scroll, transparent }: Props) => {
         </div>
       </div>
       <div
-        className={`fixed z-50 block w-full border-b px-8 transition-all duration-300 ease-out md:hidden ${
+        className={`fixed z-50 block w-full border-b bg-white px-8 pt-5 pb-5 transition-all duration-300 ease-out md:hidden ${
           scroll && "-translate-y-full transition-all"
-        } ${transparent ? "bg-transparent pt-5 pb-5" : "bg-white pt-5 pb-5"} `}
+        }`}
       >
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           <div className="z-50 cursor-pointer">
             <Link href="/">
-              <Logo />
+              <a>
+                <Logo />
+              </a>
             </Link>
           </div>
           <div className="z-50 cursor-pointer">

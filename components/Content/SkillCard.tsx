@@ -29,7 +29,7 @@ const SkillCard = () => {
           <h3 className="leading-snug">
             Looking for my{" "}
             <a
-              className="underline"
+              className="underline hover:text-blue-600"
               target="_blank"
               href="https://drive.google.com/file/d/1HX4ZndDiLkeXlhvyCWGhR7n5zGysZe2P/view?usp=sharing"
               rel="noreferrer"

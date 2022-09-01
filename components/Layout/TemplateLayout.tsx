@@ -6,32 +6,69 @@ type Props = {
   children: ReactNode;
 };
 
+declare global {
+  interface Window {
+    instgrm: {
+      Embeds: {
+        process(): void;
+      };
+    };
+  }
+}
+
 const TemplateLayout = ({ children }: Props) => {
   const [scroll, setScroll] = useState(false);
-  const [edge, setEdge] = useState(true);
-  const [transparent, setTransparent] = useState(true);
+  const [edge] = useState(true);
 
-  let oldScrollY = 0;
+  let curScroll: number;
+  let prevScroll =
+    (typeof window !== "undefined" && window.scrollY) ||
+    (typeof document !== "undefined" && document.documentElement.scrollTop);
+  let curDirection = 0;
+  let prevDirection = 0;
+
+  let lastY = 0;
+
+  let toggled: void | boolean;
+  const downThreshold = 400;
+  const upThreshold = 400;
 
   const handleScroll = () => {
-    // Reach edge
-    if (window.scrollY === 0) {
-      setEdge(true);
-      setTransparent(true);
+    curScroll = window.scrollY || document.documentElement.scrollTop;
+    if (curScroll > prevScroll) {
+      // scrolled down
+      curDirection = 2;
     } else {
-      setEdge(false);
-      setTransparent(false);
+      //scrolled up
+      curDirection = 1;
     }
 
-    // Scrolling direction
-    if (window.scrollY > oldScrollY && window.scrollY > 0) {
-      // Scroll down
-      setScroll(true); // Show header
+    if (curDirection !== prevDirection) {
+      toggled = toggleHeader();
     } else {
-      // Scroll up
-      setScroll(false); // Hide header
+      lastY = curScroll;
     }
-    oldScrollY = window.scrollY;
+
+    prevScroll = curScroll;
+
+    if (toggled) {
+      prevDirection = curDirection;
+    }
+  };
+
+  const toggleHeader = () => {
+    toggled = true;
+    if (curDirection === 2 && curScroll - lastY > downThreshold) {
+      lastY = curScroll;
+      setScroll(true);
+    } else if (curDirection === 1 && lastY - curScroll > upThreshold) {
+      lastY = curScroll;
+      setScroll(false);
+    } else {
+      toggled = false;
+    }
+
+    return toggled;
   };
 
   // Run func when scroll event is fired
@@ -45,7 +82,7 @@ const TemplateLayout = ({ children }: Props) => {
   return (
     // Unused dark mode
     <div className={`${edge && "dark"}`}>
-      <Header scroll={scroll} transparent={transparent} />
+      <Header scroll={scroll} />
       <main>{children}</main>
       <Footer />
     </div>

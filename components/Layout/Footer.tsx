@@ -47,7 +47,9 @@ const Footer = () => {
                 className="group"
               >
                 <div className="flex items-center justify-between">
-                  <div>LinkedIn</div>
+                  <div className="decoration-2 underline-offset-2 group-hover:underline">
+                    LinkedIn
+                  </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +77,9 @@ const Footer = () => {
                 className="group"
               >
                 <div className="flex items-center justify-between">
-                  <div>Github</div>
+                  <div className="decoration-2 underline-offset-2 group-hover:underline">
+                    Github
+                  </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +107,9 @@ const Footer = () => {
                 className="group"
               >
                 <div className="flex items-center justify-between">
-                  <div>Instagram</div>
+                  <div className="decoration-2 underline-offset-2 group-hover:underline">
+                    Instagram
+                  </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
