@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo, Arrow } from "../Content/SVG";
+import { Logo, Arrow } from "../Content/Svg";
 import { useState, useEffect } from "react";
 
 interface Props {
