@@ -10,7 +10,7 @@ const CustomButton = ({ title, target }: Props) => {
     <Link href={target}>
       <a>
         <div
-          className={`mx-auto inline-block rounded-full border border-gray-200 bg-white py-6 px-12 font-semibold transition-all ease-in-out hover:border-blue-700 hover:bg-blue-700 hover:text-white`}
+          className={`mx-auto inline-block rounded-full border border-black bg-white py-6 px-12 font-semibold transition-all ease-in-out hover:border-black hover:bg-black hover:text-white`}
         >
           {title}
         </div>

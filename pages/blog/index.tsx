@@ -11,7 +11,7 @@ interface Props {
 const Blog = ({ blogsData }: Props) => {
   return (
     <>
-      <Hero title="Blog" intro="Here's where I write to reflect and learn" />
+      <Hero title="Blog" intro="Here's where I write to reflect and learn." />
       <BlogFull data={blogsData} />
     </>
   );

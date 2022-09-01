@@ -1,8 +1,13 @@
 import Hero from "../components/Content/Hero/HeroPage";
+import Head from "next/head";
 
 const About = () => {
   return (
     <>
+      <Head>
+        <title>About</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Hero title="About" intro="Hello there, nice to meet you!" />
       <section className="mx-auto max-w-screen-xl px-8">
         <div className="mb-40 divide-y divide-solid">

@@ -16,9 +16,9 @@ const HeroPage = ({ date, title, intro, status }: Props) => {
           {title}
         </h1>
         {intro || status ? (
-          <h3 className="w-full text-2xl leading-snug md:w-2/4 md:text-3xl md:leading-snug">
-            {intro} <br />
-            {status}
+          <h3 className="w-full space-y-4 text-2xl leading-snug md:w-2/4 md:text-3xl md:leading-snug">
+            <div>{intro}</div>
+            <div>{status}</div>
           </h3>
         ) : null}
       </div>
