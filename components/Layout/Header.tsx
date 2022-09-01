@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import { Logo, Arrow } from "../Content/SVG";
+import { useState, useEffect } from "react";
 
 interface Props {
   scroll: boolean;
