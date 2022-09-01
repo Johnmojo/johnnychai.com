@@ -8,7 +8,7 @@ type Props = {
 const BlogPreview = ({ data }: Props) => {
   return (
     <section className="mx-auto max-w-screen-xl px-8">
-      <div className="my-40">
+      <div className="my-20 md:my-40">
         <div className="w-full md:w-7/12">
           <h1 className="pb-12 text-3xl font-medium leading-snug md:text-5xl md:leading-snug">
             What I&apos;ve written
@@ -26,7 +26,7 @@ const BlogPreview = ({ data }: Props) => {
                       </h3>
                       <p className="text-lg md:text-xl">{blog.description}</p>
                     </div>
-                    <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
+                    <div className="mt-auto mb-auto hidden overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-12 w-12"

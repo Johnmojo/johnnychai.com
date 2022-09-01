@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Logo, Arrow } from "../Content/Svg";
+import { Logo, Arrow } from "../Content/SVG";
 
 interface Props {
   scroll: boolean;
@@ -68,15 +68,19 @@ const Header = ({ scroll }: Props) => {
         }`}
       >
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
-          <div className="z-50 cursor-pointer">
+          <div className="cursor-pointer">
             <Link href="/">
-              <a>
+              <a aria-label="Homepage">
                 <Logo />
               </a>
             </Link>
           </div>
           <div className="z-50 cursor-pointer">
             <button
+              aria-label="Toggle main menu"
+              aria-haspopup="menu"
+              aria-expanded={menu ? "true" : "false"}
+              title={menu ? "Close main menu" : "Open main menu"}
               className="flex h-12 w-12 flex-col items-center justify-center rounded-full border border-black"
               onClick={() => setMenu(!menu)}
             >
@@ -98,11 +102,13 @@ const Header = ({ scroll }: Props) => {
             }`}
           >
             <nav>
-              <ul className="flex flex-col space-y-6 text-4xl">
+              <div className="mb-12 flex flex-col space-y-6 text-4xl">
                 <div className="ml-8 mr-auto text-sm">Navigation</div>
                 <div className="relative my-20 flex items-center px-8">
                   <div className="flex-grow border-t"></div>
                 </div>
+              </div>
+              <ul className="flex flex-col space-y-6 text-4xl">
                 <li
                   className={`ml-8 mr-auto underline-offset-8 ${
                     menu && "animate-[menu_0.5s_ease-in-out] duration-100"
@@ -215,6 +221,11 @@ const Header = ({ scroll }: Props) => {
                     </div>
                   </a>
                 </div>
+                <div
+                  className={`ml-8 mr-auto text-xl underline-offset-8 ${
+                    menu && "animate-[menu_2.25s_ease-in-out] duration-1000"
+                  }`}
+                ></div>
               </div>
             </nav>
           </div>

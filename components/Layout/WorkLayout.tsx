@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import type { serialize } from "next-mdx-remote/serialize";
 import dayjs from "dayjs";
 import Instagram from "../Widget/Instagram/Instagram";
+import HeadComponent from "../Common/HeadComponent";
 
 interface Props {
   data: WorkType;
@@ -39,6 +40,10 @@ const WorkLayout = ({ data, content }: Props) => {
 
   return (
     <>
+      <HeadComponent
+        title={`${data.title} - Johnny Chai`}
+        description={data.summary}
+      />
       <HeroWork title={data.title} />
       <section className="mb-48 space-y-32">
         {data.hero && (

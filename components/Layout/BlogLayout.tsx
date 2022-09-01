@@ -5,6 +5,7 @@ import { BlogType } from "../../lib/types";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
 import dayjs from "dayjs";
+import HeadComponent from "../Common/HeadComponent";
 
 interface Props {
   data: BlogType;
@@ -38,6 +39,10 @@ const BlogLayout = ({ data, content }: Props) => {
 
   return (
     <>
+      <HeadComponent
+        title={`${data.title} - Johnny Chai`}
+        description={data.description}
+      />
       <HeroBlog title={data.title} />
       <section className="mb-48">
         <div className="mx-auto mb-32 mt-12 max-w-screen-xl px-8">

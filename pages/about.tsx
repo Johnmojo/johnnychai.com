@@ -1,36 +1,27 @@
 import Hero from "../components/Content/Hero/HeroPage";
-import Head from "next/head";
+import HeadComponent from "../components/Common/HeadComponent";
 
 const About = () => {
   return (
     <>
-      <Head>
-        <title>About</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <HeadComponent
+        title="About - Johnny Chai"
+        description="Hi! I studied at Swinburne University Sarawak, graduated with a multimedia design degree, and recently worked as a Multimedia Designer."
+      />
       <Hero title="About" intro="Hello there, nice to meet you!" />
       <section className="mx-auto max-w-screen-xl px-8">
-        <div className="mb-40 divide-y divide-solid">
-          <div className="flex gap-10 pb-24">
-            {/* <div className="w-1/6">
-              <Image
-                src="/static/images/pages/profile.png"
-                className="rounded-full"
-                width={200}
-                height={200}
-                alt=""
-              />
-            </div> */}
+        <div className="mb-20 divide-y divide-solid md:mb-40">
+          <div className="flex gap-10 pb-20 md:pb-24">
             <div className="w-full space-y-4 md:w-3/4">
-              <h3 className="text-3xl leading-snug md:text-5xl md:leading-snug">
+              <h3 className="text-3xl leading-relaxed md:text-5xl md:leading-snug">
                 Hi, I&apos;m Johnny. I studied at Swinburne University Sarawak,
                 graduated with a multimedia design degree, and recently worked
                 as a Multimedia Designer.
               </h3>
             </div>
           </div>
-          <div className="gap-10 space-y-4 py-24 text-lg">
-            <p className="w-1/3 py-12 text-xl font-semibold underline md:no-underline">
+          <div className="gap-10 space-y-4 py-10 text-lg md:py-24">
+            <p className="w-full py-12 text-xl font-semibold underline md:w-1/3 md:no-underline">
               Summary
             </p>
             <p></p>
@@ -49,13 +40,13 @@ const About = () => {
               that I enjoyed.
             </p>
           </div>
-          <div className="flex flex-col py-24 md:flex-row">
-            <div className="w-1/3 py-12">
+          <div className="flex flex-col py-10 md:flex-row md:py-24">
+            <div className="w-full py-12 md:w-1/3">
               <h1 className="text-xl font-semibold underline md:no-underline">
                 Experience
               </h1>
             </div>
-            <div className="w-full divide-y divide-solid text-lg md:w-2/3">
+            <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full space-y-1 md:w-2/5">
                   <p className="font-semibold">Freelance</p>
@@ -86,8 +77,8 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col py-24 md:flex-row">
-            <div className="w-1/3 py-12">
+          <div className="flex flex-col py-10 md:flex-row md:py-24">
+            <div className="w-full py-12 md:w-1/3">
               <h1 className="text-xl font-semibold underline md:no-underline">
                 Education
               </h1>
@@ -105,13 +96,13 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col py-24 md:flex-row">
+          <div className="mb:py-24 flex flex-col py-10 md:flex-row">
             <div className="w-full py-12 md:w-1/3">
               <h1 className="text-xl font-semibold underline md:no-underline">
                 Skills
               </h1>
             </div>
-            <div className="w-full divide-y divide-solid text-lg md:w-2/3">
+            <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full md:w-2/5">
                   <p className="font-semibold">Languages &amp; techs</p>
@@ -140,13 +131,13 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col py-24 md:flex-row">
+          <div className="flex flex-col py-10 md:flex-row md:py-24">
             <div className="w-full py-12 md:w-1/3">
               <h1 className="text-xl font-semibold underline md:no-underline">
                 Certificate
               </h1>
             </div>
-            <div className="w-full divide-y divide-solid text-lg md:w-2/3">
+            <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
               <div className="space-y-1 py-12">
                 <p className="font-semibold">
                   Foundations of User Experience (UX) Design

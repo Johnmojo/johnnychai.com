@@ -10,9 +10,9 @@ interface Props {
 const HeroWork = ({ date, title, intro, status }: Props) => {
   return (
     <section className="transition-all duration-300 ease-in-out">
-      <div className="mx-auto flex h-[80vh] max-w-screen-xl animate-elastic flex-col justify-center space-y-8 px-8 pt-96 pb-64">
+      <div className="justify-cente mx-auto flex h-[40vh] max-w-screen-xl animate-elastic flex-col space-y-8 px-8 pb-48 pt-72 md:h-[80vh] md:pt-96 md:pb-64">
         {date && <p>Published on {dayjs(date).format("MMMM D, YYYY")}</p>}
-        <h1 className="mx-auto w-full text-4xl font-medium leading-relaxed md:ml-0 md:w-5/6 md:text-7xl md:leading-relaxed">
+        <h1 className="mx-auto w-full text-4xl font-medium leading-relaxed md:ml-0 md:w-5/6 md:text-6xl md:leading-relaxed">
           {title}
         </h1>
         {intro || status ? (

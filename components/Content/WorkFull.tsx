@@ -27,9 +27,9 @@ const WorkFull = ({ data }: Props) => {
   }, [category]);
 
   return (
-    <section className="mb-40">
+    <section className="mb-20 md:mb-40">
       <div className="mx-auto max-w-screen-xl px-8">
-        <div className="my-20 border-b">
+        <div className="mb-20 border-b">
           <ul className="flex flex-col space-y-4 pb-8 text-lg font-medium leading-relaxed text-gray-400 underline-offset-8 md:flex-row md:space-y-0 md:space-x-8">
             <li>
               <button
@@ -70,7 +70,7 @@ const WorkFull = ({ data }: Props) => {
           </ul>
         </div>
         <div
-          className={`grid grid-cols-1 gap-24 opacity-100 md:grid-cols-2 ${
+          className={`grid grid-cols-1 gap-20 opacity-100 md:grid-cols-2 md:gap-24 ${
             loading && "animate-slowElastic transition duration-150 ease-in-out"
           }`}
         >

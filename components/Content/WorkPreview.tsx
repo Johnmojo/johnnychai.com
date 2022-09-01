@@ -11,8 +11,8 @@ type Props = {
 const WorkPreview = ({ data, title, limit }: Props) => {
   return (
     <section className="mx-auto max-w-screen-xl">
-      <div className="my-40 px-8">
-        <div className="pb-40">
+      <div className="my-20 px-8 md:my-40">
+        <div className="pb-20 md:pb-40">
           <div className="w-full md:w-7/12">
             <h1 className="pb-12 text-3xl font-medium leading-snug md:w-3/4 md:text-5xl md:leading-snug">
               Work
@@ -47,7 +47,7 @@ const WorkPreview = ({ data, title, limit }: Props) => {
               </Link>
             ))}
         </div>
-        <div className="flex justify-center pt-40">
+        <div className="flex justify-center pt-20 pb-8 md:pb-0 md:pt-40">
           <Link href="/work">
             <a className="text-xl font-semibold underline underline-offset-8 md:text-2xl">
               See more work

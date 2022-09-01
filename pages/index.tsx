@@ -7,6 +7,7 @@ import Slideshow from "../components/Content/Slideshow";
 import SkillCard from "../components/Content/SkillCard";
 import WorkPreview from "../components/Content/WorkPreview";
 import BlogPreview from "../components/Content/BlogPreview";
+import HeadComponent from "../components/Common/HeadComponent";
 
 type Props = {
   worksData: WorksData[];
@@ -29,6 +30,10 @@ const Home = ({ worksData, blogsData }: Props) => {
 
   return (
     <>
+      <HeadComponent
+        title="Home - Johnny Chai"
+        description="Front End Web Developer based in Malaysia who is who is passionate about coding and solving problems through code and design."
+      />
       <Hero title="I'm a Front End Developer passionate about web technologies." />
       <Slideshow data={slideshowsData} />
       <SkillCard />

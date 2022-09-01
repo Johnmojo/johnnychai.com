@@ -7,7 +7,7 @@ const Logo = () => {
         className="transition duration-500 ease-in-out group-hover:scale-110"
       >
         <defs>
-          <style>{`.c{fill:#262626;}.d{fill:#fcd108;}`}</style>
+          <style>{`.c{fill:#262626;}.d{fill:#d6ff35;}`}</style>
         </defs>
         <g id="a" />
         <g id="b">

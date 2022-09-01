@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="border-t pt-28 pb-20">
+    <footer className="border-t pt-8 pb-10 md:pt-28 md:pb-20">
       <div className="mx-auto max-w-screen-xl px-8">
         <section className="mt-12 mb-6">
           <h1 className="pb-12 text-3xl font-medium leading-snug md:text-5xl md:leading-snug">
@@ -37,7 +37,7 @@ const Footer = () => {
             </a>
           </h1>
         </section>
-        <section className="mb-36 mt-6 flex text-lg text-black">
+        <section className="mb-20 mt-6 flex text-lg text-black md:mb-36">
           <ul className="flex flex-col md:flex-row">
             <li className="my-4 mr-6">
               <a
@@ -131,7 +131,7 @@ const Footer = () => {
             </li>
           </ul>
         </section>
-        <div className="text-sm text-black">
+        <div className="text-sm leading-relaxed text-black">
           © 2022 Johnny Chai.⚡Built with NextJS and TailwindCSS.
         </div>
       </div>

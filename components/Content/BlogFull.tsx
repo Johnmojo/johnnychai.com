@@ -8,7 +8,7 @@ interface Props {
 
 const BlogFull = ({ data }: Props) => {
   return (
-    <section className="mb-48">
+    <section className="mb-20 md:mb-40">
       <div className="mx-auto max-w-screen-xl divide-y divide-solid px-8">
         {data.map((blog, index) => (
           <div key={index} className="py-8">
