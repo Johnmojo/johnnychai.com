@@ -86,7 +86,7 @@ const WorkFull = ({ data }: Props) => {
                       alt={work.title}
                       width={1280}
                       height={1600}
-                      quality={80}
+                      quality={75}
                     />
                   </div>
                   <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">

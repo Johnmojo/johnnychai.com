@@ -3,7 +3,7 @@ import Image from "next/image";
 const SkillCard = () => {
   return (
     <section className=" mx-auto max-w-screen-xl px-8">
-      <div className="mx-auto my-20 max-w-screen-xl space-y-12 border-t border-b py-20 md:mb-40 md:py-40 ">
+      <div className="mx-auto my-20 max-w-screen-xl space-y-12 border-t border-b py-20 md:my-40 md:py-40 ">
         <div className="flex items-center space-x-4 text-lg font-medium">
           <Image
             alt="Logo"
