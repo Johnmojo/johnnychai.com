@@ -17,9 +17,9 @@ const WorkPreview = ({ data, title, limit }: Props) => {
             <h1 className="pb-12 text-3xl font-medium leading-snug md:w-3/4 md:text-5xl md:leading-snug">
               Work
             </h1>
-            <h3 className="text-2xl leading-snug md:text-3xl md:leading-snug">
+            <h2 className="text-2xl leading-snug md:text-3xl md:leading-snug">
               {title}
-            </h3>
+            </h2>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-24">

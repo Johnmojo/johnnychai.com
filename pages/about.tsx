@@ -71,7 +71,7 @@ const About = () => {
                   <p>
                     Creation of digital marketing materials such as graphics for
                     properties, advertisements, F&amp;B, and other format
-                    mediums. Managed social media accounts &amp; websites
+                    mediums. Handled social media accounts & client website
                     maintenance.
                   </p>
                 </div>

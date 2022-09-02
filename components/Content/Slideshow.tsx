@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import Image from "next/future/image";
 import { SlideshowType } from "../../lib/types";
 
 interface Props {
@@ -32,7 +32,6 @@ const Slideshow = ({ data }: Props) => {
           <Image
             alt="Slideshow"
             src={slideshow.image}
-            layout="responsive"
             width={1600}
             height={800}
             quality={100}

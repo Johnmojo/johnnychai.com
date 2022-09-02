@@ -21,9 +21,9 @@ const BlogPreview = ({ data }: Props) => {
                 <a className="group">
                   <div className="flex justify-between">
                     <div className="space-y-3">
-                      <h3 className="text-xl font-semibold underline-offset-2 group-hover:underline md:text-2xl">
+                      <h2 className="text-xl font-semibold underline-offset-2 group-hover:underline md:text-2xl">
                         {blog.title}
-                      </h3>
+                      </h2>
                       <p className="text-lg md:text-xl">{blog.description}</p>
                     </div>
                     <div className="mt-auto mb-auto hidden overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
