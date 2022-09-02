@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { WorkType } from "../../lib/types";
-import Image from "next/future/image";
+import Image from "next/image";
 
 type Props = {
   data: WorkType[];
@@ -39,7 +39,7 @@ const WorkPreview = ({ data, title, limit }: Props) => {
                       quality={75}
                       width={1280}
                       height={1600}
-                      sizes="(min-width: 75em) 33vw, (min-width: 48em) 50vw,100vw"
+                      sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, 100vw"
                     />
                   </div>
                   <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">

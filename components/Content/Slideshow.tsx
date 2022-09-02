@@ -34,8 +34,9 @@ const Slideshow = ({ data }: Props) => {
             src={slideshow.image}
             width={1600}
             height={800}
-            quality={75}
+            quality={100}
             className="animate-fade"
+            sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, (min-width: 1280px) 1600px"
             priority
           />
         </div>
