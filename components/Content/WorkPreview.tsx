@@ -36,10 +36,9 @@ const WorkPreview = ({ data, title, limit }: Props) => {
                     <Image
                       src={work.thumbnail}
                       alt={work.title}
-                      quality={75}
                       width={1280}
                       height={1600}
-                      sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, 100vw"
+                      sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, (min-width: 1280px) 1200px"
                     />
                   </div>
                   <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">
