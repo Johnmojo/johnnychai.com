@@ -36,6 +36,7 @@ const WorkPreview = ({ data, title, limit }: Props) => {
                     <Image
                       src={work.thumbnail}
                       alt={work.title}
+                      quality={80}
                       width={1280}
                       height={1600}
                     />

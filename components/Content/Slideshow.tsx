@@ -34,7 +34,7 @@ const Slideshow = ({ data }: Props) => {
             src={slideshow.image}
             width={1600}
             height={800}
-            quality={100}
+            quality={80}
             className="animate-fade"
             priority
           />
