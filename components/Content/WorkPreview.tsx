@@ -22,13 +22,16 @@ const WorkPreview = ({ data, title, limit }: Props) => {
             </h3>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-24 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-24">
           {data
             .sort((a, b) => (a.date > b.date ? -1 : 1)) // Sort by date
             .slice(0, limit) // Sort by limit
             .map((work, index) => (
               <Link href={"work/" + work.slug} key={index}>
-                <a key={index} className="group mb-auto space-y-8 even:mt-16">
+                <a
+                  key={index}
+                  className="group mb-auto mt-10 space-y-8 md:even:mt-16"
+                >
                   <div className="clip-inactive group-hover:clip-active group-hover:grayscale">
                     <Image
                       src={work.thumbnail}

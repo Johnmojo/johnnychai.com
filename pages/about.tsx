@@ -8,7 +8,7 @@ const About = () => {
         title="About - Johnny Chai"
         description="Hi! I studied at Swinburne University Sarawak, graduated with a multimedia design degree, and recently worked as a Multimedia Designer."
       />
-      <Hero title="About" intro="Hello there, nice to meet you!" />
+      <Hero title="About" intro="Some story about myself." />
       <section className="mx-auto max-w-screen-xl px-8">
         <div className="mb-20 divide-y divide-solid md:mb-40">
           <div className="flex gap-10 pb-20 md:pb-24">
@@ -21,24 +21,25 @@ const About = () => {
             </div>
           </div>
           <div className="gap-10 space-y-4 py-10 text-lg md:py-24">
-            <p className="w-full py-12 text-xl font-semibold underline md:w-1/3 md:no-underline">
+            <h1 className="w-full py-12 text-xl font-semibold underline md:w-1/3 md:no-underline">
               Summary
-            </p>
-            <p></p>
-            <p>
-              As someone with a non-traditional background, I approach problems
-              like a designer with knowledge from my previous field. I like to
-              see myself as a bridge between designers and developers. Someone
-              who understands both sides&apos; language and translates
-              practicality and constraint.
-            </p>
-            <p>
-              Plus, I&apos;m a fast learner who is always curious about new
-              technology and trends. I enjoy learning new things every day in
-              the fast-changing industry. Outside of work, I always have an
-              interest in topics like sci-fi, space, and futurology – something
-              that I enjoyed.
-            </p>
+            </h1>
+            <div className="space-y-8 py-12">
+              <p>
+                As someone with a non-traditional background, I approach
+                problems like a designer with knowledge from my previous field.
+                I like to see myself as a bridge between designers and
+                developers. Someone who understands both sides&apos; language
+                and translates practicality and constraint.
+              </p>
+              <p>
+                Plus, I&apos;m a fast learner who is always curious about new
+                technology and trends. I enjoy learning new things every day in
+                the fast-changing industry. Outside of work, I always have an
+                interest in topics like sci-fi, space, and futurology –
+                something that I enjoyed.
+              </p>
+            </div>
           </div>
           <div className="flex flex-col py-10 md:flex-row md:py-24">
             <div className="w-full py-12 md:w-1/3">
