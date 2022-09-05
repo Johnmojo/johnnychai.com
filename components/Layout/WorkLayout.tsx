@@ -53,6 +53,7 @@ const WorkLayout = ({ data, content }: Props) => {
               alt={data.title}
               width={1280}
               height={1280}
+              quality={100}
               priority
               className="w-full pt-8 pb-4"
             />

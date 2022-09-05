@@ -29,6 +29,7 @@ const BlogLayout = ({ data, content }: Props) => {
           width="1000"
           height="1000"
           className="w-full pt-8 pb-4"
+          quality={100}
           priority
           alt={alt}
         />
@@ -52,10 +53,12 @@ const BlogLayout = ({ data, content }: Props) => {
           <h3 className="text-2xl font-semibold leading-snug md:text-3xl md:leading-snug">
             {data.description}
           </h3>
-          <p className="text-lg font-medium">
-            Published on {dayjs(data.date).format("D MMMM, YYYY")} •{" "}
-            {data.readingTime.text}
-          </p>
+          <div className="flex flex-col space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4">
+            <p className="text-lg font-medium">
+              Published on {dayjs(data.date).format("D MMMM, YYYY")}
+            </p>
+            <p className="text-lg font-medium">• {data.readingTime.text}</p>
+          </div>
         </div>
         <div className="mx-auto max-w-screen-xl">
           <div className="relative my-10 flex items-center px-8">
