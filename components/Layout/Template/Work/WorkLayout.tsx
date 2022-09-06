@@ -1,12 +1,16 @@
+/**
+ * Work post layout (MDX)
+ */
+
 import Image from "next/future/image";
-import { MDXRemote } from "next-mdx-remote";
-import { HeroWork } from "../Content/Hero";
-import { WorkType } from "../../lib/types";
-import { ReactNode } from "react";
-import type { serialize } from "next-mdx-remote/serialize";
 import dayjs from "dayjs";
-import Instagram from "../Widget/Instagram/Instagram";
-import HeadComponent from "../Common/HeadComponent";
+import { MDXRemote } from "next-mdx-remote";
+import type { serialize } from "next-mdx-remote/serialize";
+import { ReactNode } from "react";
+import { Hero } from "../../Template/Work";
+import { WorkType } from "../../../../lib/types";
+import Instagram from "../../../Widget/Instagram/Instagram";
+import HeadComponent from "../../../Common/HeadComponent";
 
 interface Props {
   data: WorkType;
@@ -44,7 +48,7 @@ const WorkLayout = ({ data, content }: Props) => {
         title={`${data.title} - Johnny Chai`}
         description={data.summary}
       />
-      <HeroWork title={data.title} />
+      <Hero title={data.title} />
       <section className="mb-48 space-y-32">
         {data.hero && (
           <div className="mx-auto max-w-screen-xl px-8">

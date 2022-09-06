@@ -1,3 +1,8 @@
+/**
+ * Custom button
+ * @date 6th September 2022
+ */
+
 import Link from "next/link";
 
 interface Props {

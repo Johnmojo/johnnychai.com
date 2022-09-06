@@ -1,3 +1,8 @@
+/**
+ * Blog post preview only
+ * @date 6th September 2022
+ */
+
 import Link from "next/link";
 import { BlogType } from "../../lib/types";
 

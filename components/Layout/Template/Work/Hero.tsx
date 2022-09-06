@@ -7,7 +7,7 @@ interface Props {
   status?: string; // Secondary summary of the hero
 }
 
-const HeroWork = ({ date, title, intro, status }: Props) => {
+const Hero = ({ date, title, intro, status }: Props) => {
   return (
     <section className="transition-all duration-300 ease-in-out">
       <div className="justify-cente mx-auto flex h-[40vh] max-w-screen-xl animate-elastic flex-col space-y-8 px-8 pb-48 pt-72 md:h-[80vh] md:pt-96 md:pb-64">
@@ -26,4 +26,4 @@ const HeroWork = ({ date, title, intro, status }: Props) => {
   );
 };
 
-export default HeroWork;
+export default Hero;

@@ -1,3 +1,8 @@
+/**
+ * Override - web font insertion
+ * @date 6th September 2022
+ */
+
 import { Html, Head, Main, NextScript } from "next/document";
 
 const Document = () => {

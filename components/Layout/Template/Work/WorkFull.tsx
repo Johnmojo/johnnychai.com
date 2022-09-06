@@ -1,8 +1,13 @@
+/**
+ * Work post full version - display all posts
+ * @date 6th September 2022
+ */
+
 import { useState, useEffect } from "react";
-import { WorkType } from "../../lib/types";
 import Link from "next/link";
 import Image from "next/future/image";
-import HeadComponent from "../Common/HeadComponent";
+import { WorkType } from "../../../../lib/types";
+import HeadComponent from "../../../Common/HeadComponent";
 
 interface Props {
   data: WorkType[];

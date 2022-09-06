@@ -1,5 +1,10 @@
-import Header from "./Header";
-import Footer from "./Footer";
+/**
+ * Main layout template for _app.tsx
+ * @date 6th September 2022
+ */
+
+import Header from "../../../Common/Header";
+import Footer from "../../../Common/Footer";
 import { useState, useEffect, ReactNode } from "react";
 
 type Props = {
@@ -16,7 +21,7 @@ declare global {
   }
 }
 
-const TemplateLayout = ({ children }: Props) => {
+const AppLayout = ({ children }: Props) => {
   const [scroll, setScroll] = useState(false);
   const [edge] = useState(true);
 
@@ -89,4 +94,4 @@ const TemplateLayout = ({ children }: Props) => {
   );
 };
 
-export default TemplateLayout;
+export default AppLayout;

@@ -1,13 +1,18 @@
+/**
+ * _app.tsx - TemplateLayout wrap component
+ * @date 6th September 2022
+ */
+
 import "../styles/globals.css";
 import "prismjs/themes/prism-tomorrow.css";
 
 import type { AppProps } from "next/app";
-import TemplateLayout from "../components/Layout/TemplateLayout";
+import { AppLayout } from "../components/Layout/Template/App";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <TemplateLayout>
+    <AppLayout>
       <Component {...pageProps} />
-    </TemplateLayout>
+    </AppLayout>
   );
 }

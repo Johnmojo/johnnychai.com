@@ -35,6 +35,15 @@ a {
   border-color: black;
 }
 
+div,
+footer,
+header,
+main,
+nav,
+section {
+  border-color: #c7c7c7;
+}
+
 .noScroll {
   height: 100%;
   overflow-y: hidden;

@@ -1,3 +1,8 @@
+/**
+ * Footer component
+ * @date 6th September 2022
+ */
+
 const Footer = () => {
   return (
     <footer className="border-t pt-8 pb-10 md:pt-28 md:pb-20">

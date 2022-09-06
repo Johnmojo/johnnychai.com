@@ -1,8 +1,13 @@
+/**
+ * Work index page
+ * @date 6th September 2022
+ */
+
 import { GetStaticProps } from "next";
+import { Hero } from "../../components/Layout/Template/Page";
+import { WorkFull } from "../../components/Layout/Template/Work";
 import { WorksData } from "../../lib/types";
 import getWorks from "../../lib/getWorks";
-import Hero from "../../components/Content/Hero/HeroPage";
-import WorkFull from "../../components/Content/WorkFull";
 
 interface Props {
   worksData: WorksData[];

@@ -1,6 +1,11 @@
+/**
+ * Work post preview only - display up to 4 at a time
+ * @date 6th September 2022
+ */
+
 import Link from "next/link";
-import { WorkType } from "../../lib/types";
 import Image from "next/image";
+import { WorkType } from "../../../../lib/types";
 
 type Props = {
   data: WorkType[];

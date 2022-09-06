@@ -1,3 +1,8 @@
+/**
+ * Header component
+ * @date 6th September 2022
+ */
+
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Logo, Arrow } from "../Content/SVG";
@@ -43,17 +48,17 @@ const Header = ({ scroll }: Props) => {
           </div>
           <nav>
             <ul className="text-base">
-              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-medium decoration-2 underline-offset-8 hover:underline">
                 <Link href="/work">
                   <a>Work</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-medium decoration-2 underline-offset-8 hover:underline">
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-medium decoration-2 underline-offset-8 hover:underline">
                 <Link href="/about">
                   <a>About</a>
                 </Link>

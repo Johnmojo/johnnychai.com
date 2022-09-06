@@ -1,3 +1,7 @@
+/**
+ * Slideshow component for homepage
+ */
+
 import { useEffect, useState } from "react";
 import Image from "next/future/image";
 import { SlideshowType } from "../../lib/types";

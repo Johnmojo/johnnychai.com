@@ -1,4 +1,9 @@
-import Hero from "../components/Content/Hero/HeroPage";
+/**
+ * About page
+ * @date 6th September 2022
+ */
+
+import { Hero } from "../components/Layout/Template/Page";
 import HeadComponent from "../components/Common/HeadComponent";
 
 const About = () => {

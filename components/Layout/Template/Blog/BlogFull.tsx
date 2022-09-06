@@ -1,7 +1,12 @@
-import { BlogType } from "../../lib/types";
+/**
+ * Blog post full version - display all posts
+ * @date 6th September 2022
+ */
+
 import Link from "next/link";
 import Dayjs from "dayjs";
-import HeadComponent from "../../components/Common/HeadComponent";
+import { BlogType } from "../../../../lib/types";
+import HeadComponent from "../../../Common/HeadComponent";
 
 interface Props {
   data: BlogType[];

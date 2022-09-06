@@ -14,6 +14,7 @@ interface Props {
 // Load the onLoad function when loaded
 const Observer = ({ children, onLoad, height = 0 }: Props) => {
   const [isChildVisible, setIsChildVisible] = useState(false);
+  // TODO: Implement intersection observer API
   useEffect(() => {
     if (onLoad) {
       onLoad();

@@ -1,3 +1,8 @@
+/**
+ * Head component to insert tags
+ * @date 6th September 2022
+ */
+
 import Head from "next/head";
 
 interface Props {

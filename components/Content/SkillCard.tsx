@@ -1,3 +1,7 @@
+/**
+ * Summary component for homepage
+ */
+
 import Image from "next/image";
 
 const SkillCard = () => {

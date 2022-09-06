@@ -1,3 +1,8 @@
+/**
+ * Pills component for decoration
+ * @date 6th September 2022
+ */
+
 interface Props {
   title: string;
 }

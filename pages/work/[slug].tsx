@@ -1,9 +1,14 @@
+/**
+ * Slug for work post e.g. johnny.com/work/[slug]
+ * @date 6th September 2022
+ */
+
 import { GetStaticProps, GetStaticPaths } from "next";
 import getWork from "../../lib/getWork";
 import getWorks from "../../lib/getWorks";
 import { serialize } from "next-mdx-remote/serialize";
 import { WorkType } from "../../lib/types";
-import WorkLayout from "../../components/Layout/WorkLayout";
+import { WorkLayout } from "../../components/Layout/Template/Work";
 import RemarkUnwrapImages from "remark-unwrap-images";
 import Prism from "remark-prism";
 
