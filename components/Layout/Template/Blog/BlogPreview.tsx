@@ -4,7 +4,7 @@
  */
 
 import Link from "next/link";
-import { BlogType } from "../../lib/types";
+import { BlogType } from "../../../../lib/types";
 
 type Props = {
   data: BlogType[];
