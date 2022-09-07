@@ -58,7 +58,7 @@ const WorkPreview = ({ data, title, limit }: Props) => {
         </div>
         <div className="flex justify-center pt-20 pb-8 md:pb-0 md:pt-40">
           <Link href="/work">
-            <a className="text-xl font-semibold underline underline-offset-8 md:text-2xl">
+            <a className="text-xl font-semibold underline underline-offset-8 hover:no-underline md:text-2xl">
               See more work
             </a>
           </Link>
