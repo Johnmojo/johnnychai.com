@@ -1,5 +1,19 @@
 /**
  * Slideshow component for homepage
+ * Feed array of image links to data prop
+ * e.g.
+  const slideshowsData = [
+    {
+      image: "/static/images/slideshows/slideshow-1.png"
+    },
+    {
+      image: "/static/images/slideshows/slideshow-2.png"
+    },
+    {
+      image: "/static/images/slideshows/slideshow-3.png"
+    }
+  ];
+  * After that, use <Slideshow data={slideshowsData} />
  */
 
 import { useEffect, useState } from "react";
@@ -20,7 +34,7 @@ const Slideshow = ({ data }: Props) => {
       if (slideIndex === 2) {
         setSlideIndex(0);
       }
-    }, 3000);
+    }, 4000);
     return () => clearInterval(slideShowInterval);
   });
 
@@ -40,7 +54,6 @@ const Slideshow = ({ data }: Props) => {
             height={800}
             quality={100}
             className="animate-fade"
-            sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, (min-width: 1280px) 1600px"
             priority
           />
         </div>

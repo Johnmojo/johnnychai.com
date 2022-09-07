@@ -11,7 +11,7 @@ const About = () => {
     <>
       <HeadComponent
         title="About - Johnny Chai"
-        description="Hi! I studied at Swinburne University Sarawak, graduated with a multimedia design degree, and recently worked as a Multimedia Designer."
+        description="Hi! I studied at Swinburne University Sarawak, graduated with a multimedia design degree, and previously worked as a Multimedia Designer."
       />
       <Hero title="About" intro="Some story about myself." />
       <section className="mx-auto max-w-screen-xl px-8">
@@ -131,7 +131,8 @@ const About = () => {
                 </div>
                 <div className="w-full md:w-3/5">
                   <p>
-                    Adobe Creative Cloud, Autodesk Maya, Blender, Unity, Git
+                    Adobe Creative Cloud, Autodesk Maya, Blender, Unity, Figma,
+                    Git
                   </p>
                 </div>
               </div>
