@@ -1,9 +1,14 @@
+/**
+ * Slug for blog post e.g. johnny.com/blog/[slug]
+ * @date 6th September 2022
+ */
+
 import { GetStaticProps, GetStaticPaths } from "next";
 import getBlog from "../../lib/getBlog";
 import getBlogs from "../../lib/getBlogs";
 import { serialize } from "next-mdx-remote/serialize";
 import { BlogType } from "../../lib/types";
-import BlogLayout from "../../components/Layout/BlogLayout";
+import { BlogLayout } from "../../components/Layout/Template/Blog";
 import RemarkUnwrapImages from "remark-unwrap-images";
 import ReadingTime from "reading-time";
 import Prism from "remark-prism";

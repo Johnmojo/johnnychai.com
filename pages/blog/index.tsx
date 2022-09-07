@@ -1,8 +1,13 @@
+/**
+ * Blog index page
+ * @date 6th September 2022
+ */
+
 import { GetStaticProps } from "next";
+import { Hero } from "../../components/Layout/Template/Page";
+import { BlogFull } from "../../components/Layout/Template/Blog";
 import { BlogsData } from "../../lib/types";
 import getBlogs from "../../lib/getBlogs";
-import Hero from "../../components/Content/Hero/HeroPage";
-import BlogFull from "../../components/Content/BlogFull";
 
 interface Props {
   blogsData: BlogsData[];

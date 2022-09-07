@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useState } from "react";
-import Observer from "../../Common/Observer";
+import { Observer } from "../../Common/Observer";
 import { handleInstagrmLoad } from "./utils";
 
 declare global {
