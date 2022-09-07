@@ -15,13 +15,13 @@ const Summary = () => {
         <div className="w-full space-y-12 text-3xl md:w-3/4 md:text-5xl">
           <h1 className="leading-snug">
             <span className="font-medium">
-              Hi, I&apos;m Johnny 👋 - a Front End Developer
+              Hello! 👋 I&apos;m a self-taught Front-End developer
             </span>{" "}
-            who is passionate about coding and solving problems through code and
-            design.
+            with a passion for web technologies and solving problems through
+            code and design.
           </h1>
           <h1 className="leading-snug">
-            Currently, I&apos;m on the break from freelancing. Before that, I
+            Currently, I&apos;m on a break from freelancing. Before that, I
             worked as a Multimedia designer in a marketing agency doing digital
             advertisements and designs.
           </h1>

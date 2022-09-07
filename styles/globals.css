@@ -91,12 +91,14 @@ code {
 
 .instagram-media {
   background: white;
-  width: calc(100% - 2px);
+  width: calc(50% - 2px);
   border-radius: 3px;
   border: 1px solid rgb(219, 219, 219);
   box-shadow: none;
   display: block;
-  margin: 0px 0px 12px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 24px !important;
   min-width: 326px;
   padding: 0px;
 }
