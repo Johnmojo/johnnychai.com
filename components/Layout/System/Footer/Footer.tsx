@@ -3,6 +3,8 @@
  * @date 6th September 2022
  */
 
+import { Arrow, ArrowMid } from "../../../Common/SVG";
+
 const Footer = () => {
   return (
     <footer className="border-t pt-8 pb-10 md:pt-28 md:pb-20">
@@ -23,20 +25,7 @@ const Footer = () => {
                   hello@johnnychai.com
                 </div>
                 <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                    data-darkreader-inline-stroke=""
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
+                  <ArrowMid />
                 </div>
               </div>
             </a>
@@ -56,20 +45,7 @@ const Footer = () => {
                     LinkedIn
                   </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      data-darkreader-inline-stroke=""
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
+                    <Arrow />
                   </div>
                 </div>
               </a>
@@ -86,20 +62,7 @@ const Footer = () => {
                     Github
                   </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      data-darkreader-inline-stroke=""
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
+                    <Arrow />
                   </div>
                 </div>
               </a>
@@ -116,20 +79,7 @@ const Footer = () => {
                     Instagram
                   </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      data-darkreader-inline-stroke=""
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
+                    <Arrow />
                   </div>
                 </div>
               </a>

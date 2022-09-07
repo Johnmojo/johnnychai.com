@@ -1,3 +1,8 @@
+/**
+ * Hero component for Home
+ * @date 7th September 2022
+ */
+
 interface Props {
   title: string; // Name
   intro?: string; // Summary of the hero

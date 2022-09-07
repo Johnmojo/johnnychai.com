@@ -1,3 +1,8 @@
+/**
+ * Hero component for blog
+ * @date 7th September 2022
+ */
+
 interface Props {
   title: string; // Title of the hero
 }

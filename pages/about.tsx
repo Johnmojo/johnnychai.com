@@ -4,12 +4,12 @@
  */
 
 import { Hero } from "../components/Layout/Template/Page";
-import HeadComponent from "../components/Common/HeadComponent";
+import { HeaderMeta } from "../components/Layout/System/Header";
 
 const About = () => {
   return (
     <>
-      <HeadComponent
+      <HeaderMeta
         title="About - Johnny Chai"
         description="Hi! I studied at Swinburne University Sarawak, graduated with a multimedia design degree, and previously worked as a Multimedia Designer."
       />

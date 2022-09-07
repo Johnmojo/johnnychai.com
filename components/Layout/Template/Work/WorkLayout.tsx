@@ -10,7 +10,7 @@ import { ReactNode } from "react";
 import { Hero } from "../../Template/Work";
 import { WorkType } from "../../../../lib/types";
 import Instagram from "../../../Widget/Instagram/Instagram";
-import HeadComponent from "../../../Common/HeadComponent";
+import { HeaderMeta } from "../../System/Header";
 
 interface Props {
   data: WorkType;
@@ -44,7 +44,7 @@ const WorkLayout = ({ data, content }: Props) => {
 
   return (
     <>
-      <HeadComponent
+      <HeaderMeta
         title={`${data.title} - Johnny Chai`}
         description={data.summary}
       />

@@ -18,7 +18,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/future/image";
-import { SlideshowType } from "../../lib/types";
+import { SlideshowType } from "../../../lib/types";
 
 interface Props {
   data: SlideshowType[];

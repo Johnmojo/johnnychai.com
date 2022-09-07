@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/future/image";
 import { WorkType } from "../../../../lib/types";
-import HeadComponent from "../../../Common/HeadComponent";
+import { HeaderMeta } from "../../System/Header";
 
 interface Props {
   data: WorkType[];
@@ -34,7 +34,7 @@ const WorkFull = ({ data }: Props) => {
 
   return (
     <>
-      <HeadComponent
+      <HeaderMeta
         title="Work - Johnny Chai"
         description="Here's where I write to reflect and learn."
       />

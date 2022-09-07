@@ -2,19 +2,14 @@
  * Summary component for homepage
  */
 
-import Image from "next/image";
+import { Location } from "../SVG";
 
-const SkillCard = () => {
+const Summary = () => {
   return (
     <section className=" mx-auto max-w-screen-xl px-8">
       <div className="mx-auto max-w-screen-xl space-y-12 border-t border-b py-20 md:py-40 ">
         <div className="flex items-center space-x-4 text-lg font-medium">
-          <Image
-            alt="Logo"
-            src="/../../../static/icons/location.svg"
-            width={14}
-            height={19}
-          />
+          <Location />
           <div className="text-sm md:text-base">Kuching, Malaysia</div>
         </div>
         <div className="w-full space-y-12 text-3xl md:w-3/4 md:text-5xl">
@@ -33,7 +28,7 @@ const SkillCard = () => {
           <h1 className="leading-snug">
             Looking for my{" "}
             <a
-              className="underline hover:text-blue-600"
+              className="text-blue-600 underline hover:text-black"
               target="_blank"
               href="https://drive.google.com/file/d/1HX4ZndDiLkeXlhvyCWGhR7n5zGysZe2P/view?usp=sharing"
               rel="noreferrer"
@@ -48,4 +43,4 @@ const SkillCard = () => {
   );
 };
 
-export default SkillCard;
+export default Summary;

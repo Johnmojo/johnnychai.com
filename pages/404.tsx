@@ -4,13 +4,13 @@
  */
 
 import { Hero } from "../components/Layout/Template/Page";
-import CustomButton from "../components/Common/CustomButton";
-import HeadComponent from "../components/Common/HeadComponent";
+import { CustomButton } from "../components/Common/Button";
+import { HeaderMeta } from "../components/Layout/System/Header";
 
 const Error = () => {
   return (
     <>
-      <HeadComponent
+      <HeaderMeta
         title="404 - Johnny Chai"
         description="Front End Web Developer based in Malaysia who is who is passionate about coding and solving problems through code and design."
       />

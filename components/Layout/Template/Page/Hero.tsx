@@ -1,3 +1,8 @@
+/**
+ * Hero component for Home page
+ * @date 7th September 2022
+ */
+
 import dayjs from "dayjs";
 
 interface Props {

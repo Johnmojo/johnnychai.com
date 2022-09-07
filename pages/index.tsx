@@ -8,10 +8,10 @@ import { WorksData, BlogsData } from "../lib/types";
 import getWorks from "../lib/getWorks";
 import getBlogs from "../lib/getBlogs";
 import { Hero } from "../components/Layout/Template/Home";
-import SkillCard from "../components/Content/SkillCard";
+import { Summary } from "../components/Common/Content";
 import { WorkPreview } from "../components/Layout/Template/Work";
 import { BlogPreview } from "../components/Layout/Template/Blog";
-import HeadComponent from "../components/Common/HeadComponent";
+import { HeaderMeta } from "../components/Layout/System/Header";
 
 type Props = {
   worksData: WorksData[];
@@ -21,12 +21,12 @@ type Props = {
 const Home = ({ worksData, blogsData }: Props) => {
   return (
     <>
-      <HeadComponent
+      <HeaderMeta
         title="Home - Johnny Chai"
         description="Front End Web Developer based in Malaysia who is who is passionate about coding and solving problems through code and design."
       />
       <Hero title="I'm Johnny, a front end developer based in Malaysia." />
-      <SkillCard />
+      <Summary />
       <WorkPreview
         data={worksData}
         title="Some of the recent projects that I've worked on include designs, websites, and many more."

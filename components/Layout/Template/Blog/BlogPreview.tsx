@@ -5,6 +5,7 @@
 
 import Link from "next/link";
 import { BlogType } from "../../../../lib/types";
+import { ArrowBig } from "../../../Common/SVG";
 
 type Props = {
   data: BlogType[];
@@ -32,20 +33,7 @@ const BlogPreview = ({ data }: Props) => {
                       <p className="text-lg md:text-xl">{blog.description}</p>
                     </div>
                     <div className="mt-auto mb-auto hidden overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-12 w-12"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1"
-                        data-darkreader-inline-stroke=""
-                      >
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
+                      <ArrowBig />
                     </div>
                   </div>
                 </a>

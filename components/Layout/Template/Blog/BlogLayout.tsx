@@ -9,7 +9,7 @@ import { BlogType } from "../../../../lib/types";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
 import dayjs from "dayjs";
-import HeadComponent from "../../../Common/HeadComponent";
+import { HeaderMeta } from "../../System/Header";
 
 interface Props {
   data: BlogType;
@@ -44,7 +44,7 @@ const BlogLayout = ({ data, content }: Props) => {
 
   return (
     <>
-      <HeadComponent
+      <HeaderMeta
         title={`${data.title} - Johnny Chai`}
         description={data.description}
       />
