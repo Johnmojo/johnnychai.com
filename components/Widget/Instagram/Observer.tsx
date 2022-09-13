@@ -19,6 +19,7 @@ const Observer = ({ children, onLoad, height = 0 }: Props) => {
     if (onLoad) {
       onLoad();
       setIsChildVisible(true);
+      console.log("PRINT");
     }
   }, [onLoad]);
 

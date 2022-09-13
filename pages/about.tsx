@@ -94,10 +94,7 @@ const About = () => {
                 <p className="font-semibold">
                   Swinburne University of Technology Sarawak
                 </p>
-                <p>
-                  Bachelor of Design (Multimedia Design), Minor in 3D Modelling
-                  and Animation
-                </p>
+                <p>Bachelor of Design (Multimedia Design)</p>
                 <p className="text-base text-gray-600">Mar 2017 - Dec 2019</p>
               </div>
             </div>
@@ -145,6 +142,21 @@ const About = () => {
               </h1>
             </div>
             <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
+              <div className="space-y-1 py-12">
+                <p className="font-semibold">
+                  MySTEP Programme 2022 - UX Design
+                </p>
+                <p>
+                  General Assembly | September 2022 | {""}
+                  <a
+                    className="text-gray-600 underline"
+                    href="https://www.coursera.org/account/accomplishments/verify/AAM77APQBGTX"
+                  >
+                    Link to credential (PDF)
+                  </a>
+                </p>
+                <p>Fully funded upskilling programme by Khazanah Nasional</p>
+              </div>
               <div className="space-y-1 py-12">
                 <p className="font-semibold">
                   Foundations of User Experience (UX) Design

@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { BlogType } from "../../../../lib/types";
-import { ArrowBig } from "../../../Common/SVG";
+import { ArrowBig } from "../../../SVG";
 
 type Props = {
   data: BlogType[];

@@ -7,7 +7,7 @@ import Link from "next/link";
 import Dayjs from "dayjs";
 import { BlogType } from "../../../../lib/types";
 import { HeaderMeta } from "../../System/Header";
-import { ArrowBig } from "../../../Common/SVG";
+import { ArrowBig } from "../../../SVG";
 
 interface Props {
   data: BlogType[];

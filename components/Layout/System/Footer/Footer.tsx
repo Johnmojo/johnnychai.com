@@ -3,7 +3,7 @@
  * @date 6th September 2022
  */
 
-import { Arrow, ArrowMid } from "../../../Common/SVG";
+import { Arrow, ArrowMid } from "../../../SVG";
 
 const Footer = () => {
   return (
