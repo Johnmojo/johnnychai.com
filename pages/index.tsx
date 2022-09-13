@@ -13,6 +13,7 @@ import { Summary } from "../components/Common";
 import { BlogPreview } from "../components/Layout/Template/Blog";
 import { HeaderMeta } from "../components/Layout/System/Header";
 import dynamic from "next/dynamic";
+import { useInView } from "react-intersection-observer";
 import Observer from "../components/Widget/Observer";
 import { useRef, useEffect, useState, ReactNode } from "react";
 
@@ -22,17 +23,7 @@ type Props = {
 };
 
 const Home = ({ worksData, blogsData }: Props) => {
-  const targetRef = useRef();
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setVisible(entry.isIntersecting);
-    });
-    observer.observe(targetRef.current);
-  });
-
+  const { ref: workPreviewRef, inView: workPreviewVisible } = useInView();
   const WorkPreview = dynamic(
     () => import("../components/Layout/Template/Work/WorkPreview")
   );
@@ -45,6 +36,17 @@ const Home = ({ worksData, blogsData }: Props) => {
       />
       <Hero title="I'm Johnny, a front end developer based in Malaysia." />
       <Summary />
+      <p ref={workPreviewRef}>
+        {workPreviewVisible ? (
+          <WorkPreview
+            data={worksData}
+            title="Some of the recent projects that I've worked on include designs, websites, and many more."
+            limit={4}
+          />
+        ) : (
+          "No 🙈"
+        )}
+      </p>
       {/* <Observer
         // How do I set if the observer visible, then show the onload?
         onload={
@@ -55,15 +57,11 @@ const Home = ({ worksData, blogsData }: Props) => {
           />
         }
       /> */}
-      <div ref={targetRef}>
-        {visible && (
-          <WorkPreview
-            data={worksData}
-            title="Some of the recent projects that I've worked on include designs, websites, and many more."
-            limit={4}
-          />
-        )}
-      </div>
+      <WorkPreview
+        data={worksData}
+        title="Some of the recent projects that I've worked on include designs, websites, and many more."
+        limit={4}
+      />
       {/* <Observer onload={<BlogPreview data={blogsData} />} /> */}
       <BlogPreview data={blogsData} />
     </>
