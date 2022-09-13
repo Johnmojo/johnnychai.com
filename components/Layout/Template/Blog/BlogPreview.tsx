@@ -4,6 +4,7 @@
  */
 
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 import { BlogType } from "../../../../lib/types";
 import { ArrowBig } from "../../../SVG";
 
@@ -12,9 +13,17 @@ type Props = {
 };
 
 const BlogPreview = ({ data }: Props) => {
+  const { ref: mainRef, inView: mainVisible } = useInView({
+    triggerOnce: true
+  });
+
   return (
-    <section className="mx-auto max-w-screen-xl px-8">
-      <div className="my-20 md:my-40">
+    <section ref={mainRef} className="mx-auto max-w-screen-xl px-8">
+      <div
+        className={`my-20 md:my-40 ${
+          mainVisible && "animate-[content_1s_ease-in-out]"
+        }`}
+      >
         <div className="w-full md:w-7/12">
           <h1 className="pb-12 text-3xl font-medium leading-snug md:text-5xl md:leading-snug">
             What I&apos;ve written

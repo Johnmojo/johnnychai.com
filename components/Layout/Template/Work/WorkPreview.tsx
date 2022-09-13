@@ -5,6 +5,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 import { WorkType } from "../../../../lib/types";
 
 type Props = {
@@ -14,9 +15,17 @@ type Props = {
 };
 
 const WorkPreview = ({ data, title, limit }: Props) => {
+  const { ref: mainRef, inView: mainVisible } = useInView({
+    triggerOnce: true
+  });
+
   return (
-    <section className="mx-auto max-w-screen-xl">
-      <div className="my-20 px-8 md:my-40">
+    <section ref={mainRef} className="mx-auto max-w-screen-xl">
+      <div
+        className={`my-20 px-8 md:my-40 ${
+          mainVisible && "animate-[content_1s_ease-in-out]"
+        }`}
+      >
         <div className="pb-20 md:pb-40">
           <div className="w-full md:w-7/12">
             <h1 className="pb-12 text-3xl font-medium leading-snug md:w-3/4 md:text-5xl md:leading-snug">
