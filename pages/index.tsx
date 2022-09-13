@@ -24,8 +24,13 @@ type Props = {
 
 const Home = ({ worksData, blogsData }: Props) => {
   const { ref: workPreviewRef, inView: workPreviewVisible } = useInView();
+  const { ref: blogPreviewRef, inView: blogPreviewVisible } = useInView();
   const WorkPreview = dynamic(
     () => import("../components/Layout/Template/Work/WorkPreview")
+  );
+
+  const BlogPreview = dynamic(
+    () => import("../components/Layout/Template/Blog/BlogPreview")
   );
 
   return (
@@ -36,7 +41,7 @@ const Home = ({ worksData, blogsData }: Props) => {
       />
       <Hero title="I'm Johnny, a front end developer based in Malaysia." />
       <Summary />
-      <p ref={workPreviewRef}>
+      <div ref={workPreviewRef}>
         {workPreviewVisible ? (
           <WorkPreview
             data={worksData}
@@ -46,7 +51,7 @@ const Home = ({ worksData, blogsData }: Props) => {
         ) : (
           "No 🙈"
         )}
-      </p>
+      </div>
       {/* <Observer
         // How do I set if the observer visible, then show the onload?
         onload={
@@ -57,13 +62,11 @@ const Home = ({ worksData, blogsData }: Props) => {
           />
         }
       /> */}
-      <WorkPreview
-        data={worksData}
-        title="Some of the recent projects that I've worked on include designs, websites, and many more."
-        limit={4}
-      />
       {/* <Observer onload={<BlogPreview data={blogsData} />} /> */}
-      <BlogPreview data={blogsData} />
+      {/* <BlogPreview data={blogsData} /> */}
+      <div ref={blogPreviewRef}>
+        {blogPreviewVisible ? <BlogPreview data={blogsData} /> : "No 🙈"}
+      </div>
     </>
   );
 };
