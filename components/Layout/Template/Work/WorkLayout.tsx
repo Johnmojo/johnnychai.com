@@ -39,7 +39,7 @@ const WorkLayout = ({ data, content }: Props) => {
           width="1000"
           height="1000"
           className="w-full pt-8 pb-4"
-          alt={alt}
+          alt={alt as string}
         />
         <figcaption className="pt-4 text-center text-sm">{alt}</figcaption>
       </div>

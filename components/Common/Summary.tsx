@@ -3,10 +3,21 @@
  */
 
 import { Location } from "../SVG";
+import { useInView } from "react-intersection-observer";
 
 const Summary = () => {
+  // Intersection observer
+  const { ref: contentRef, inView: contentVisible } = useInView({
+    triggerOnce: true
+  });
+
   return (
-    <section className=" mx-auto max-w-screen-xl px-8">
+    <section
+      ref={contentRef}
+      className={`mx-auto max-w-screen-xl px-8 ${
+        contentVisible && "animate-[content_1s_ease-in-out]"
+      }`}
+    >
       <div className="mx-auto max-w-screen-xl space-y-12 border-t border-b py-20 md:py-40 ">
         <div className="flex items-center space-x-4 text-lg font-medium">
           <Location />
@@ -14,7 +25,7 @@ const Summary = () => {
         </div>
         <div className="w-full space-y-12 text-3xl md:w-3/4 md:text-5xl">
           <h1 className="leading-snug">
-            <span className="font-medium">
+            <span className="font-medium text-blue-700">
               Hello!{" "}
               <span className="inline-block origin-[70%_70%] animate-wave">
                 👋
@@ -32,7 +43,7 @@ const Summary = () => {
           <h1 className="leading-snug">
             Looking for my{" "}
             <a
-              className="text-blue-600 underline hover:text-black"
+              className="text-blue-700 underline hover:text-black"
               target="_blank"
               href="https://drive.google.com/file/d/1HX4ZndDiLkeXlhvyCWGhR7n5zGysZe2P/view?usp=sharing"
               rel="noreferrer"
