@@ -40,7 +40,17 @@ const Instagram = ({ postID }: Props) => {
         data-instgrm-version="12"
       >
         <a href={`https://instagram.com/p/${postID}`}>
-          {typeof window !== "undefined" && !window.instgrm ? "Loading" : ""}
+          {typeof window !== "undefined" && !window.instgrm ? (
+            <div className="instagram-media instagram-mdx-embed mx-auto animate-pulse">
+              <div className="flex animate-pulse">
+                <div className="flex-1 space-y-6 py-1">
+                  <div className="m-6 h-[70vh] rounded-md bg-slate-200"></div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
         </a>
       </blockquote>
     </Observer>
