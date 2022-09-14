@@ -25,7 +25,7 @@ const Summary = () => {
         </div>
         <div className="w-full space-y-12 text-3xl md:w-3/4 md:text-5xl">
           <h1 className="leading-snug">
-            <span className="font-medium text-blue-700">
+            <span className="font-medium">
               Hello!{" "}
               <span className="inline-block origin-[70%_70%] animate-wave">
                 👋
@@ -43,7 +43,7 @@ const Summary = () => {
           <h1 className="leading-snug">
             Looking for my{" "}
             <a
-              className="text-blue-700 underline hover:text-black"
+              className="text-blue-600 underline hover:text-black"
               target="_blank"
               href="https://drive.google.com/file/d/1HX4ZndDiLkeXlhvyCWGhR7n5zGysZe2P/view?usp=sharing"
               rel="noreferrer"
