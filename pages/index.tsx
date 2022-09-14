@@ -6,8 +6,6 @@
 import { GetStaticProps } from "next";
 import getWorks from "../lib/getWorks";
 import getBlogs from "../lib/getBlogs";
-import { Hero } from "../components/Layout/Template/Home";
-import { Summary } from "../components/Common";
 import { HeaderMeta } from "../components/Layout/System/Header";
 
 const Home = () => {
@@ -17,8 +15,6 @@ const Home = () => {
         title="Home - Johnny Chai"
         description="Front End Web Developer based in Malaysia who is who is passionate about coding and solving problems through code and design."
       />
-      <Hero title="I'm Johnny, a front end developer based in Malaysia." />
-      <Summary />
     </>
   );
 };
