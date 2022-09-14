@@ -4,7 +4,7 @@
  */
 
 import { Hero } from "../components/Layout/Template/Page";
-import { HeaderMeta } from "../components/Layout/System/Header";
+import { HeaderMeta } from "../components/Layout/Header";
 
 const About = () => {
   return (

@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/future/image";
 import { WorkType } from "../../../../lib/types";
-import { HeaderMeta } from "../../System/Header";
+import { HeaderMeta } from "../../Header";
 
 interface Props {
   data: WorkType[];

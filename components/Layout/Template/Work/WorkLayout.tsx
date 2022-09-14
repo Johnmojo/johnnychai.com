@@ -10,7 +10,7 @@ import { ReactNode } from "react";
 import { Hero } from "../../Template/Work";
 import { WorkType } from "../../../../lib/types";
 import Instagram from "../../../Widget/Instagram/Instagram";
-import { HeaderMeta } from "../../System/Header";
+import { HeaderMeta } from "../../Header";
 
 interface Props {
   data: WorkType;

@@ -6,7 +6,7 @@
 import Link from "next/link";
 import Dayjs from "dayjs";
 import { BlogType } from "../../../../lib/types";
-import { HeaderMeta } from "../../System/Header";
+import { HeaderMeta } from "../../Header";
 import { ArrowBig } from "../../../SVG";
 
 interface Props {

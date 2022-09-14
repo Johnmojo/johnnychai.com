@@ -9,7 +9,7 @@ import { BlogType } from "../../../../lib/types";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
 import dayjs from "dayjs";
-import { HeaderMeta } from "../../System/Header";
+import { HeaderMeta } from "../../Header";
 
 interface Props {
   data: BlogType;
