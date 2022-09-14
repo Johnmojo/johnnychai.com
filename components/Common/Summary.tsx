@@ -3,10 +3,21 @@
  */
 
 import { Location } from "../SVG";
+import { useInView } from "react-intersection-observer";
 
 const Summary = () => {
+  // Intersection observer
+  const { ref: contentRef, inView: contentVisible } = useInView({
+    triggerOnce: true
+  });
+
   return (
-    <section className=" mx-auto max-w-screen-xl px-8">
+    <section
+      ref={contentRef}
+      className={`mx-auto max-w-screen-xl px-8 ${
+        contentVisible && "animate-[content_1s_ease-in-out]"
+      }`}
+    >
       <div className="mx-auto max-w-screen-xl space-y-12 border-t border-b py-20 md:py-40 ">
         <div className="flex items-center space-x-4 text-lg font-medium">
           <Location />

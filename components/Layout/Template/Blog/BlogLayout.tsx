@@ -41,7 +41,7 @@ const BlogLayout = ({ data, content }: Props) => {
           className="w-full pt-8 pb-4"
           quality={100}
           priority
-          alt={alt}
+          alt={alt as string}
         />
         <figcaption className="pt-4 text-center text-sm">{alt}</figcaption>
       </div>
