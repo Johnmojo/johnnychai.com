@@ -4,8 +4,8 @@
  */
 
 import { Hero } from "../components/Layout/Template/Page";
-import { CustomButton } from "../components/Common/Button";
-import { HeaderMeta } from "../components/Layout/System/Header";
+import { CustomButton } from "../components/Button";
+import { HeaderMeta } from "../components/Layout/Header";
 
 const Error = () => {
   return (

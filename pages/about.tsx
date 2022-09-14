@@ -4,9 +4,30 @@
  */
 
 import { Hero } from "../components/Layout/Template/Page";
-import { HeaderMeta } from "../components/Layout/System/Header";
+import { HeaderMeta } from "../components/Layout/Header";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  // Intersection observer
+  const { ref: introRef, inView: introVisible } = useInView({
+    triggerOnce: true
+  });
+  const { ref: summaryRef, inView: summaryVisible } = useInView({
+    triggerOnce: true
+  });
+  const { ref: experienceRef, inView: experienceVisible } = useInView({
+    triggerOnce: true
+  });
+  const { ref: educationRef, inView: educationVisible } = useInView({
+    triggerOnce: true
+  });
+  const { ref: skillsRef, inView: skillsVisible } = useInView({
+    triggerOnce: true
+  });
+  const { ref: certificateRef, inView: certificateVisible } = useInView({
+    triggerOnce: true
+  });
+
   return (
     <>
       <HeaderMeta
@@ -16,7 +37,12 @@ const About = () => {
       <Hero title="About" intro="Some story about myself." />
       <section className="mx-auto max-w-screen-xl px-8">
         <div className="mb-20 divide-y divide-solid md:mb-40">
-          <div className="flex gap-10 pb-20 md:pb-24">
+          <div
+            ref={introRef}
+            className={`flex gap-10 pb-20 md:pb-24 ${
+              introVisible && "animate-[content_1s_ease-in-out]"
+            }`}
+          >
             <div className="w-full space-y-4 md:w-3/4">
               <h3 className="text-3xl leading-relaxed md:text-5xl md:leading-snug">
                 Hi, I&apos;m Johnny. I studied at Swinburne University Sarawak,
@@ -25,7 +51,12 @@ const About = () => {
               </h3>
             </div>
           </div>
-          <div className="gap-10 space-y-4 py-10 text-lg md:py-24">
+          <div
+            ref={summaryRef}
+            className={`gap-10 space-y-4 py-10 text-lg md:py-24 ${
+              summaryVisible && "animate-[content_1s_ease-in-out]"
+            }`}
+          >
             <h1 className="w-full py-12 text-xl font-semibold underline md:w-1/3 md:no-underline">
               Summary
             </h1>
@@ -46,13 +77,28 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col py-10 md:flex-row md:py-24">
+          <div
+            ref={experienceRef}
+            className={`flex flex-col py-10 md:flex-row md:py-24 ${
+              experienceVisible && "animate-[content_1s_ease-in-out]"
+            }`}
+          >
             <div className="w-full py-12 md:w-1/3">
               <h1 className="text-xl font-semibold underline md:no-underline">
                 Experience
               </h1>
             </div>
             <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
+              <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
+                <div className="w-full space-y-1 md:w-2/5">
+                  <p className="font-semibold">UXAgents</p>
+                  <p>UX Intern</p>
+                  <p className="text-base text-gray-600">Sep 2022 - Present</p>
+                </div>
+                <div className="w-full md:w-3/5">
+                  <p>Conduct user research, design and development.</p>
+                </div>
+              </div>
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full space-y-1 md:w-2/5">
                   <p className="font-semibold">Freelance</p>
@@ -83,26 +129,44 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col py-10 md:flex-row md:py-24">
+          <div
+            ref={educationRef}
+            className={`flex flex-col py-10 md:flex-row md:py-24 ${
+              educationVisible && "animate-[content_1s_ease-in-out]"
+            }`}
+          >
             <div className="w-full py-12 md:w-1/3">
               <h1 className="text-xl font-semibold underline md:no-underline">
                 Education
               </h1>
             </div>
-            <div className="w-full space-y-4 py-12 text-lg md:w-2/3">
-              <div className="space-y-1">
+            {/* <div className="w-full space-y-4 py-12 text-lg md:w-2/3"> */}
+            <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
+              <div className="space-y-1 py-12">
+                <p className="font-semibold">General Assembly Malaysia</p>
+                <p>
+                  UX Design - Fully funded upskilling programme by Khazanah
+                  Nasional (MySTEP)
+                </p>
+                <p className="text-base text-gray-600">
+                  August 2022 - September 2022
+                </p>
+              </div>
+              <div className="space-y-1 py-12">
                 <p className="font-semibold">
                   Swinburne University of Technology Sarawak
                 </p>
-                <p>
-                  Bachelor of Design (Multimedia Design), Minor in 3D Modelling
-                  and Animation
-                </p>
+                <p>Bachelor of Design (Multimedia Design)</p>
                 <p className="text-base text-gray-600">Mar 2017 - Dec 2019</p>
               </div>
             </div>
           </div>
-          <div className="mb:py-24 flex flex-col py-10 md:flex-row">
+          <div
+            ref={skillsRef}
+            className={`mb:py-24 flex flex-col py-10 md:flex-row ${
+              skillsVisible && "animate-[content_1s_ease-in-out]"
+            }`}
+          >
             <div className="w-full py-12 md:w-1/3">
               <h1 className="text-xl font-semibold underline md:no-underline">
                 Skills
@@ -122,7 +186,7 @@ const About = () => {
                   <p className="font-semibold">Framework / Library / CMS</p>
                 </div>
                 <div className="w-full md:w-3/5">
-                  <p>React.js, Node.js, Next.js, Bootstrap, WordPress</p>
+                  <p>React.js, Express.js, Next.js, Bootstrap, WordPress</p>
                 </div>
               </div>
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
@@ -138,7 +202,12 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col py-10 md:flex-row md:py-24">
+          <div
+            ref={certificateRef}
+            className={`flex flex-col py-10 md:flex-row md:py-24 ${
+              certificateVisible && "animate-[content_1s_ease-in-out]"
+            }`}
+          >
             <div className="w-full py-12 md:w-1/3">
               <h1 className="text-xl font-semibold underline md:no-underline">
                 Certificate

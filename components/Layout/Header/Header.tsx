@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Logo, Arrow } from "../../../Common/SVG";
+import { Logo, Arrow } from "../../SVG";
 
 interface Props {
   scroll: boolean;

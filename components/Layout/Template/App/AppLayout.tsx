@@ -3,8 +3,8 @@
  * @date 6th September 2022
  */
 
-import { Header } from "../../System/Header";
-import { Footer } from "../../System/Footer";
+import { Header } from "../../Header";
+import { Footer } from "../../Footer";
 import { useState, useEffect, ReactNode } from "react";
 
 type Props = {
@@ -23,7 +23,6 @@ declare global {
 
 const AppLayout = ({ children }: Props) => {
   const [scroll, setScroll] = useState(false);
-  const [edge] = useState(true);
 
   let curScroll: number;
   let prevScroll =
@@ -85,12 +84,11 @@ const AppLayout = ({ children }: Props) => {
   }, []);
 
   return (
-    // Unused dark mode
-    <div className={`${edge && "dark"}`}>
+    <>
       <Header scroll={scroll} />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 

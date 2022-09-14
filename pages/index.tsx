@@ -8,10 +8,10 @@ import { WorksData, BlogsData } from "../lib/types";
 import getWorks from "../lib/getWorks";
 import getBlogs from "../lib/getBlogs";
 import { Hero } from "../components/Layout/Template/Home";
-import { Summary } from "../components/Common/Content";
+import { Summary } from "../components/Common";
 import { WorkPreview } from "../components/Layout/Template/Work";
 import { BlogPreview } from "../components/Layout/Template/Blog";
-import { HeaderMeta } from "../components/Layout/System/Header";
+import { HeaderMeta } from "../components/Layout/Header";
 
 type Props = {
   worksData: WorksData[];

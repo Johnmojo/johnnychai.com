@@ -9,7 +9,8 @@ import { BlogType } from "../../../../lib/types";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
 import dayjs from "dayjs";
-import { HeaderMeta } from "../../System/Header";
+import { HeaderMeta } from "../../Header";
+import { useInView } from "react-intersection-observer";
 
 interface Props {
   data: BlogType;
@@ -17,6 +18,11 @@ interface Props {
 }
 
 const BlogLayout = ({ data, content }: Props) => {
+  // Intersection observer
+  const { ref: contentRef, inView: contentVisible } = useInView({
+    triggerOnce: true
+  });
+
   const MDXComponents = {
     h1: ({ children }: { children?: ReactNode }) => (
       <h1 className="mt-12 mb-4 text-xl font-medium leading-loose text-black md:text-2xl md:leading-loose">
@@ -53,7 +59,12 @@ const BlogLayout = ({ data, content }: Props) => {
         <div className="mx-auto mb-32 mt-12 max-w-screen-xl px-8">
           <Image src={data.hero} alt={data.title} width={1280} height={1280} />
         </div>
-        <div className="mx-auto flex max-w-screen-xl flex-col justify-center space-y-4 px-8">
+        <div
+          ref={contentRef}
+          className={`mx-auto flex max-w-screen-xl flex-col justify-center space-y-4 px-8 ${
+            contentVisible && "animate-[content_1s_ease-in-out]"
+          }`}
+        >
           <h3 className="text-2xl font-semibold leading-snug md:text-3xl md:leading-snug">
             {data.description}
           </h3>
@@ -64,12 +75,20 @@ const BlogLayout = ({ data, content }: Props) => {
             <p className="text-lg font-medium">• {data.readingTime.text}</p>
           </div>
         </div>
-        <div className="mx-auto max-w-screen-xl">
+        <div
+          className={`mx-auto max-w-screen-xl transition-opacity duration-1000 ease-in-out ${
+            contentVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
           <div className="relative my-10 flex items-center px-8">
             <div className="flex-grow border-t"></div>
           </div>
         </div>
-        <div className="mx-auto max-w-screen-xl">
+        <div
+          className={`mx-auto max-w-screen-xl ${
+            contentVisible && "animate-[content_1.5s_ease-in-out]"
+          }`}
+        >
           <div className="mb-32 mt-12 px-8">
             <MDXRemote {...content} components={MDXComponents} />
           </div>

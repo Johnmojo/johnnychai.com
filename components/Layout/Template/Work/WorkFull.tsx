@@ -7,7 +7,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/future/image";
 import { WorkType } from "../../../../lib/types";
-import { HeaderMeta } from "../../System/Header";
+import { HeaderMeta } from "../../Header";
+import { useInView } from "react-intersection-observer";
 
 interface Props {
   data: WorkType[];
@@ -16,6 +17,11 @@ interface Props {
 const WorkFull = ({ data }: Props) => {
   const [category, setCategory] = useState("all");
   const [loading, setLoading] = useState(false);
+
+  // Intersection observer
+  const { ref: listRef, inView: listVisible } = useInView({
+    triggerOnce: true
+  });
 
   // Onclick handler for the category buttons
   const setClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -40,7 +46,12 @@ const WorkFull = ({ data }: Props) => {
       />
       <section className="mb-20 md:mb-40">
         <div className="mx-auto max-w-screen-xl px-8">
-          <div className="mb-20 border-b">
+          <div
+            ref={listRef}
+            className={`mb-20 border-b ${
+              listVisible && "animate-[content_1s_ease-in-out]"
+            }`}
+          >
             <ul className="flex flex-col space-y-4 pb-8 text-lg font-medium leading-relaxed text-gray-400 underline-offset-8 md:flex-row md:space-y-0 md:space-x-8">
               <li>
                 <button

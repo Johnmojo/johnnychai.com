@@ -15,7 +15,11 @@ const Summary = () => {
         <div className="w-full space-y-12 text-3xl md:w-3/4 md:text-5xl">
           <h1 className="leading-snug">
             <span className="font-medium">
-              Hello! 👋 I&apos;m a self-taught Front-End developer
+              Hello!{" "}
+              <span className="inline-block origin-[70%_70%] animate-wave">
+                👋
+              </span>{" "}
+              I&apos;m a self-taught Front-End developer
             </span>{" "}
             with a passion for web technologies and solving problems through
             code and design.
