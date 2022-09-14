@@ -9,7 +9,7 @@ My JAMStack portfolio to display my projects, built using Next.js with Typescrip
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 
 # Overview
-- ```components/Common``` - Layouts and reusable components.
+- ```components``` - Layouts and reusable components.
 - ```data/*``` - MDX files for my Work & Blog collection.
 - ```lib/``` - Directory for storing Typescript's Interfaces.
 - ```pages/*``` - General static pages and some URL slug.
