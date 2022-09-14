@@ -11,6 +11,7 @@ import { Hero } from "../../Template/Work";
 import { WorkType } from "../../../../lib/types";
 import Instagram from "../../../Widget/Instagram/Instagram";
 import { HeaderMeta } from "../../Header";
+import { useInView } from "react-intersection-observer";
 
 interface Props {
   data: WorkType;
@@ -18,6 +19,10 @@ interface Props {
 }
 
 const WorkLayout = ({ data, content }: Props) => {
+  const { ref: contentRef, inView: contentVisible } = useInView({
+    triggerOnce: true
+  });
+
   const MDXComponents = {
     h1: ({ children }: { children?: ReactNode }) => (
       <h1 className="mt-12 mb-4 text-xl font-medium leading-loose text-black md:text-2xl md:leading-loose">
@@ -63,9 +68,13 @@ const WorkLayout = ({ data, content }: Props) => {
             />
           </div>
         )}
-        <div className="mx-auto max-w-screen-xl">
+        <div ref={contentRef} className="mx-auto max-w-screen-xl">
           <div className="mb-32 px-8">
-            <div>
+            <div
+              className={`${
+                contentVisible && "animate-[content_1s_ease-in-out]"
+              }`}
+            >
               <div>
                 <h3 className="mb-6 text-2xl leading-snug text-black md:text-3xl md:leading-snug">
                   {data.summary}
@@ -113,7 +122,11 @@ const WorkLayout = ({ data, content }: Props) => {
                 <div className="flex-grow border-t"></div>
               </div>
             </div>
-            <div>
+            <div
+              className={`${
+                contentVisible && "animate-[content_1.5s_ease-in-out]"
+              }`}
+            >
               <MDXRemote {...content} components={MDXComponents} />
             </div>
           </div>

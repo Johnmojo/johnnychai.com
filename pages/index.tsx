@@ -9,11 +9,9 @@ import getWorks from "../lib/getWorks";
 import getBlogs from "../lib/getBlogs";
 import { Hero } from "../components/Layout/Template/Home";
 import { Summary } from "../components/Common";
-// import { WorkPreview } from "../components/Layout/Template/Work";
+import { WorkPreview } from "../components/Layout/Template/Work";
 import { BlogPreview } from "../components/Layout/Template/Blog";
 import { HeaderMeta } from "../components/Layout/Header";
-import { useInView } from "react-intersection-observer";
-import dynamic from "next/dynamic";
 
 type Props = {
   worksData: WorksData[];
@@ -21,17 +19,6 @@ type Props = {
 };
 
 const Home = ({ worksData, blogsData }: Props) => {
-  const { ref: workRef, inView: workVisible } = useInView({
-    triggerOnce: true
-  });
-  const { ref: blogRef, inView: blogVisible } = useInView({
-    triggerOnce: true
-  });
-
-  const WorkPreview = dynamic(
-    () => import("../components/Layout/Template/Work/WorkPreview")
-  );
-
   return (
     <>
       <HeaderMeta
@@ -40,19 +27,12 @@ const Home = ({ worksData, blogsData }: Props) => {
       />
       <Hero title="I'm Johnny, a front end developer based in Malaysia." />
       <Summary />
-      <div
-        ref={workRef}
-        className={` ${workVisible ? "opacity-100" : "opacity-0"}`}
-      >
-        {workVisible && (
-          <WorkPreview
-            data={worksData}
-            title="Some of the recent projects that I've worked on include designs, websites, and many more."
-            limit={4}
-          />
-        )}
-      </div>
-      <div ref={blogRef}>{blogVisible && <BlogPreview data={blogsData} />}</div>
+      <WorkPreview
+        data={worksData}
+        title="Some of the recent projects that I've worked on include designs, websites, and many more."
+        limit={4}
+      />
+      <BlogPreview data={blogsData} />
     </>
   );
 };

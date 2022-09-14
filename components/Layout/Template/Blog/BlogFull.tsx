@@ -8,20 +8,30 @@ import Dayjs from "dayjs";
 import { BlogType } from "../../../../lib/types";
 import { HeaderMeta } from "../../Header";
 import { ArrowBig } from "../../../SVG";
+import { useInView } from "react-intersection-observer";
 
 interface Props {
   data: BlogType[];
 }
 
 const BlogFull = ({ data }: Props) => {
+  // Intersection observer
+  const { ref: listRef, inView: listVisible } = useInView({
+    triggerOnce: true
+  });
+
   return (
     <>
       <HeaderMeta
         title="Blog - Johnny Chai"
         description="Here's where I write to reflect and learn."
       />
-      <section className="mb-20 md:mb-40">
-        <div className="mx-auto max-w-screen-xl divide-y divide-solid px-8">
+      <section ref={listRef} className="mb-20 md:mb-40">
+        <div
+          className={`mx-auto max-w-screen-xl divide-y divide-solid px-8 ${
+            listVisible && "animate-[content_1s_ease-in-out]"
+          }`}
+        >
           {data.map((blog, index) => (
             <div key={index} className="py-8">
               <Link href={"blog/" + blog.slug} key={index}>

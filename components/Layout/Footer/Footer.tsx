@@ -4,10 +4,21 @@
  */
 
 import { Arrow, ArrowMid } from "../../SVG";
+import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
+  // Intersection observer
+  const { ref: listRef, inView: listVisible } = useInView({
+    triggerOnce: true
+  });
+
   return (
-    <footer className="border-t pt-8 pb-10 md:pt-28 md:pb-20">
+    <footer
+      ref={listRef}
+      className={`border-t pt-8 pb-10 md:pt-28 md:pb-20 ${
+        listVisible && "animate-[content_1s_ease-in-out]"
+      }`}
+    >
       <div className="mx-auto max-w-screen-xl px-8">
         <section className="mt-12 mb-6">
           <h1 className="pb-12 text-3xl font-medium leading-snug md:text-5xl md:leading-snug">
