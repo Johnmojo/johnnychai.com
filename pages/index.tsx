@@ -21,7 +21,10 @@ type Props = {
 };
 
 const Home = ({ worksData, blogsData }: Props) => {
-  const { ref: mainRef, inView: mainVisible } = useInView({
+  const { ref: workRef, inView: workVisible } = useInView({
+    triggerOnce: true
+  });
+  const { ref: blogRef, inView: blogVisible } = useInView({
     triggerOnce: true
   });
 
@@ -38,10 +41,10 @@ const Home = ({ worksData, blogsData }: Props) => {
       <Hero title="I'm Johnny, a front end developer based in Malaysia." />
       <Summary />
       <div
-        ref={mainRef}
-        className={` ${mainVisible ? "opacity-100" : "opacity-0"}`}
+        ref={workRef}
+        className={` ${workVisible ? "opacity-100" : "opacity-0"}`}
       >
-        {mainVisible && (
+        {workVisible && (
           <WorkPreview
             data={worksData}
             title="Some of the recent projects that I've worked on include designs, websites, and many more."
@@ -49,7 +52,7 @@ const Home = ({ worksData, blogsData }: Props) => {
           />
         )}
       </div>
-      <BlogPreview data={blogsData} />
+      <div ref={blogRef}>{blogVisible && <BlogPreview data={blogsData} />}</div>
     </>
   );
 };
