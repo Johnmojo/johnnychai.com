@@ -91,6 +91,13 @@ const About = () => {
             <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full space-y-1 md:w-2/5">
+                  <p className="font-semibold">UXAgents</p>
+                  <p>UX Intern</p>
+                  <p className="text-base text-gray-600">Sep 2022 - Present</p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
+                <div className="w-full space-y-1 md:w-2/5">
                   <p className="font-semibold">Freelance</p>
                   <p>Freelance Developer</p>
                   <p className="text-base text-gray-600">Sep 2021 - May 2022</p>
