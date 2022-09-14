@@ -4,21 +4,13 @@
  */
 
 import { GetStaticProps } from "next";
-import { WorksData, BlogsData } from "../lib/types";
 import getWorks from "../lib/getWorks";
 import getBlogs from "../lib/getBlogs";
 import { Hero } from "../components/Layout/Template/Home";
 import { Summary } from "../components/Common";
-import { WorkPreview } from "../components/Layout/Template/Work";
-import { BlogPreview } from "../components/Layout/Template/Blog";
 import { HeaderMeta } from "../components/Layout/System/Header";
 
-type Props = {
-  worksData: WorksData[];
-  blogsData: BlogsData[];
-};
-
-const Home = ({ worksData, blogsData }: Props) => {
+const Home = () => {
   return (
     <>
       <HeaderMeta
@@ -27,12 +19,6 @@ const Home = ({ worksData, blogsData }: Props) => {
       />
       <Hero title="I'm Johnny, a front end developer based in Malaysia." />
       <Summary />
-      <WorkPreview
-        data={worksData}
-        title="Some of the recent projects that I've worked on include designs, websites, and many more."
-        limit={4}
-      />
-      <BlogPreview data={blogsData} />
     </>
   );
 };
