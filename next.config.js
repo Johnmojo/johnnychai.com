@@ -6,13 +6,5 @@ module.exports = {
   i18n: {
     locales: ["en"],
     defaultLocale: "en"
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/sitemap.xml",
-        destination: "/api/Sitemap"
-      }
-    ];
   }
 };
