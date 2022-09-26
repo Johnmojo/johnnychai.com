@@ -1,3 +1,10 @@
+/**
+ * Types
+ * @date 26th August 2022
+ */
+
+// TODO Tidy up
+
 export interface Blog {
   postType: string;
   slug: number;

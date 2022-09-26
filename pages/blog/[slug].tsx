@@ -23,7 +23,7 @@ const Blog = ({ data, content }: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Get the slug from the URL
+  // Read the slug from the URL
   const blogs = getBlogs();
   const paths = blogs.map((blog) => ({ params: { slug: blog.slug } }));
   return {
@@ -33,11 +33,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  //Get the slug
   const slug = context.params?.slug as string;
 
+  // Retrieve the content & frontmatter
   const blog = getBlog(slug);
+
   // Update front matter to have reading time
   const data = { ...blog.data, readingTime: ReadingTime(blog.content) };
+
+  // Feed into MDX remote
   const mdxSource = await serialize(blog.content, {
     mdxOptions: {
       remarkPlugins: [Prism, RemarkUnwrapImages]
