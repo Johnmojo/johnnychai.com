@@ -1,3 +1,8 @@
+/**
+ * Fetch single blog content & frontmatter
+ * @date 26th August 2022
+ */
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://johnnychai.com
+
+# Sitemaps
+Sitemap: https://johnnychai.com/sitemap.xml

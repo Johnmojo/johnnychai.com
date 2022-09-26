@@ -22,7 +22,7 @@ const Work = ({ data, content }: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Get the slug from the URL
+  // Read the slug from the URL
   const works = getWorks();
   const paths = works.map((work) => ({ params: { slug: work.slug } }));
   return {
@@ -32,9 +32,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  //Get the slug
   const slug = context.params?.slug as string;
 
+  // Retrieve the content & frontmatter
   const work = getWork(slug);
+
+  // Feed into MDX remote
   const mdxSource = await serialize(work.content, {
     mdxOptions: {
       remarkPlugins: [Prism, RemarkUnwrapImages]

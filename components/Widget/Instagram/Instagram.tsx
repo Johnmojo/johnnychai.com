@@ -41,6 +41,8 @@ const Instagram = ({ postID }: Props) => {
       >
         <a href={`https://instagram.com/p/${postID}`}>
           {typeof window !== "undefined" && !window.instgrm ? (
+            ""
+          ) : (
             <div className="instagram-media instagram-mdx-embed mx-auto animate-pulse">
               <div className="flex animate-pulse">
                 <div className="flex-1 space-y-6 py-1">
@@ -48,8 +50,6 @@ const Instagram = ({ postID }: Props) => {
                 </div>
               </div>
             </div>
-          ) : (
-            ""
           )}
         </a>
       </blockquote>

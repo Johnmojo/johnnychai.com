@@ -92,7 +92,7 @@ const About = () => {
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full space-y-1 md:w-2/5">
                   <p className="font-semibold">UXAgents</p>
-                  <p>UX Intern</p>
+                  <p>UX Developer Intern</p>
                   <p className="text-base text-gray-600">Sep 2022 - Present</p>
                 </div>
                 <div className="w-full md:w-3/5">
