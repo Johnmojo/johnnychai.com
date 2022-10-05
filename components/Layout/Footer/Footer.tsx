@@ -20,16 +20,16 @@ const Footer = () => {
       }`}
     >
       <div className="mx-auto max-w-screen-xl px-8">
-        <section className="mt-12 mb-6">
-          <h1 className="pb-12 text-3xl font-medium leading-snug md:text-5xl md:leading-snug">
+        <section className="mt-12 mb-6 font-medium">
+          <h1 className=" text-3xl leading-snug md:text-5xl md:leading-snug">
             Say hi at
           </h1>
-          <h1 className="inline-block text-xl leading-snug md:text-3xl md:leading-snug">
+          <h1 className="inline-block text-xl leading-snug md:text-5xl md:leading-snug">
             <a
               target="_blank"
               rel="noreferrer"
               href="mailto:hello@johnnychai.com"
-              className="group break-words font-medium"
+              className="group break-words"
             >
               <div className="flex items-center">
                 <div className="group-hover:underline">
@@ -40,11 +40,12 @@ const Footer = () => {
                 </div>
               </div>
             </a>
+            <div>or stay in touch.</div>
           </h1>
         </section>
         <section className="mb-20 mt-6 flex text-lg text-black md:mb-36">
           <ul className="flex flex-col md:flex-row">
-            <li className="my-4 mr-6">
+            <li className="my-2 mr-6">
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -61,7 +62,7 @@ const Footer = () => {
                 </div>
               </a>
             </li>
-            <li className="my-4 mr-6">
+            <li className="my-2 mr-6">
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -78,7 +79,7 @@ const Footer = () => {
                 </div>
               </a>
             </li>
-            <li className="my-4 mr-6">
+            <li className="my-2 mr-6">
               <a
                 target="_blank"
                 rel="noreferrer"

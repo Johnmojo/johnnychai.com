@@ -34,7 +34,7 @@ const Header = ({ scroll }: Props) => {
   return (
     <header>
       <div
-        className={`fixed z-50 hidden w-full border-b bg-white pt-5 pb-5 transition-all duration-300 ease-out md:block ${
+        className={`fixed z-50 hidden w-full pt-5 pb-5 transition-all duration-300 ease-out md:block ${
           scroll && "-translate-y-full transition-all"
         }`}
       >
@@ -48,17 +48,17 @@ const Header = ({ scroll }: Props) => {
           </div>
           <nav>
             <ul className="text-base">
-              <li className="ml-16 inline-block font-medium decoration-2 underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/work">
                   <a>Work</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block font-medium decoration-2 underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block font-medium decoration-2 underline-offset-8 hover:underline">
+              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/about">
                   <a>About</a>
                 </Link>
@@ -68,7 +68,7 @@ const Header = ({ scroll }: Props) => {
         </div>
       </div>
       <div
-        className={`fixed z-50 block w-full border-b bg-white px-8 pt-5 pb-5 transition-all duration-300 ease-out md:hidden ${
+        className={`fixed z-50 block w-full px-8 pt-5 pb-5 transition-all duration-300 ease-out md:hidden ${
           scroll && "-translate-y-full transition-all"
         }`}
       >

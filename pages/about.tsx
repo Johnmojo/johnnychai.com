@@ -47,7 +47,7 @@ const About = () => {
               <h3 className="text-3xl leading-relaxed md:text-5xl md:leading-snug">
                 Hi, I&apos;m Johnny. I studied at Swinburne University Sarawak,
                 graduated with a multimedia design degree, and recently worked
-                as a Multimedia Designer.
+                as a UX Developer.
               </h3>
             </div>
           </div>
@@ -96,7 +96,11 @@ const About = () => {
                   <p className="text-base text-gray-600">Sep 2022 - Present</p>
                 </div>
                 <div className="w-full md:w-3/5">
-                  <p>Conduct user research, design and development.</p>
+                  <p>
+                    Responsible for the UX design, front-end development, and
+                    implementation of the client&apos;s products and services
+                    that focus on user-friendly websites and applications.
+                  </p>
                 </div>
               </div>
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">

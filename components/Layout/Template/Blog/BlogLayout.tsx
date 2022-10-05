@@ -65,7 +65,7 @@ const BlogLayout = ({ data, content }: Props) => {
             contentVisible && "animate-[content_1s_ease-in-out]"
           }`}
         >
-          <h3 className="text-2xl font-semibold leading-snug md:text-3xl md:leading-snug">
+          <h3 className="text-2xl font-medium leading-snug md:text-3xl md:leading-snug">
             {data.description}
           </h3>
           <div className="flex flex-col space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4">
