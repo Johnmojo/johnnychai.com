@@ -2,6 +2,8 @@
  * Summary component for homepage
  */
 
+// TODO Compoentize this component
+
 import { Location } from "../SVG";
 import { useInView } from "react-intersection-observer";
 
@@ -36,9 +38,18 @@ const Summary = () => {
             code and design.
           </h1>
           <h1 className="leading-snug">
-            Currently, I&apos;m on a break from freelancing. Before that, I
-            worked as a Multimedia designer in a marketing agency doing digital
-            advertisements and designs.
+            Currently interning as a{" "}
+            <span className="underline">UX Developer</span> @{" "}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://uxagents.com"
+              className="underline"
+            >
+              UXAgents
+            </a>
+            . Before that, I worked as a Multimedia designer in a marketing
+            agency doing digital advertisements and designs.
           </h1>
           <h1 className="leading-snug">
             Looking for my{" "}

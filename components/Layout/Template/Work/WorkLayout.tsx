@@ -76,7 +76,7 @@ const WorkLayout = ({ data, content }: Props) => {
               }`}
             >
               <div>
-                <h3 className="mb-6 text-2xl leading-snug text-black md:text-3xl md:leading-snug">
+                <h3 className="mb-6 text-2xl font-medium leading-snug text-black md:text-3xl md:leading-snug">
                   {data.summary}
                 </h3>
                 <div className="flex w-full flex-col justify-between gap-8 pt-8 md:w-3/4 md:flex-row">
