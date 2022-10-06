@@ -93,7 +93,9 @@ const AppLayout = ({ children }: Props) => {
     async function fetchColor() {
       // TODO: clean up & CORS
       const res = await fetch("https://johnnychai.com/api/color");
+      // const res = await fetch("http://localhost:3000/api/color");
       const result = await res.json();
+      document.body.style.background = result.color;
       setColor(result.color);
     }
     fetchColor();
@@ -102,7 +104,7 @@ const AppLayout = ({ children }: Props) => {
   return (
     <>
       <Header scroll={scroll} />
-      <main style={{ backgroundColor: `${color}` }}>{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );
