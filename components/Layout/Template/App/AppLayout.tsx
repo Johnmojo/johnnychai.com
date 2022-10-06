@@ -5,7 +5,8 @@
 
 import { Header } from "../../Header";
 import { Footer } from "../../Footer";
-import { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect, ReactNode, useContext } from "react";
+import { ColorContext } from "../../../../pages/_app";
 
 type Props = {
   children: ReactNode;
@@ -22,8 +23,12 @@ declare global {
 }
 
 const AppLayout = ({ children }: Props) => {
+  const colorBG = useContext(ColorContext);
+
+  // Check scroll & color
   const [scroll, setScroll] = useState(false);
 
+  // Set scroll variables
   let curScroll: number;
   let prevScroll =
     (typeof window !== "undefined" && window.scrollY) ||
@@ -37,6 +42,7 @@ const AppLayout = ({ children }: Props) => {
   const downThreshold = 400;
   const upThreshold = 400;
 
+  // Check scroll direction
   const handleScroll = () => {
     curScroll = window.scrollY || document.documentElement.scrollTop;
     if (curScroll > prevScroll) {
@@ -60,6 +66,7 @@ const AppLayout = ({ children }: Props) => {
     }
   };
 
+  // Toggle header
   const toggleHeader = () => {
     toggled = true;
     if (curDirection === 2 && curScroll - lastY > downThreshold) {
@@ -75,7 +82,7 @@ const AppLayout = ({ children }: Props) => {
     return toggled;
   };
 
-  // Run func when scroll event is fired
+  // Run function when scroll event is fired
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -86,7 +93,7 @@ const AppLayout = ({ children }: Props) => {
   return (
     <>
       <Header scroll={scroll} />
-      <main>{children}</main>
+      <main style={{ backgroundColor: `${colorBG}` }}>{children}</main>
       <Footer />
     </>
   );
