@@ -5,8 +5,7 @@
 
 import { Header } from "../../Header";
 import { Footer } from "../../Footer";
-import { useState, useEffect, ReactNode, useContext } from "react";
-import { ColorContext } from "../../../../pages/_app";
+import { useState, useEffect, ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
@@ -23,10 +22,9 @@ declare global {
 }
 
 const AppLayout = ({ children }: Props) => {
-  const colorBG = useContext(ColorContext);
-
   // Check scroll & color
   const [scroll, setScroll] = useState(false);
+  const [color, setColor] = useState(false);
 
   // Set scroll variables
   let curScroll: number;
@@ -90,10 +88,20 @@ const AppLayout = ({ children }: Props) => {
     };
   }, []);
 
+  // Fetch API color
+  useEffect(() => {
+    async function fetchColor() {
+      const res = await fetch("http://localhost:3000/api/color");
+      const result = await res.json();
+      setColor(result.color);
+    }
+    fetchColor();
+  }, []);
+
   return (
     <>
       <Header scroll={scroll} />
-      <main style={{ backgroundColor: `${colorBG}` }}>{children}</main>
+      <main style={{ backgroundColor: `${color}` }}>{children}</main>
       <Footer />
     </>
   );
