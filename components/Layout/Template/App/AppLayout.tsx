@@ -24,7 +24,6 @@ declare global {
 const AppLayout = ({ children }: Props) => {
   // Check scroll & color
   const [scroll, setScroll] = useState(false);
-  const [color, setColor] = useState(false);
 
   // Set scroll variables
   let curScroll: number;
@@ -91,12 +90,13 @@ const AppLayout = ({ children }: Props) => {
   // Fetch API color
   useEffect(() => {
     async function fetchColor() {
-      // TODO: clean up & CORS
+      // TODO: clean up code, use .env
       const res = await fetch("https://johnnychai.com/api/color");
       // const res = await fetch("http://localhost:3000/api/color");
       const result = await res.json();
+
+      // Inject CSS directly into body
       document.body.style.background = result.color;
-      setColor(result.color);
     }
     fetchColor();
   }, []);
