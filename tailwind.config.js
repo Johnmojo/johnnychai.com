@@ -13,6 +13,7 @@ module.exports = {
       },
       animation: {
         fade: "fade 3s infinite",
+        fadeOnce: "fadeOnce 3s",
         fastfade: "opacity 1s",
         elastic: "elastic 0.5s",
         slowElastic: "slowElastic 0.3s",
@@ -77,6 +78,10 @@ module.exports = {
           }
         },
         fade: {
+          "0%": { opacity: ".1" },
+          "100%": { opacity: "1" }
+        },
+        fadeOnce: {
           "0%": { opacity: ".1" },
           "100%": { opacity: "1" }
         },
