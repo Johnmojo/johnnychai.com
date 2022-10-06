@@ -12,7 +12,6 @@ import { Summary } from "../components/Common";
 import { WorkPreview } from "../components/Layout/Template/Work";
 import { BlogPreview } from "../components/Layout/Template/Blog";
 import { HeaderMeta } from "../components/Layout/Header";
-import { Fragment } from "react";
 
 type Props = {
   worksData: WorksData[];
