@@ -91,7 +91,8 @@ const AppLayout = ({ children }: Props) => {
   // Fetch API color
   useEffect(() => {
     async function fetchColor() {
-      const res = await fetch("http://localhost:3000/api/color");
+      // TODO: clean up & CORS
+      const res = await fetch("https://johnnychai.com/api/color");
       const result = await res.json();
       setColor(result.color);
     }
