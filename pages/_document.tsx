@@ -14,7 +14,7 @@ const Document = () => {
           rel="stylesheet"
         />
       </Head>
-      <body className="animate-fastfade">
+      <body className="animate-fastfade transition-opacity">
         <Main />
         <NextScript />
       </body>

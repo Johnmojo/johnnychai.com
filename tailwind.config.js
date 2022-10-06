@@ -14,7 +14,7 @@ module.exports = {
       animation: {
         fade: "fade 3s infinite",
         fadeOnce: "fadeOnce 3s",
-        fastfade: "opacity 1s",
+        fastfade: "opacity 3s",
         elastic: "elastic 0.5s",
         slowElastic: "slowElastic 0.3s",
         push: "push 0.5s",
