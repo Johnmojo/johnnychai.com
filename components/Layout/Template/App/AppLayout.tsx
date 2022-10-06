@@ -92,7 +92,9 @@ const AppLayout = ({ children }: Props) => {
   useEffect(() => {
     async function fetchColor() {
       // TODO: clean up & CORS
-      const res = await fetch("https://johnnychai.com/api/color");
+      const res = await fetch(
+        "https://johnnychai-git-dev-johnmojo.vercel.app/api/color"
+      );
       const result = await res.json();
       setColor(result.color);
     }
