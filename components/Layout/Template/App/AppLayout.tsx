@@ -25,6 +25,16 @@ const AppLayout = ({ children }: Props) => {
   // Check scroll & color
   const [scroll, setScroll] = useState(false);
 
+  // Here we store our beautiful & colorful array
+  const colorsArray = [
+    "#d1e4de",
+    "#d1dee4",
+    "#d2d0e5",
+    "#e6d1d4",
+    "#e5dbd2",
+    "#eeeade"
+  ];
+
   // Set scroll variables
   let curScroll: number;
   let prevScroll =
@@ -91,12 +101,13 @@ const AppLayout = ({ children }: Props) => {
   useEffect(() => {
     async function fetchColor() {
       // TODO: clean up code, use .env
-      const res = await fetch("https://johnnychai.com/api/color");
+      // const res = await fetch("https://johnnychai.com/api/color");
+      const random = Math.floor(Math.random() * colorsArray.length);
       // const res = await fetch("http://localhost:3000/api/color");
-      const result = await res.json();
+      // const result = await res.json();
 
       // Inject CSS directly into body
-      document.body.style.background = result.color;
+      document.body.style.background = colorsArray[random];
     }
     fetchColor();
   }, []);

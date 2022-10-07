@@ -14,7 +14,7 @@ const Document = () => {
           rel="stylesheet"
         />
       </Head>
-      <body className="animate-fastfade transition-opacity">
+      <body className="bg-transparent transition-all duration-1000">
         <Main />
         <NextScript />
       </body>
