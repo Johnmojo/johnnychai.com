@@ -47,7 +47,7 @@ const About = () => {
               <h3 className="text-3xl leading-relaxed md:text-5xl md:leading-snug">
                 Hi, I&apos;m Johnny. I studied at Swinburne University Sarawak,
                 graduated with a multimedia design degree, and recently worked
-                as a UX Developer.
+                as a Front End Developer intern.
               </h3>
             </div>
           </div>
@@ -72,8 +72,8 @@ const About = () => {
                 Plus, I&apos;m a fast learner who is always curious about new
                 technology and trends. I enjoy learning new things every day in
                 the fast-changing industry. Outside of work, I always have an
-                interest in topics like sci-fi, space, and futurology –
-                something that I enjoyed.
+                interest in topics like VR games, sci-fi, space, and futurology
+                – something that I enjoyed.
               </p>
             </div>
           </div>
@@ -92,14 +92,14 @@ const About = () => {
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full space-y-1 md:w-2/5">
                   <p className="font-semibold">UXAgents</p>
-                  <p>UX Developer Intern</p>
+                  <p>Front End Developer Intern</p>
                   <p className="text-base text-gray-600">Sep 2022 - Present</p>
                 </div>
                 <div className="w-full md:w-3/5">
                   <p>
-                    Responsible for the UX design, front-end development, and
-                    implementation of the client&apos;s products and services
-                    that focus on user-friendly websites and applications.
+                    Responsible for the front-end web development, and
+                    implementation of client-side logic for existing startup
+                    clients like Ouch! Insurance & Swipey.
                   </p>
                 </div>
               </div>
@@ -111,8 +111,9 @@ const About = () => {
                 </div>
                 <div className="w-full md:w-3/5">
                   <p>
-                    Worked with clients to developed custom Wordpress websites
-                    and animated short motion graphics.
+                    Developed and launched client&apos;s websites with WordPress
+                    CMS, PHP, SCSS & WooCommerce. Produced several motion
+                    graphics for an NGO.
                   </p>
                 </div>
               </div>
@@ -149,18 +150,19 @@ const About = () => {
               <div className="space-y-1 py-12">
                 <p className="font-semibold">General Assembly Malaysia</p>
                 <p>
-                  UX Design - Fully funded upskilling programme by Khazanah
-                  Nasional (MySTEP)
+                  Immersive UX Design - Fully funded upskilling programme by
+                  Khazanah Nasional (MySTEP)
                 </p>
-                <p className="text-base text-gray-600">
-                  August 2022 - September 2022
-                </p>
+                <p className="text-base text-gray-600">Aug 2022 - Sep 2022</p>
               </div>
               <div className="space-y-1 py-12">
                 <p className="font-semibold">
                   Swinburne University of Technology Sarawak
                 </p>
-                <p>Bachelor of Design (Multimedia Design)</p>
+                <p>
+                  Bachelor of Design (Multimedia Design). Minor in 3D Modeling
+                  and Animation.
+                </p>
                 <p className="text-base text-gray-600">Mar 2017 - Dec 2019</p>
               </div>
             </div>
@@ -191,6 +193,14 @@ const About = () => {
                 </div>
                 <div className="w-full md:w-3/5">
                   <p>React.js, Express.js, Next.js, Bootstrap, WordPress</p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
+                <div className="w-full md:w-2/5">
+                  <p className="font-semibold">Database</p>
+                </div>
+                <div className="w-full md:w-3/5">
+                  <p>PostgreSQL</p>
                 </div>
               </div>
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">

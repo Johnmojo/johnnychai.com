@@ -35,11 +35,12 @@ const Summary = () => {
               I&apos;m a self-taught Front-End developer
             </span>{" "}
             with a passion for web technologies and solving problems through
-            code and design.
+            code and design. I also recently graduated with a multimedia design
+            degree.
           </h1>
           <h1 className="leading-snug">
             Currently interning as a{" "}
-            <span className="underline">UX Developer</span> @{" "}
+            <span className="underline">Front-End Developer</span> @{" "}
             <a
               target="_blank"
               rel="noreferrer"
@@ -48,8 +49,8 @@ const Summary = () => {
             >
               UXAgents
             </a>
-            . Before that, I worked as a Multimedia designer in a marketing
-            agency doing digital advertisements and designs.
+            . Before that, I&apos;ve worked as a Multimedia designer in a
+            marketing agency doing digital advertisements and designs.
           </h1>
           <h1 className="leading-snug">
             Looking for my{" "}
