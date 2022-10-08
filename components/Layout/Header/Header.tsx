@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Logo, Arrow } from "../../SVG";
+import { Arrow } from "../../SVG";
 
 interface Props {
   scroll: boolean;
@@ -34,15 +34,18 @@ const Header = ({ scroll }: Props) => {
   return (
     <header>
       <div
-        className={`fixed z-50 hidden w-full pt-5 pb-5 transition-all duration-300 ease-out md:block ${
+        className={`fixed z-50 hidden w-full pt-8 pb-8 transition-all duration-300 ease-out md:block ${
           scroll && "-translate-y-full transition-all"
         }`}
       >
         <div className="mx-auto flex max-w-screen-xl items-center justify-between px-8">
           <div className="cursor-pointer">
             <Link href="/">
-              <a>
-                <Logo />
+              <a
+                aria-label="Homepage"
+                className="inline-block font-semibold decoration-2 underline-offset-8 hover:underline"
+              >
+                Johnny Chai
               </a>
             </Link>
           </div>
@@ -68,15 +71,18 @@ const Header = ({ scroll }: Props) => {
         </div>
       </div>
       <div
-        className={`fixed z-50 block w-full px-8 pt-5 pb-5 transition-all duration-300 ease-out md:hidden ${
+        className={`fixed z-50 block w-full px-8 pt-8 pb-8 transition-all duration-300 ease-out md:hidden ${
           scroll && "-translate-y-full transition-all"
         }`}
       >
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           <div className="cursor-pointer">
             <Link href="/">
-              <a aria-label="Homepage">
-                <Logo />
+              <a
+                aria-label="Homepage"
+                className="inline-block font-semibold decoration-2 underline-offset-8 hover:underline"
+              >
+                Johnny Chai
               </a>
             </Link>
           </div>
