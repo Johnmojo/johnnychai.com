@@ -3,8 +3,8 @@
  * @date 6th September 2022
  */
 
-import { Header } from "../../Header";
-import { Footer } from "../../Footer";
+import { Header } from "../Navigation";
+import { Footer } from "../Navigation";
 import { useState, useEffect, ReactNode } from "react";
 
 type Props = {
@@ -21,7 +21,7 @@ declare global {
   }
 }
 
-const AppLayout = ({ children }: Props) => {
+const App = ({ children }: Props) => {
   // Check scroll & color
   const [scroll, setScroll] = useState(false);
 
@@ -121,4 +121,4 @@ const AppLayout = ({ children }: Props) => {
   );
 };
 
-export default AppLayout;
+export default App;

@@ -7,10 +7,10 @@ import dayjs from "dayjs";
 import { MDXRemote } from "next-mdx-remote";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
-import { Hero } from "../../Template/Work";
-import { WorkType } from "../../../../lib/types";
-import Instagram from "../../../Widget/Instagram/Instagram";
-import { HeaderMeta } from "../../Header";
+import Hero from "./Hero";
+import { WorkType } from "../../../lib/types";
+import Instagram from "../../Widget/Instagram/Instagram";
+import { HeaderMeta } from "../../Navigation";
 import { useInView } from "react-intersection-observer";
 
 interface Props {

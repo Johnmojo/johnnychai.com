@@ -9,7 +9,7 @@ interface Props {
   status?: string;
 }
 
-const Hero = ({ title }: Props) => {
+const Homepage = ({ title }: Props) => {
   return (
     <section className=" mx-auto max-w-screen-xl animate-elastic px-8 transition-all duration-300 ease-in-out">
       <div className="mx-auto max-w-screen-xl space-y-12 pb-20 pt-44 md:pb-40 md:pt-64">
@@ -21,4 +21,4 @@ const Hero = ({ title }: Props) => {
   );
 };
 
-export default Hero;
+export default Homepage;

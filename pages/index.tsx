@@ -7,11 +7,11 @@ import { GetStaticProps } from "next";
 import { WorksData, BlogsData } from "../lib/types";
 import getWorks from "../lib/getWorks";
 import getBlogs from "../lib/getBlogs";
-import { Hero } from "../components/Layout/Template/Home";
+import { Hero } from "../components/Layout/Homepage";
 import { Summary } from "../components/Common";
-import { WorkPreview } from "../components/Layout/Template/Work";
-import { BlogPreview } from "../components/Layout/Template/Blog";
-import { HeaderMeta } from "../components/Layout/Header";
+import { WorkPreview } from "../components/Layout/Work";
+import { BlogPreview } from "../components/Layout/Blog";
+import { HeaderMeta } from "../components/Navigation";
 
 type Props = {
   worksData: WorksData[];

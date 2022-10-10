@@ -3,8 +3,8 @@
  * @date 6th September 2022
  */
 
-import { Hero } from "../components/Layout/Template/Page";
-import { HeaderMeta } from "../components/Layout/Header";
+import { Hero } from "../components/Layout/Page";
+import { HeaderMeta } from "../components/Navigation";
 import { useInView } from "react-intersection-observer";
 
 const About = () => {

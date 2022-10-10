@@ -4,8 +4,8 @@
  */
 
 import { GetStaticProps } from "next";
-import { Hero } from "../../components/Layout/Template/Page";
-import { BlogFull } from "../../components/Layout/Template/Blog";
+import { Hero } from "../../components/Layout/Page";
+import { BlogFull } from "../../components/Layout/Blog";
 import { BlogsData } from "../../lib/types";
 import getBlogs from "../../lib/getBlogs";
 

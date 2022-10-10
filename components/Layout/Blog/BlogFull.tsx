@@ -5,9 +5,9 @@
 
 import Link from "next/link";
 import Dayjs from "dayjs";
-import { BlogType } from "../../../../lib/types";
-import { HeaderMeta } from "../../Header";
-import { ArrowBig } from "../../../SVG";
+import { BlogType } from "../../../lib/types";
+import { HeaderMeta } from "../../Navigation";
+import { ArrowBig } from "../../SVG";
 import { useInView } from "react-intersection-observer";
 
 interface Props {
