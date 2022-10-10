@@ -6,12 +6,14 @@
 import "../styles/globals.css";
 import "prismjs/themes/prism-tomorrow.css";
 import type { AppProps } from "next/app";
-import { AppLayout } from "../components/Layout/Template/App";
+import { App } from "../components/Layout/";
 
-export default function App({ Component, pageProps }: AppProps) {
+const Index = ({ Component, pageProps }: AppProps) => {
   return (
-    <AppLayout>
+    <App>
       <Component {...pageProps} />
-    </AppLayout>
+    </App>
   );
-}
+};
+
+export default Index;

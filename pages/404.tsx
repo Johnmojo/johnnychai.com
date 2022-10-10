@@ -3,9 +3,9 @@
  * @date 6th September 2022
  */
 
-import { Hero } from "../components/Layout/Template/Page";
+import { Hero } from "../components/Layout/Page";
 import { CustomButton } from "../components/Button";
-import { HeaderMeta } from "../components/Layout/Header";
+import { HeaderMeta } from "../components/Navigation";
 
 const Error = () => {
   return (

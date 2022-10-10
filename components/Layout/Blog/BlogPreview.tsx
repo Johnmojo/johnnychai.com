@@ -5,8 +5,8 @@
 
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { BlogType } from "../../../../lib/types";
-import { ArrowBig } from "../../../SVG";
+import { BlogType } from "../../../lib/types";
+import { ArrowBig } from "../../SVG";
 
 type Props = {
   data: BlogType[];

@@ -4,8 +4,8 @@
  */
 
 import { GetStaticProps } from "next";
-import { Hero } from "../../components/Layout/Template/Page";
-import { WorkFull } from "../../components/Layout/Template/Work";
+import { Hero } from "../../components/Layout/Page";
+import { WorkFull } from "../../components/Layout/Work";
 import { WorksData } from "../../lib/types";
 import getWorks from "../../lib/getWorks";
 

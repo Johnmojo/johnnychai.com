@@ -4,12 +4,12 @@
 
 import Image from "next/future/image";
 import { MDXRemote } from "next-mdx-remote";
-import { Hero } from "../../Template/Blog";
-import { BlogType } from "../../../../lib/types";
+import { Hero } from "../../Layout/Blog";
+import { BlogType } from "../../../lib/types";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
 import dayjs from "dayjs";
-import { HeaderMeta } from "../../Header";
+import { HeaderMeta } from "../../Navigation";
 import { useInView } from "react-intersection-observer";
 
 interface Props {

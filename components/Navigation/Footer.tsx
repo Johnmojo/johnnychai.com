@@ -3,7 +3,7 @@
  * @date 6th September 2022
  */
 
-import { Arrow, ArrowMid } from "../../SVG";
+import { Arrow, ArrowMid } from "../SVG";
 import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
