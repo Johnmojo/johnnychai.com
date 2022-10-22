@@ -35,7 +35,7 @@ const About = () => {
         description="Hi! I studied at Swinburne University Sarawak, graduated with a multimedia design degree, and previously worked as a Multimedia Designer."
       />
       <Hero title="About" intro="Some story about myself." />
-      <section className="mx-auto max-w-screen-xl px-8">
+      <section className="max-w-screen-xl px-8 mx-auto">
         <div className="mb-20 divide-y divide-solid md:mb-40">
           <div
             ref={introRef}
@@ -60,7 +60,7 @@ const About = () => {
             <h1 className="w-full py-12 text-xl font-semibold underline md:w-1/3 md:no-underline">
               Summary
             </h1>
-            <div className="space-y-8 py-12">
+            <div className="py-12 space-y-8">
               <p>
                 As someone with a non-traditional background, I approach
                 problems like a designer with knowledge from my previous field.
@@ -145,9 +145,9 @@ const About = () => {
                 Education
               </h1>
             </div>
-            {/* <div className="w-full space-y-4 py-12 text-lg md:w-2/3"> */}
+            {/* <div className="w-full py-12 space-y-4 text-lg md:w-2/3"> */}
             <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
-              <div className="space-y-1 py-12">
+              <div className="py-12 space-y-1">
                 <p className="font-semibold">General Assembly Malaysia</p>
                 <p>
                   Immersive UX Design - Fully funded upskilling programme by
@@ -155,7 +155,7 @@ const About = () => {
                 </p>
                 <p className="text-base text-gray-600">Aug 2022 - Sep 2022</p>
               </div>
-              <div className="space-y-1 py-12">
+              <div className="py-12 space-y-1">
                 <p className="font-semibold">
                   Swinburne University of Technology Sarawak
                 </p>
@@ -197,14 +197,6 @@ const About = () => {
               </div>
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full md:w-2/5">
-                  <p className="font-semibold">Database</p>
-                </div>
-                <div className="w-full md:w-3/5">
-                  <p>PostgreSQL</p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
-                <div className="w-full md:w-2/5">
                   <p className="font-semibold">Tools</p>
                 </div>
                 <div className="w-full md:w-3/5">
@@ -228,7 +220,7 @@ const About = () => {
               </h1>
             </div>
             <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
-              <div className="space-y-1 py-12">
+              <div className="py-12 space-y-1">
                 <p className="font-semibold">
                   Foundations of User Experience (UX) Design
                 </p>
@@ -242,7 +234,7 @@ const About = () => {
                   </a>
                 </p>
               </div>
-              <div className="space-y-1 py-12">
+              <div className="py-12 space-y-1">
                 <p className="font-semibold">Technical Support Fundamentals</p>
                 <p>
                   Coursera | Google - Issued Jan 2022 | {""}
