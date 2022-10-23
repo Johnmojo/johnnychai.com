@@ -14,7 +14,7 @@ interface Props {
   data: WorkType[];
 }
 
-const WorkFull = ({ data }: Props) => {
+const WorkSection = ({ data }: Props) => {
   const [category, setCategory] = useState("all");
   const [loading, setLoading] = useState(false);
 
@@ -128,4 +128,4 @@ const WorkFull = ({ data }: Props) => {
   );
 };
 
-export default WorkFull;
+export default WorkSection;

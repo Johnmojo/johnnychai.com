@@ -4,8 +4,7 @@
  */
 
 import { GetStaticProps } from "next";
-import { Hero } from "@components/index";
-import { WorkFull } from "@components/index";
+import { Hero, WorkSection } from "@components/index";
 import { WorksData } from "@lib/types";
 import getWorks from "@lib/getWorks";
 
@@ -20,7 +19,7 @@ const Work = ({ worksData }: Props) => {
         title="Work"
         intro="Some of my professional work and side projects that I've done over the years."
       />
-      <WorkFull data={worksData} />
+      <WorkSection data={worksData} />
     </>
   );
 };

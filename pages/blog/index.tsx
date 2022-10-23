@@ -4,8 +4,7 @@
  */
 
 import { GetStaticProps } from "next";
-import { Hero } from "@components/index";
-import { BlogFull } from "@components/index";
+import { Hero, BlogSection } from "@components/index";
 import { BlogsData } from "@lib/types";
 import getBlogs from "@lib/getBlogs";
 
@@ -17,7 +16,7 @@ const Blog = ({ blogsData }: Props) => {
   return (
     <>
       <Hero title="Blog" intro="Here's where I write to reflect and learn." />
-      <BlogFull data={blogsData} />
+      <BlogSection data={blogsData} />
     </>
   );
 };

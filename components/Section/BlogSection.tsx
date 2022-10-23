@@ -6,15 +6,14 @@
 import Link from "next/link";
 import Dayjs from "dayjs";
 import { BlogType } from "@lib/types";
-import { HeaderMeta } from "@components/index";
-import { ArrowBig } from "@components/index";
+import { ArrowBig, HeaderMeta } from "@components/index";
 import { useInView } from "react-intersection-observer";
 
 interface Props {
   data: BlogType[];
 }
 
-const BlogFull = ({ data }: Props) => {
+const BlogSection = ({ data }: Props) => {
   // Intersection observer
   const { ref: listRef, inView: listVisible } = useInView({
     triggerOnce: true
@@ -60,4 +59,4 @@ const BlogFull = ({ data }: Props) => {
   );
 };
 
-export default BlogFull;
+export default BlogSection;

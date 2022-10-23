@@ -11,8 +11,8 @@ export { default as Work } from "./Layout/Work";
 export { default as Blog } from "./Layout/Blog";
 
 // Section
-export { default as WorkFull } from "./Section/WorkFull";
-export { default as BlogFull } from "./Section/BlogFull";
+export { default as WorkSection } from "./Section/WorkSection";
+export { default as BlogSection } from "./Section/BlogSection";
 
 // Preview snippet
 export { default as WorkPreview } from "./Preview/WorkPreview";
