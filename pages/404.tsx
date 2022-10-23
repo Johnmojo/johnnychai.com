@@ -4,7 +4,7 @@
  */
 
 import { Hero } from "../components/Layout/Page";
-import { CustomButton } from "../components/Button";
+import { Button } from "@components/index";
 import { HeaderMeta } from "../components/Navigation";
 
 const Error = () => {
@@ -15,8 +15,8 @@ const Error = () => {
         description="Front End Web Developer based in Malaysia who is who is passionate about coding and solving problems through code and design."
       />
       <Hero title="404" intro="Page not found" status="(ノಠ益ಠ)ノ彡┻━┻" />
-      <section className="mx-auto mb-40 max-w-screen-xl px-8">
-        <CustomButton title="Return Home" target="/" />
+      <section className="max-w-screen-xl px-8 mx-auto mb-40">
+        <Button title="Return Home" target="/" />
       </section>
     </>
   );
