@@ -4,10 +4,10 @@
  */
 
 import { GetStaticProps } from "next";
-import { Hero } from "../../components/Layout/Page";
-import { WorkFull } from "../../components/Layout/Work";
-import { WorksData } from "../../lib/types";
-import getWorks from "../../lib/getWorks";
+import { Hero } from "@components/index";
+import { WorkFull } from "@components/index";
+import { WorksData } from "@lib/types";
+import getWorks from "@lib/getWorks";
 
 interface Props {
   worksData: WorksData[];

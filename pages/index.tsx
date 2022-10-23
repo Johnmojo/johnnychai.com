@@ -4,14 +4,16 @@
  */
 
 import { GetStaticProps } from "next";
-import { WorksData, BlogsData } from "../lib/types";
-import getWorks from "../lib/getWorks";
-import getBlogs from "../lib/getBlogs";
-import { Hero } from "../components/Layout/Homepage";
-import { Summary } from "../components/Common";
-import { WorkPreview } from "../components/Layout/Work";
-import { BlogPreview } from "../components/Layout/Blog";
-import { HeaderMeta } from "../components/Navigation";
+import { WorksData, BlogsData } from "@lib/types";
+import getWorks from "@lib/getWorks";
+import getBlogs from "@lib/getBlogs";
+import {
+  HeaderMeta,
+  Summary,
+  Hero,
+  BlogPreview,
+  WorkPreview
+} from "@components/index";
 
 type Props = {
   worksData: WorksData[];
@@ -25,10 +27,7 @@ const Home = ({ worksData, blogsData }: Props) => {
         title="Home - Johnny Chai"
         description="Front End Web Developer based in Malaysia who is who is passionate about coding and solving problems through code and design."
       />
-      <Hero
-        title="I'm Johnny, a front end developer based in Malaysia."
-        status="🚀 Exploring opportunities and side projects."
-      />
+      <Hero title="I'm Johnny, a front end developer based in Malaysia." />
       <Summary />
       <WorkPreview
         data={worksData}

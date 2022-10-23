@@ -10,12 +10,12 @@ interface Props {
   target: string;
 }
 
-const CustomButton = ({ title, target }: Props) => {
+const Button = ({ title, target }: Props) => {
   return (
     <Link href={target}>
       <a>
         <div
-          className={`mx-auto inline-block rounded-full border border-black bg-white py-6 px-12 font-semibold transition-all ease-in-out hover:border-black hover:bg-black hover:text-white`}
+          className={`mx-auto inline-block rounded-full border border-black py-6 px-12 font-semibold transition-all ease-in-out hover:border-black hover:bg-black hover:text-white`}
         >
           {title}
         </div>
@@ -24,4 +24,4 @@ const CustomButton = ({ title, target }: Props) => {
   );
 };
 
-export default CustomButton;
+export default Button;

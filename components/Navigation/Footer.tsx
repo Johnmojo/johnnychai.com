@@ -3,7 +3,7 @@
  * @date 6th September 2022
  */
 
-import { Arrow, ArrowMid } from "../SVG";
+import { ArrowSmall, ArrowMid } from "@components/index";
 import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
@@ -19,9 +19,9 @@ const Footer = () => {
         listVisible && "animate-[content_1s_ease-in-out]"
       }`}
     >
-      <div className="mx-auto max-w-screen-xl px-8">
+      <div className="max-w-screen-xl px-8 mx-auto">
         <section className="mt-12 mb-6 font-medium">
-          <h1 className=" text-3xl leading-snug md:text-5xl md:leading-snug">
+          <h1 className="text-3xl leading-snug md:text-5xl md:leading-snug">
             Say hi at
           </h1>
           <h1 className="inline-block text-xl leading-snug md:text-5xl md:leading-snug">
@@ -29,7 +29,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               href="mailto:hello@johnnychai.com"
-              className="group break-words"
+              className="break-words group"
             >
               <div className="flex items-center">
                 <div className="group-hover:underline">
@@ -43,7 +43,7 @@ const Footer = () => {
             <div>or stay in touch.</div>
           </h1>
         </section>
-        <section className="mb-20 mt-6 flex text-lg text-black md:mb-36">
+        <section className="flex mt-6 mb-20 text-lg text-black md:mb-36">
           <ul className="flex flex-col md:flex-row">
             <li className="my-2 mr-6">
               <a
@@ -57,7 +57,7 @@ const Footer = () => {
                     LinkedIn
                   </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                    <Arrow />
+                    <ArrowSmall />
                   </div>
                 </div>
               </a>
@@ -74,7 +74,7 @@ const Footer = () => {
                     Github
                   </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                    <Arrow />
+                    <ArrowSmall />
                   </div>
                 </div>
               </a>
@@ -91,7 +91,7 @@ const Footer = () => {
                     Instagram
                   </div>
                   <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                    <Arrow />
+                    <ArrowSmall />
                   </div>
                 </div>
               </a>

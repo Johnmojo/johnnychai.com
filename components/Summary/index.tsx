@@ -4,7 +4,7 @@
 
 // TODO Compoentize this component
 
-import { Location } from "../SVG";
+import { IconLocation } from "@components/index";
 import { useInView } from "react-intersection-observer";
 
 const Summary = () => {
@@ -20,9 +20,9 @@ const Summary = () => {
         contentVisible && "animate-[content_1s_ease-in-out]"
       }`}
     >
-      <div className="mx-auto max-w-screen-xl space-y-12 border-t border-b py-20 md:py-40 ">
+      <div className="max-w-screen-xl py-20 mx-auto space-y-12 border-t border-b md:py-40 ">
         <div className="flex items-center space-x-4 text-lg font-medium">
-          <Location />
+          <IconLocation />
           <div className="text-sm md:text-base">Kuching, Malaysia</div>
         </div>
         <div className="w-full space-y-12 text-3xl md:w-3/4 md:text-5xl">

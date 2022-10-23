@@ -4,11 +4,11 @@
  */
 
 import { GetStaticProps, GetStaticPaths } from "next";
-import getWork from "../../lib/getWork";
-import getWorks from "../../lib/getWorks";
+import getWork from "@lib/getWork";
+import getWorks from "@lib/getWorks";
+import { WorkType } from "@lib/types";
 import { serialize } from "next-mdx-remote/serialize";
-import { WorkType } from "../../lib/types";
-import { WorkLayout } from "../../components/Layout/Work";
+import { Work } from "@components/index";
 import RemarkUnwrapImages from "remark-unwrap-images";
 import Prism from "remark-prism";
 
@@ -17,8 +17,8 @@ interface Props {
   content: Awaited<ReturnType<typeof serialize>>;
 }
 
-const Work = ({ data, content }: Props) => {
-  return <WorkLayout data={data} content={content} />;
+const WorkSlug = ({ data, content }: Props) => {
+  return <Work data={data} content={content} />;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -53,4 +53,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export default Work;
+export default WorkSlug;

@@ -6,7 +6,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import { WorkType } from "../../../lib/types";
+import { WorkType } from "@lib/types";
 
 type Props = {
   data: WorkType[];
@@ -20,7 +20,7 @@ const WorkPreview = ({ data, title, limit }: Props) => {
   });
 
   return (
-    <section ref={mainRef} className="mx-auto max-w-screen-xl">
+    <section ref={mainRef} className="max-w-screen-xl mx-auto">
       <div
         className={`my-20 px-8 md:my-40 ${
           mainVisible && "animate-[content_1s_ease-in-out]"
@@ -44,7 +44,7 @@ const WorkPreview = ({ data, title, limit }: Props) => {
               <Link href={"work/" + work.slug} key={index}>
                 <a
                   key={index}
-                  className="group mb-auto mt-10 space-y-8 md:even:mt-16"
+                  className="mt-10 mb-auto space-y-8 group md:even:mt-16"
                 >
                   <div className="clip-inactive group-hover:clip-active group-hover:grayscale">
                     <Image
@@ -59,7 +59,7 @@ const WorkPreview = ({ data, title, limit }: Props) => {
                     <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
                       {work.title}
                     </h3>
-                    <p className="md:test-xl text-lg">{work.description}</p>
+                    <p className="text-lg md:test-xl">{work.description}</p>
                   </div>
                 </a>
               </Link>

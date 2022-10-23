@@ -7,10 +7,8 @@ import dayjs from "dayjs";
 import { MDXRemote } from "next-mdx-remote";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
-import Hero from "./Hero";
-import { WorkType } from "../../../lib/types";
-import Instagram from "../../Widget/Instagram/Instagram";
-import { HeaderMeta } from "../../Navigation";
+import { WorkType } from "@lib/types";
+import { HeaderMeta, Instagram, Hero } from "@components/index";
 import { useInView } from "react-intersection-observer";
 
 interface Props {
@@ -18,7 +16,7 @@ interface Props {
   content: Awaited<ReturnType<typeof serialize>>;
 }
 
-const WorkLayout = ({ data, content }: Props) => {
+const Work = ({ data, content }: Props) => {
   const { ref: contentRef, inView: contentVisible } = useInView({
     triggerOnce: true
   });
@@ -41,7 +39,7 @@ const WorkLayout = ({ data, content }: Props) => {
           className="w-full pt-8 pb-4"
           alt={alt as string}
         />
-        <figcaption className="pt-4 text-center text-sm">{alt}</figcaption>
+        <figcaption className="pt-4 text-sm text-center">{alt}</figcaption>
       </div>
     ),
     Instagram: ({ postID }: { postID: string }) => <Instagram postID={postID} />
@@ -56,7 +54,7 @@ const WorkLayout = ({ data, content }: Props) => {
       <Hero title={data.title} />
       <section className="mb-48 space-y-32">
         {data.hero && (
-          <div className="mx-auto max-w-screen-xl px-8">
+          <div className="max-w-screen-xl px-8 mx-auto">
             <Image
               src={data.hero}
               alt={data.title}
@@ -68,8 +66,8 @@ const WorkLayout = ({ data, content }: Props) => {
             />
           </div>
         )}
-        <div ref={contentRef} className="mx-auto max-w-screen-xl">
-          <div className="mb-32 px-8">
+        <div ref={contentRef} className="max-w-screen-xl mx-auto">
+          <div className="px-8 mb-32">
             <div
               className={`${
                 contentVisible && "animate-[content_1s_ease-in-out]"
@@ -79,7 +77,7 @@ const WorkLayout = ({ data, content }: Props) => {
                 <h3 className="mb-6 text-2xl font-medium leading-snug text-black md:text-3xl md:leading-snug">
                   {data.summary}
                 </h3>
-                <div className="flex w-full flex-col justify-between gap-8 pt-8 md:w-3/4 md:flex-row">
+                <div className="flex flex-col justify-between w-full gap-8 pt-8 md:w-3/4 md:flex-row">
                   <div>
                     <span className="text-base text-gray-500">Category</span>
                     <div className="text-lg font-medium capitalize">
@@ -118,7 +116,7 @@ const WorkLayout = ({ data, content }: Props) => {
                   )}
                 </div>
               </div>
-              <div className="relative my-20 flex items-center">
+              <div className="relative flex items-center my-20">
                 <div className="flex-grow border-t"></div>
               </div>
             </div>
@@ -136,4 +134,4 @@ const WorkLayout = ({ data, content }: Props) => {
   );
 };
 
-export default WorkLayout;
+export default Work;

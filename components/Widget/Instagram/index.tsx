@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { Observer } from "../../Widget/Instagram";
+import Observer from "@components/Widget/Observer";
 import { handleInstagrmLoad } from "./utils";
 
 declare global {
@@ -43,9 +43,9 @@ const Instagram = ({ postID }: Props) => {
           {typeof window !== "undefined" && !window.instgrm ? (
             ""
           ) : (
-            <div className="instagram-media instagram-mdx-embed mx-auto animate-pulse">
+            <div className="mx-auto instagram-media instagram-mdx-embed animate-pulse">
               <div className="flex animate-pulse">
-                <div className="flex-1 space-y-6 py-1">
+                <div className="flex-1 py-1 space-y-6">
                   <div className="m-6 h-[70vh] rounded-md bg-slate-200"></div>
                 </div>
               </div>
