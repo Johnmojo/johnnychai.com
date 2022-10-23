@@ -6,8 +6,8 @@
 import { GetStaticProps } from "next";
 import { Hero } from "@components/index";
 import { WorkFull } from "@components/index";
-import { WorksData } from "../../lib/types";
-import getWorks from "../../lib/getWorks";
+import { WorksData } from "@lib/types";
+import getWorks from "@lib/getWorks";
 
 interface Props {
   worksData: WorksData[];

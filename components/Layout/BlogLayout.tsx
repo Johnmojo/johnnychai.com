@@ -2,11 +2,11 @@
  * Blog post layout (MDX)
  */
 
+import { ReactNode } from "react";
 import Image from "next/future/image";
 import { MDXRemote } from "next-mdx-remote";
-import { BlogType } from "../../lib/types";
+import { BlogType } from "@lib/types";
 import type { serialize } from "next-mdx-remote/serialize";
-import { ReactNode } from "react";
 import dayjs from "dayjs";
 import { HeaderMeta, Hero } from "@components/index";
 import { useInView } from "react-intersection-observer";

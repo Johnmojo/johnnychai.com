@@ -4,9 +4,9 @@
  */
 
 import { GetStaticProps } from "next";
-import { WorksData, BlogsData } from "../lib/types";
-import getWorks from "../lib/getWorks";
-import getBlogs from "../lib/getBlogs";
+import { WorksData, BlogsData } from "@lib/types";
+import getWorks from "@lib/getWorks";
+import getBlogs from "@lib/getBlogs";
 import {
   HeaderMeta,
   Summary,

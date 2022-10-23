@@ -7,7 +7,7 @@ import dayjs from "dayjs";
 import { MDXRemote } from "next-mdx-remote";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
-import { WorkType } from "../../lib/types";
+import { WorkType } from "@lib/types";
 import { HeaderMeta, Instagram, Hero } from "@components/index";
 import { useInView } from "react-intersection-observer";
 

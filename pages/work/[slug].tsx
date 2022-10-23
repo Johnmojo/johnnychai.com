@@ -4,10 +4,10 @@
  */
 
 import { GetStaticProps, GetStaticPaths } from "next";
-import getWork from "../../lib/getWork";
-import getWorks from "../../lib/getWorks";
+import getWork from "@lib/getWork";
+import getWorks from "@lib/getWorks";
+import { WorkType } from "@lib/types";
 import { serialize } from "next-mdx-remote/serialize";
-import { WorkType } from "../../lib/types";
 import { WorkLayout } from "@components/index";
 import RemarkUnwrapImages from "remark-unwrap-images";
 import Prism from "remark-prism";

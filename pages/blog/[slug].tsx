@@ -4,10 +4,10 @@
  */
 
 import { GetStaticProps, GetStaticPaths } from "next";
-import getBlog from "../../lib/getBlog";
-import getBlogs from "../../lib/getBlogs";
+import getBlog from "@lib/getBlog";
+import getBlogs from "@lib/getBlogs";
+import { BlogType } from "@lib/types";
 import { serialize } from "next-mdx-remote/serialize";
-import { BlogType } from "../../lib/types";
 import { BlogLayout } from "@components/index";
 import RemarkUnwrapImages from "remark-unwrap-images";
 import ReadingTime from "reading-time";
