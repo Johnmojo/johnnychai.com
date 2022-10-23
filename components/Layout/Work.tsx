@@ -16,7 +16,7 @@ interface Props {
   content: Awaited<ReturnType<typeof serialize>>;
 }
 
-const WorkLayout = ({ data, content }: Props) => {
+const Work = ({ data, content }: Props) => {
   const { ref: contentRef, inView: contentVisible } = useInView({
     triggerOnce: true
   });
@@ -134,4 +134,4 @@ const WorkLayout = ({ data, content }: Props) => {
   );
 };
 
-export default WorkLayout;
+export default Work;

@@ -16,7 +16,7 @@ interface Props {
   content: Awaited<ReturnType<typeof serialize>>;
 }
 
-const BlogLayout = ({ data, content }: Props) => {
+const Blog = ({ data, content }: Props) => {
   // Intersection observer
   const { ref: contentRef, inView: contentVisible } = useInView({
     triggerOnce: true
@@ -97,4 +97,4 @@ const BlogLayout = ({ data, content }: Props) => {
   );
 };
 
-export default BlogLayout;
+export default Blog;
