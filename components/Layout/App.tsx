@@ -97,14 +97,10 @@ const App = ({ children }: Props) => {
     };
   }, []);
 
-  // Fetch API color
+  // Fetch random colors
   useEffect(() => {
     async function fetchColor() {
-      // TODO: clean up code, use .env
-      // const res = await fetch("https://johnnychai.com/api/color");
       const random = Math.floor(Math.random() * colorsArray.length);
-      // const res = await fetch("http://localhost:3000/api/color");
-      // const result = await res.json();
 
       // Inject CSS directly into body
       document.body.style.background = colorsArray[random];
