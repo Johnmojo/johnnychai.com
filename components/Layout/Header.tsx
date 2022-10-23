@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Arrow } from "../SVG";
+import { ArrowSmall } from "@components/index";
 
 interface Props {
   scroll: boolean;
@@ -38,7 +38,7 @@ const Header = ({ scroll }: Props) => {
           scroll && "-translate-y-full transition-all"
         }`}
       >
-        <div className="mx-auto flex max-w-screen-xl items-center justify-between px-8">
+        <div className="flex items-center justify-between max-w-screen-xl px-8 mx-auto">
           <div className="cursor-pointer">
             <Link href="/">
               <a
@@ -51,17 +51,17 @@ const Header = ({ scroll }: Props) => {
           </div>
           <nav>
             <ul className="text-base">
-              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
+              <li className="inline-block ml-16 font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/work">
                   <a>Work</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
+              <li className="inline-block ml-16 font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
-              <li className="ml-16 inline-block font-semibold decoration-2 underline-offset-8 hover:underline">
+              <li className="inline-block ml-16 font-semibold decoration-2 underline-offset-8 hover:underline">
                 <Link href="/about">
                   <a>About</a>
                 </Link>
@@ -75,7 +75,7 @@ const Header = ({ scroll }: Props) => {
           scroll && "-translate-y-full transition-all"
         }`}
       >
-        <div className="mx-auto flex max-w-screen-xl items-center justify-between">
+        <div className="flex items-center justify-between max-w-screen-xl mx-auto">
           <div className="cursor-pointer">
             <Link href="/">
               <a
@@ -92,7 +92,7 @@ const Header = ({ scroll }: Props) => {
               aria-haspopup="menu"
               aria-expanded={menu ? "true" : "false"}
               title={menu ? "Close main menu" : "Open main menu"}
-              className="flex h-12 w-12 flex-col items-center justify-center rounded-full border border-black"
+              className="flex flex-col items-center justify-center w-12 h-12 border border-black rounded-full"
               onClick={() => setMenu(!menu)}
             >
               <span
@@ -113,9 +113,9 @@ const Header = ({ scroll }: Props) => {
             }`}
           >
             <nav>
-              <div className="mb-12 flex flex-col space-y-6 text-4xl">
+              <div className="flex flex-col mb-12 space-y-6 text-4xl">
                 <div className="ml-8 mr-auto text-sm">Navigation</div>
-                <div className="relative my-20 flex items-center px-8">
+                <div className="relative flex items-center px-8 my-20">
                   <div className="flex-grow border-t"></div>
                 </div>
               </div>
@@ -151,9 +151,9 @@ const Header = ({ scroll }: Props) => {
                   </Link>
                 </li>
               </ul>
-              <div className="mt-12 flex flex-col space-y-6 text-4xl">
+              <div className="flex flex-col mt-12 space-y-6 text-4xl">
                 <div className="ml-8 mr-auto text-sm">Say hi at</div>
-                <div className="relative my-20 flex items-center px-8">
+                <div className="relative flex items-center px-8 my-20">
                   <div className="flex-grow border-t"></div>
                 </div>
                 <div
@@ -170,7 +170,7 @@ const Header = ({ scroll }: Props) => {
                     <div className="flex items-center justify-between">
                       <div>hello@johnnychai.com</div>
                       <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                        <Arrow />
+                        <ArrowSmall />
                       </div>
                     </div>
                   </a>
@@ -189,7 +189,7 @@ const Header = ({ scroll }: Props) => {
                     <div className="flex items-center justify-between">
                       <div>LinkedIn</div>
                       <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                        <Arrow />
+                        <ArrowSmall />
                       </div>
                     </div>
                   </a>
@@ -208,7 +208,7 @@ const Header = ({ scroll }: Props) => {
                     <div className="flex items-center justify-between">
                       <div>Github</div>
                       <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                        <Arrow />
+                        <ArrowSmall />
                       </div>
                     </div>
                   </a>
@@ -227,7 +227,7 @@ const Header = ({ scroll }: Props) => {
                     <div className="flex items-center justify-between">
                       <div>Instagram</div>
                       <div className="mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
-                        <Arrow />
+                        <ArrowSmall />
                       </div>
                     </div>
                   </a>

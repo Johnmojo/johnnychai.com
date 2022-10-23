@@ -6,8 +6,8 @@
 import Link from "next/link";
 import Dayjs from "dayjs";
 import { BlogType } from "../../../lib/types";
-import { HeaderMeta } from "../../Navigation";
-import { ArrowBig } from "../../SVG";
+import { HeaderMeta } from "@components/index";
+import { ArrowBig } from "@components/index";
 import { useInView } from "react-intersection-observer";
 
 interface Props {
@@ -46,7 +46,7 @@ const BlogFull = ({ data }: Props) => {
                       </h3>
                       <p className="text-lg md:text-xl">{blog.description}</p>
                     </div>
-                    <div className="mt-auto mb-auto hidden overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
+                    <div className="hidden mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
                       <ArrowBig />
                     </div>
                   </div>

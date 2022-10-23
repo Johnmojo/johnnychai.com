@@ -3,9 +3,7 @@
  * @date 6th September 2022
  */
 
-import { Hero } from "../components/Layout/Page";
-import { Button } from "@components/index";
-import { HeaderMeta } from "../components/Navigation";
+import { HeaderMeta, Button, Hero } from "@components/index";
 
 const Error = () => {
   return (

@@ -1,8 +1,8 @@
-const Arrow = () => {
+const ArrowSmall = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
+      className="w-6 h-6"
       width="20"
       height="20"
       viewBox="0 0 24 24"
@@ -17,4 +17,4 @@ const Arrow = () => {
   );
 };
 
-export default Arrow;
+export default ArrowSmall;

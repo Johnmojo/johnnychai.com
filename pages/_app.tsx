@@ -6,13 +6,13 @@
 import "../styles/globals.css";
 import "prismjs/themes/prism-tomorrow.css";
 import type { AppProps } from "next/app";
-import { App } from "../components/Layout/";
+import { Layout } from "@components/index";
 
 const Index = ({ Component, pageProps }: AppProps) => {
   return (
-    <App>
+    <Layout>
       <Component {...pageProps} />
-    </App>
+    </Layout>
   );
 };
 

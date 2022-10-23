@@ -3,7 +3,17 @@
  * @date 26th August 2022
  */
 
-import { createScriptTag } from "../../Utils/index";
+// Create and insert inject Instagram script tag
+export const createScriptTag = (providerEmbedUrl: string | null) => {
+  const script = document.createElement(`script`);
+  script.type = `text/javascript`;
+
+  if (providerEmbedUrl) {
+    script.src = providerEmbedUrl;
+  }
+
+  document.getElementsByTagName(`head`)[0].appendChild(script);
+};
 
 const instagramClassNames = [
   `.instagram-media`,

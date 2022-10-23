@@ -9,7 +9,7 @@ import { BlogType } from "../../../lib/types";
 import type { serialize } from "next-mdx-remote/serialize";
 import { ReactNode } from "react";
 import dayjs from "dayjs";
-import { HeaderMeta } from "../../Navigation";
+import { HeaderMeta } from "@components/index";
 import { useInView } from "react-intersection-observer";
 
 interface Props {
@@ -43,7 +43,7 @@ const BlogLayout = ({ data, content }: Props) => {
           priority
           alt={alt as string}
         />
-        <figcaption className="pt-4 text-center text-sm">{alt}</figcaption>
+        <figcaption className="pt-4 text-sm text-center">{alt}</figcaption>
       </div>
     )
   };
@@ -56,7 +56,7 @@ const BlogLayout = ({ data, content }: Props) => {
       />
       <Hero title={data.title} />
       <section className="mb-48">
-        <div className="mx-auto mb-32 mt-12 max-w-screen-xl px-8">
+        <div className="max-w-screen-xl px-8 mx-auto mt-12 mb-32">
           <Image src={data.hero} alt={data.title} width={1280} height={1280} />
         </div>
         <div
@@ -80,7 +80,7 @@ const BlogLayout = ({ data, content }: Props) => {
             contentVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="relative my-10 flex items-center px-8">
+          <div className="relative flex items-center px-8 my-10">
             <div className="flex-grow border-t"></div>
           </div>
         </div>
@@ -89,7 +89,7 @@ const BlogLayout = ({ data, content }: Props) => {
             contentVisible && "animate-[content_1.5s_ease-in-out]"
           }`}
         >
-          <div className="mb-32 mt-12 px-8">
+          <div className="px-8 mt-12 mb-32">
             <MDXRemote {...content} components={MDXComponents} />
           </div>
         </div>
