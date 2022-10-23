@@ -1,8 +1,18 @@
 // Meta
-export { default as HeaderMeta } from "./Layout/HeaderMeta";
+export { default as HeaderMeta } from "./HeaderMeta";
+
+// Navigation
+export { default as Header } from "./Navigation/Header";
+export { default as Footer } from "./Navigation/Footer";
 
 // Layout
 export { default as Layout } from "./Layout";
+export { default as WorkLayout } from "./Layout/WorkLayout";
+export { default as BlogLayout } from "./Layout/BlogLayout";
+
+// Section
+export { default as WorkFull } from "./Section/WorkFull";
+export { default as BlogFull } from "./Section/BlogFull";
 
 // Button
 export { default as Button } from "./Button";
@@ -18,6 +28,10 @@ export { default as IconLocation } from "./SVG/Location";
 
 // Hero
 export { default as Hero } from "./Hero";
+
+// Preview snippet
+export { default as WorkPreview } from "./Preview/WorkPreview";
+export { default as BlogPreview } from "./Preview/BlogPreview";
 
 // Widget
 export { default as Observer } from "./Widget/Observer";

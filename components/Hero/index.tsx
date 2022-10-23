@@ -3,21 +3,17 @@
  * @date 7th September 2022
  */
 
-import dayjs from "dayjs";
-
 interface Props {
-  date?: Date; // Date if you use on Work or Blog post
   title: string; // Title of the hero
   intro?: string; // Summary of the hero
   status?: string; // Secondary summary of the hero
 }
 
-const PageHero = ({ date, title, intro, status }: Props) => {
+const PageHero = ({ title, intro, status }: Props) => {
   return (
-    <section className="transition-all duration-300 ease-in-out">
-      <div className="mx-auto flex h-[40vh] max-w-screen-xl animate-elastic flex-col justify-center space-y-8 px-8 pt-72 pb-48 md:h-[80vh] md:pb-64 md:pt-96">
-        {date && <p>Published on {dayjs(date).format("MMMM D, YYYY")}</p>}
-        <h1 className="w-full text-5xl font-semibold leading-relaxed md:text-6xl md:leading-relaxed lg:w-5/6">
+    <section className="max-w-screen-xl px-8 mx-auto transition-all duration-300 ease-in-out animate-elastic">
+      <div className="max-w-screen-xl pb-20 space-y-12 mmx-auto pt-44 md:pb-40 md:pt-64">
+        <h1 className="w-full text-5xl font-semibold leading-snug sm:text-6xl sm:leading-snug md:text-7xl md:font-medium md:leading-snug lg:text-8xl lg:leading-snug xl:w-5/6">
           {title}
         </h1>
         {intro || status ? (

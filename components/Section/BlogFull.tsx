@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import Dayjs from "dayjs";
-import { BlogType } from "../../../lib/types";
+import { BlogType } from "../../lib/types";
 import { HeaderMeta } from "@components/index";
 import { ArrowBig } from "@components/index";
 import { useInView } from "react-intersection-observer";

@@ -8,7 +8,7 @@ import getBlog from "../../lib/getBlog";
 import getBlogs from "../../lib/getBlogs";
 import { serialize } from "next-mdx-remote/serialize";
 import { BlogType } from "../../lib/types";
-import { BlogLayout } from "../../components/Layout/Blog";
+import { BlogLayout } from "@components/index";
 import RemarkUnwrapImages from "remark-unwrap-images";
 import ReadingTime from "reading-time";
 import Prism from "remark-prism";

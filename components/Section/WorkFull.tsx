@@ -6,7 +6,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/future/image";
-import { WorkType } from "../../../lib/types";
+import { WorkType } from "../../lib/types";
 import { HeaderMeta } from "@components/index";
 import { useInView } from "react-intersection-observer";
 

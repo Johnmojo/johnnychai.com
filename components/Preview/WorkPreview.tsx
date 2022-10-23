@@ -6,7 +6,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import { WorkType } from "../../../lib/types";
+import { WorkType } from "../../lib/types";
 
 type Props = {
   data: WorkType[];

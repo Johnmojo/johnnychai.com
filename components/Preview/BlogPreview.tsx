@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { BlogType } from "../../../lib/types";
+import { BlogType } from "../../lib/types";
 import { ArrowBig } from "@components/index";
 
 type Props = {
@@ -18,7 +18,7 @@ const BlogPreview = ({ data }: Props) => {
   });
 
   return (
-    <section ref={mainRef} className="max-w-screen-xl px-8 mx-auto">
+    <section ref={mainRef} className="mx-auto max-w-screen-xl px-8">
       <div
         className={`my-20 md:my-40 ${
           mainVisible && "animate-[content_1s_ease-in-out]"
@@ -41,7 +41,7 @@ const BlogPreview = ({ data }: Props) => {
                       </h2>
                       <p className="text-lg md:text-xl">{blog.description}</p>
                     </div>
-                    <div className="hidden mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
+                    <div className="mt-auto mb-auto hidden overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
                       <ArrowBig />
                     </div>
                   </div>
