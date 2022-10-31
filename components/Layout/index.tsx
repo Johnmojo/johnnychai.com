@@ -26,12 +26,12 @@ const Layout = ({ children }: Props) => {
 
   // Here we store our beautiful & colorful array
   const colorsArray = [
-    "#eaeb4d", // Yellow
-    "#e2482d", // Red
-    "#007563", // Cyan
-    "#e6e6e6", // Gray
-    "#cf92ae", // Purple
-    "#ffffff" // White
+    "#d1e4de",
+    "#d1dee4",
+    "#d2d0e5",
+    "#e6d1d4",
+    "#e5dbd2",
+    "#eeeade"
   ];
 
   // Set scroll variables
