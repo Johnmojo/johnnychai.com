@@ -80,15 +80,6 @@ const WorkSection = ({ data }: Props) => {
                   Design
                 </button>
               </li>
-              <li>
-                <button
-                  value="app"
-                  onClick={setClick}
-                  className={` ${category === "app" && "text-black"} `}
-                >
-                  Mobile App
-                </button>
-              </li>
             </ul>
           </div>
           <div

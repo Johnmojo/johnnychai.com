@@ -48,7 +48,7 @@ const About = () => {
               <h3 className="text-3xl leading-relaxed md:text-5xl md:leading-snug">
                 Hi, I&apos;m Johnny. I studied at Swinburne University Sarawak,
                 graduated with a multimedia design degree, and recently worked
-                as a Front End Developer intern.
+                as a Front End Developer.
               </h3>
             </div>
           </div>
@@ -93,7 +93,7 @@ const About = () => {
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full space-y-1 md:w-2/5">
                   <p className="font-semibold">UXAgents</p>
-                  <p>Front End Developer Intern</p>
+                  <p>Front End Developer - Contract</p>
                   <p className="text-base text-gray-600">Sep 2022 - Present</p>
                 </div>
                 <div className="w-full md:w-3/5">
@@ -113,15 +113,15 @@ const About = () => {
                 <div className="w-full md:w-3/5">
                   <p>
                     Developed and launched client&apos;s websites with WordPress
-                    CMS, PHP, SCSS & WooCommerce. Produced several motion
-                    graphics for an NGO.
+                    CMS, SCSS & WooCommerce. Produced several motion graphics
+                    for an NGO.
                   </p>
                 </div>
               </div>
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
                 <div className="w-full space-y-1 md:w-2/5">
                   <p className="font-semibold">MADE it Media</p>
-                  <p>Multimedia Designer</p>
+                  <p>Multimedia Designer - Full time</p>
                   <p className="text-base text-gray-600">Oct 2020 - Aug 2021</p>
                 </div>
                 <div className="w-full md:w-3/5">
@@ -185,7 +185,7 @@ const About = () => {
                   <p className="font-semibold">Languages &amp; techs</p>
                 </div>
                 <div className="w-full md:w-3/5">
-                  <p>HTML &amp; SCSS, Javascript, Typescript, PHP</p>
+                  <p>HTML &amp; SCSS, Javascript, Typescript</p>
                 </div>
               </div>
               <div className="flex flex-col gap-8 py-12 text-lg md:flex-row">
@@ -225,11 +225,11 @@ const About = () => {
                 <p className="font-semibold">
                   Foundations of User Experience (UX) Design
                 </p>
-                <p>
+                <p className="text-gray-600">
                   Coursera | Google - Issued Oct 2021 | {""}
                   <Link
-                    className="text-gray-600 underline"
                     href="https://www.coursera.org/account/accomplishments/verify/AAM77APQBGTX"
+                    className="underline"
                   >
                     Credential ID AAM77APQBGTX
                   </Link>
@@ -237,9 +237,12 @@ const About = () => {
               </div>
               <div className="py-12 space-y-1">
                 <p className="font-semibold">Technical Support Fundamentals</p>
-                <p className="text-gray-600 underline">
+                <p className="text-gray-600">
                   Coursera | Google - Issued Jan 2022 | {""}
-                  <Link href="https://www.coursera.org/account/accomplishments/verify/8UJJGHNZFP39">
+                  <Link
+                    href="https://www.coursera.org/account/accomplishments/verify/8UJJGHNZFP39"
+                    className="underline"
+                  >
                     Credential ID 8UJJGHNZFP39
                   </Link>
                 </p>

@@ -40,7 +40,7 @@ const Summary = () => {
             degree.
           </h1>
           <h1 className="leading-snug">
-            Currently interning as a{" "}
+            Currently working as a{" "}
             <span className="underline">Front-End Developer</span> @{" "}
             <Link
               target="_blank"
