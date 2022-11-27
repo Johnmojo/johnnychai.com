@@ -6,6 +6,7 @@
 import { useEffect, useState } from "react";
 import Observer from "@components/Widget/Observer";
 import { handleInstagrmLoad } from "./utils";
+import Link from "next/link";
 
 declare global {
   interface Window {
@@ -39,7 +40,7 @@ const Instagram = ({ postID }: Props) => {
         className="instagram-media instagram-mdx-embed"
         data-instgrm-version="12"
       >
-        <a href={`https://instagram.com/p/${postID}`}>
+        <Link href={`https://instagram.com/p/${postID}`}>
           {typeof window !== "undefined" && !window.instgrm ? (
             ""
           ) : (
@@ -51,7 +52,7 @@ const Instagram = ({ postID }: Props) => {
               </div>
             </div>
           )}
-        </a>
+        </Link>
       </blockquote>
     </Observer>
   );

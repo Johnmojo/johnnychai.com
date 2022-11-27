@@ -33,23 +33,21 @@ const BlogSection = ({ data }: Props) => {
         >
           {data.map((blog, index) => (
             <div key={index} className="py-8">
-              <Link href={"blog/" + blog.slug} key={index}>
-                <a className="group">
-                  <div className="flex justify-between">
-                    <div className="space-y-3">
-                      <p className="text-base font-medium">
-                        {Dayjs(blog.date).format("D MMMM, YYYY")}
-                      </p>
-                      <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
-                        {blog.title}
-                      </h3>
-                      <p className="text-lg md:text-xl">{blog.description}</p>
-                    </div>
-                    <div className="hidden mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
-                      <ArrowBig />
-                    </div>
+              <Link href={"blog/" + blog.slug} key={index} className="group">
+                <div className="flex justify-between">
+                  <div className="space-y-3">
+                    <p className="text-base font-medium">
+                      {Dayjs(blog.date).format("D MMMM, YYYY")}
+                    </p>
+                    <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
+                      {blog.title}
+                    </h3>
+                    <p className="text-lg md:text-xl">{blog.description}</p>
                   </div>
-                </a>
+                  <div className="hidden mt-auto mb-auto overflow-hidden transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 md:block">
+                    <ArrowBig />
+                  </div>
+                </div>
               </Link>
             </div>
           ))}

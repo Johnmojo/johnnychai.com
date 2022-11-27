@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/future/image";
+import Image from "next/image";
 import { WorkType } from "@lib/types";
 import { HeaderMeta } from "@components/index";
 import { useInView } from "react-intersection-observer";
@@ -101,24 +101,26 @@ const WorkSection = ({ data }: Props) => {
               .sort((asc, desc) => (asc.date > desc.date ? -1 : 1)) // Sort by date
               .filter((cat) => cat.category === category || category === "all") // If category matched, return filtered data. Otherwise, return all unfiltered data anyway (truthy - at least one must be true). If can't find cat.category === "all", then it will return all unfiltered data.
               .map((work, index) => (
-                <Link href={"work/" + work.slug} key={index}>
-                  <a key={index} className="mb-auto space-y-8 group">
-                    <div className="clip-inactive group-hover:clip-active group-hover:grayscale">
-                      <Image
-                        src={work.thumbnail}
-                        alt={work.title}
-                        width={1280}
-                        height={1600}
-                        sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, (min-width: 1280px) 1200px"
-                      />
-                    </div>
-                    <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">
-                      <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
-                        {work.title}
-                      </h3>
-                      <p className="text-lg md:text-xl">{work.description}</p>
-                    </div>
-                  </a>
+                <Link
+                  href={"work/" + work.slug}
+                  key={index}
+                  className="mb-auto space-y-8 group"
+                >
+                  <div className="clip-inactive group-hover:clip-active group-hover:grayscale">
+                    <Image
+                      src={work.thumbnail}
+                      alt={work.title}
+                      width={1280}
+                      height={1600}
+                      sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, (min-width: 1280px) 1200px"
+                    />
+                  </div>
+                  <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">
+                    <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
+                      {work.title}
+                    </h3>
+                    <p className="text-lg md:text-xl">{work.description}</p>
+                  </div>
                 </Link>
               ))}
           </div>

@@ -5,6 +5,7 @@
 // TODO Compoentize this component
 
 import { IconLocation } from "@components/index";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 const Summary = () => {
@@ -41,27 +42,27 @@ const Summary = () => {
           <h1 className="leading-snug">
             Currently interning as a{" "}
             <span className="underline">Front-End Developer</span> @{" "}
-            <a
+            <Link
               target="_blank"
               rel="noreferrer"
               href="https://uxagents.com"
               className="underline"
             >
               UXAgents
-            </a>
+            </Link>
             . Before that, I&apos;ve worked as a Multimedia designer in a
             marketing agency doing digital advertisements and designs.
           </h1>
           <h1 className="leading-snug">
             Looking for my{" "}
-            <a
+            <Link
               className="text-blue-600 underline hover:text-black"
               target="_blank"
               href="https://drive.google.com/file/d/1HX4ZndDiLkeXlhvyCWGhR7n5zGysZe2P/view?usp=sharing"
               rel="noreferrer"
             >
               resume
-            </a>
+            </Link>
             ?
           </h1>
         </div>

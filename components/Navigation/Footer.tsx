@@ -4,6 +4,7 @@
  */
 
 import { ArrowSmall, ArrowMid } from "@components/index";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
@@ -25,7 +26,7 @@ const Footer = () => {
             Say hi at
           </h1>
           <h1 className="inline-block text-xl leading-snug md:text-5xl md:leading-snug">
-            <a
+            <Link
               target="_blank"
               rel="noreferrer"
               href="mailto:hello@johnnychai.com"
@@ -39,14 +40,14 @@ const Footer = () => {
                   <ArrowMid />
                 </div>
               </div>
-            </a>
+            </Link>
             <div>or stay in touch.</div>
           </h1>
         </section>
         <section className="flex mt-6 mb-20 text-lg text-black md:mb-36">
           <ul className="flex flex-col md:flex-row">
             <li className="my-2 mr-6">
-              <a
+              <Link
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.linkedin.com/in/johchai"
@@ -60,10 +61,10 @@ const Footer = () => {
                     <ArrowSmall />
                   </div>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className="my-2 mr-6">
-              <a
+              <Link
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.github.com/johnmojo"
@@ -77,10 +78,10 @@ const Footer = () => {
                     <ArrowSmall />
                   </div>
                 </div>
-              </a>
+              </Link>
             </li>
             <li className="my-2 mr-6">
-              <a
+              <Link
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.instagram.com/johnsaaz"
@@ -94,7 +95,7 @@ const Footer = () => {
                     <ArrowSmall />
                   </div>
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
         </section>

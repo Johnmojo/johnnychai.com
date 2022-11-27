@@ -40,31 +40,24 @@ const Header = ({ scroll }: Props) => {
       >
         <div className="flex items-center justify-between max-w-screen-xl px-8 mx-auto">
           <div className="cursor-pointer">
-            <Link href="/">
-              <a
-                aria-label="Homepage"
-                className="inline-block font-semibold decoration-2 underline-offset-8 hover:underline"
-              >
-                Johnny Chai
-              </a>
+            <Link
+              href="/"
+              aria-label="Homepage"
+              className="inline-block font-semibold decoration-2 underline-offset-8 hover:underline"
+            >
+              Johnny Chai
             </Link>
           </div>
           <nav>
             <ul className="text-base">
               <li className="inline-block ml-16 font-semibold decoration-2 underline-offset-8 hover:underline">
-                <Link href="/work">
-                  <a>Work</a>
-                </Link>
+                <Link href="/work">Work</Link>
               </li>
               <li className="inline-block ml-16 font-semibold decoration-2 underline-offset-8 hover:underline">
-                <Link href="/blog">
-                  <a>Blog</a>
-                </Link>
+                <Link href="/blog">Blog</Link>
               </li>
               <li className="inline-block ml-16 font-semibold decoration-2 underline-offset-8 hover:underline">
-                <Link href="/about">
-                  <a>About</a>
-                </Link>
+                <Link href="/about">About</Link>
               </li>
             </ul>
           </nav>
@@ -77,13 +70,12 @@ const Header = ({ scroll }: Props) => {
       >
         <div className="flex items-center justify-between max-w-screen-xl mx-auto">
           <div className="cursor-pointer">
-            <Link href="/">
-              <a
-                aria-label="Homepage"
-                className="inline-block font-semibold decoration-2 underline-offset-8 hover:underline"
-              >
-                Johnny Chai
-              </a>
+            <Link
+              href="/"
+              aria-label="Homepage"
+              className="inline-block font-semibold decoration-2 underline-offset-8 hover:underline"
+            >
+              Johnny Chai
             </Link>
           </div>
           <div className="z-50 cursor-pointer">
@@ -126,9 +118,7 @@ const Header = ({ scroll }: Props) => {
                   }`}
                   onClick={() => setMenu(!menu)}
                 >
-                  <Link href="/work">
-                    <a>Work</a>
-                  </Link>
+                  <Link href="/work">Work</Link>
                 </li>
                 <li
                   className={`ml-8 mr-auto underline-offset-8 ${
@@ -136,9 +126,7 @@ const Header = ({ scroll }: Props) => {
                   }`}
                   onClick={() => setMenu(!menu)}
                 >
-                  <Link href="/blog">
-                    <a>Blog</a>
-                  </Link>
+                  <Link href="/blog">Blog</Link>
                 </li>
                 <li
                   className={`ml-8 mr-auto underline-offset-8 ${
@@ -146,9 +134,7 @@ const Header = ({ scroll }: Props) => {
                   }`}
                   onClick={() => setMenu(!menu)}
                 >
-                  <Link href="/about">
-                    <a>About</a>
-                  </Link>
+                  <Link href="/about">About</Link>
                 </li>
               </ul>
               <div className="flex flex-col mt-12 space-y-6 text-4xl">
@@ -161,7 +147,7 @@ const Header = ({ scroll }: Props) => {
                     menu && "animate-[menu_1.25s_ease-in-out] duration-1000"
                   }`}
                 >
-                  <a
+                  <Link
                     target="_blank"
                     rel="noreferrer"
                     href="hello@johnnychai.com"
@@ -173,14 +159,14 @@ const Header = ({ scroll }: Props) => {
                         <ArrowSmall />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div
                   className={`ml-8 mr-auto text-xl underline-offset-8 ${
                     menu && "animate-[menu_1.5s_ease-in-out] duration-1000"
                   }`}
                 >
-                  <a
+                  <Link
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.linkedin.com/in/johchai"
@@ -192,14 +178,14 @@ const Header = ({ scroll }: Props) => {
                         <ArrowSmall />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div
                   className={`ml-8 mr-auto text-xl underline-offset-8 ${
                     menu && "animate-[menu_1.75s_ease-in-out] duration-1000"
                   }`}
                 >
-                  <a
+                  <Link
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.github.com/johnmojo"
@@ -211,14 +197,14 @@ const Header = ({ scroll }: Props) => {
                         <ArrowSmall />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div
                   className={`ml-8 mr-auto text-xl underline-offset-8 ${
                     menu && "animate-[menu_2s_ease-in-out] duration-1000"
                   }`}
                 >
-                  <a
+                  <Link
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.instagram.com/johnsaaz"
@@ -230,7 +216,7 @@ const Header = ({ scroll }: Props) => {
                         <ArrowSmall />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div
                   className={`ml-8 mr-auto text-xl underline-offset-8 ${

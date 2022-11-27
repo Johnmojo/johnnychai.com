@@ -3,7 +3,7 @@
  */
 
 import { ReactNode } from "react";
-import Image from "next/future/image";
+import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote";
 import { BlogType } from "@lib/types";
 import type { serialize } from "next-mdx-remote/serialize";

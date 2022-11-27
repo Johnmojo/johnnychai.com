@@ -2,7 +2,7 @@
  * Work post layout (MDX)
  */
 
-import Image from "next/future/image";
+import Image from "next/image";
 import dayjs from "dayjs";
 import { MDXRemote } from "next-mdx-remote";
 import type { serialize } from "next-mdx-remote/serialize";
@@ -10,6 +10,7 @@ import { ReactNode } from "react";
 import { WorkType } from "@lib/types";
 import { HeaderMeta, Instagram, Hero } from "@components/index";
 import { useInView } from "react-intersection-observer";
+import Link from "next/link";
 
 interface Props {
   data: WorkType;
@@ -98,9 +99,9 @@ const Work = ({ data, content }: Props) => {
                     <div>
                       <span className="text-base text-gray-500">Website</span>
                       <div className="text-lg font-medium underline">
-                        <a target="_blank" rel="noreferrer" href={data.link}>
+                        <Link target="_blank" rel="noreferrer" href={data.link}>
                           Live Website
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   )}
@@ -108,9 +109,13 @@ const Work = ({ data, content }: Props) => {
                     <div>
                       <span className="text-base text-gray-500">Source</span>
                       <div className="text-lg font-medium underline">
-                        <a target="_blank" rel="noreferrer" href={data.github}>
+                        <Link
+                          target="_blank"
+                          rel="noreferrer"
+                          href={data.github}
+                        >
                           Github Repo
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   )}

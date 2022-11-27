@@ -5,6 +5,7 @@
 
 import { Hero } from "@components/index";
 import { HeaderMeta } from "@components/index";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 const About = () => {
@@ -226,24 +227,21 @@ const About = () => {
                 </p>
                 <p>
                   Coursera | Google - Issued Oct 2021 | {""}
-                  <a
+                  <Link
                     className="text-gray-600 underline"
                     href="https://www.coursera.org/account/accomplishments/verify/AAM77APQBGTX"
                   >
                     Credential ID AAM77APQBGTX
-                  </a>
+                  </Link>
                 </p>
               </div>
               <div className="py-12 space-y-1">
                 <p className="font-semibold">Technical Support Fundamentals</p>
-                <p>
+                <p className="text-gray-600 underline">
                   Coursera | Google - Issued Jan 2022 | {""}
-                  <a
-                    className="text-gray-600 underline"
-                    href="https://www.coursera.org/account/accomplishments/verify/8UJJGHNZFP39"
-                  >
+                  <Link href="https://www.coursera.org/account/accomplishments/verify/8UJJGHNZFP39">
                     Credential ID 8UJJGHNZFP39
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

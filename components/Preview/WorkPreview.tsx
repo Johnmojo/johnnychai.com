@@ -41,35 +41,35 @@ const WorkPreview = ({ data, title, limit }: Props) => {
             .sort((a, b) => (a.date > b.date ? -1 : 1)) // Sort by date
             .slice(0, limit) // Sort by limit
             .map((work, index) => (
-              <Link href={"work/" + work.slug} key={index}>
-                <a
-                  key={index}
-                  className="mt-10 mb-auto space-y-8 group md:even:mt-16"
-                >
-                  <div className="clip-inactive group-hover:clip-active group-hover:grayscale">
-                    <Image
-                      src={work.thumbnail}
-                      alt={work.title}
-                      width={1280}
-                      height={1600}
-                      sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, (min-width: 1280px) 1200px"
-                    />
-                  </div>
-                  <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">
-                    <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
-                      {work.title}
-                    </h3>
-                    <p className="text-lg md:test-xl">{work.description}</p>
-                  </div>
-                </a>
+              <Link
+                href={"work/" + work.slug}
+                key={index}
+                className="mt-10 mb-auto space-y-8 group md:even:mt-16"
+              >
+                <div className="clip-inactive group-hover:clip-active group-hover:grayscale">
+                  <Image
+                    src={work.thumbnail}
+                    alt={work.title}
+                    width={1280}
+                    height={1600}
+                    sizes="(min-width: 640px) 600px, (min-width: 768px) 800px, (min-width: 1280px) 1200px"
+                  />
+                </div>
+                <div className="space-y-3 transition-all duration-300 ease-in group-hover:animate-elastic">
+                  <h3 className="text-xl font-semibold group-hover:underline md:text-2xl">
+                    {work.title}
+                  </h3>
+                  <p className="text-lg md:test-xl">{work.description}</p>
+                </div>
               </Link>
             ))}
         </div>
         <div className="flex justify-center pt-20 pb-8 md:pb-0 md:pt-40">
-          <Link href="/work">
-            <a className="text-xl font-semibold underline underline-offset-8 hover:no-underline md:text-2xl">
-              See more work
-            </a>
+          <Link
+            href="/work"
+            className="text-xl font-semibold underline underline-offset-8 hover:no-underline md:text-2xl"
+          >
+            See more work
           </Link>
         </div>
       </div>
