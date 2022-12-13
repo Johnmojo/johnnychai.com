@@ -36,7 +36,7 @@ const About = () => {
         description="Hi! I studied at Swinburne University Sarawak, graduated with a multimedia design degree, and previously worked as a Multimedia Designer."
       />
       <Hero title="About" intro="Some story about myself." />
-      <section className="max-w-screen-xl px-8 mx-auto">
+      <section className="mx-auto max-w-screen-xl px-8">
         <div className="mb-20 divide-y divide-solid md:mb-40">
           <div
             ref={introRef}
@@ -61,7 +61,7 @@ const About = () => {
             <h1 className="w-full py-12 text-xl font-semibold underline md:w-1/3 md:no-underline">
               Summary
             </h1>
-            <div className="py-12 space-y-8">
+            <div className="space-y-8 py-12">
               <p>
                 As someone with a non-traditional background, I approach
                 problems like a designer with knowledge from my previous field.
@@ -148,15 +148,15 @@ const About = () => {
             </div>
             {/* <div className="w-full py-12 space-y-4 text-lg md:w-2/3"> */}
             <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
-              <div className="py-12 space-y-1">
+              <div className="space-y-1 py-12">
                 <p className="font-semibold">General Assembly Malaysia</p>
                 <p>
-                  Immersive UX Design - Fully funded upskilling programme by
-                  Khazanah Nasional (MySTEP)
+                  User Experience Design Bootcamp - Fully funded upskilling
+                  programme by Khazanah Nasional (MySTEP)
                 </p>
                 <p className="text-base text-gray-600">Aug 2022 - Sep 2022</p>
               </div>
-              <div className="py-12 space-y-1">
+              <div className="space-y-1 py-12">
                 <p className="font-semibold">
                   Swinburne University of Technology Sarawak
                 </p>
@@ -221,7 +221,20 @@ const About = () => {
               </h1>
             </div>
             <div className="w-full text-lg md:w-2/3 md:divide-y md:divide-solid">
-              <div className="py-12 space-y-1">
+              <div className="space-y-1 py-12">
+                <p className="font-semibold">User Experience Design Bootcamp</p>
+                <p className="text-gray-600">
+                  General Assembly Malaysia - Issued Dec 2022 | {""}
+                  <Link
+                    href="https://drive.google.com/file/d/1s6st2uUauI3MsrD4sqxFEzUeXGemzQx2"
+                    className="underline"
+                    target="_blank"
+                  >
+                    Certificate of Completion
+                  </Link>
+                </p>
+              </div>
+              <div className="space-y-1 py-12">
                 <p className="font-semibold">
                   Foundations of User Experience (UX) Design
                 </p>
@@ -230,18 +243,20 @@ const About = () => {
                   <Link
                     href="https://www.coursera.org/account/accomplishments/verify/AAM77APQBGTX"
                     className="underline"
+                    target="_blank"
                   >
                     Credential ID AAM77APQBGTX
                   </Link>
                 </p>
               </div>
-              <div className="py-12 space-y-1">
+              <div className="space-y-1 py-12">
                 <p className="font-semibold">Technical Support Fundamentals</p>
                 <p className="text-gray-600">
                   Coursera | Google - Issued Jan 2022 | {""}
                   <Link
                     href="https://www.coursera.org/account/accomplishments/verify/8UJJGHNZFP39"
                     className="underline"
+                    target="_blank"
                   >
                     Credential ID 8UJJGHNZFP39
                   </Link>
