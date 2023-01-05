@@ -3,6 +3,8 @@
  * @date 6th September 2022
  */
 
+// TODO: Clean up code component
+
 import Link from "next/link";
 
 interface Props {

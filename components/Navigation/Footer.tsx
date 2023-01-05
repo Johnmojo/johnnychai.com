@@ -20,7 +20,7 @@ const Footer = () => {
         listVisible && "animate-[content_1s_ease-in-out]"
       }`}
     >
-      <div className="max-w-screen-xl px-8 mx-auto">
+      <div className="mx-auto max-w-screen-xl px-8">
         <section className="mt-12 mb-6 font-medium">
           <h1 className="text-3xl leading-snug md:text-5xl md:leading-snug">
             Say hi at
@@ -30,7 +30,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               href="mailto:hello@johnnychai.com"
-              className="break-words group"
+              className="group break-words"
             >
               <div className="flex items-center">
                 <div className="group-hover:underline">
@@ -44,7 +44,7 @@ const Footer = () => {
             <div>or stay in touch.</div>
           </h1>
         </section>
-        <section className="flex mt-6 mb-20 text-lg text-black md:mb-36">
+        <section className="mt-6 mb-20 flex text-lg text-black md:mb-36">
           <ul className="flex flex-col md:flex-row">
             <li className="my-2 mr-6">
               <Link
@@ -100,7 +100,16 @@ const Footer = () => {
           </ul>
         </section>
         <div className="text-sm leading-relaxed text-black">
-          © 2022 Johnny Chai.⚡Built with NextJS and TailwindCSS.
+          © 2022 Johnny Chai.⚡
+          <a
+            href="https://github.com/Johnmojo/johnnychai.com"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            Built
+          </a>{" "}
+          with NextJS & Tailwind CSS.
         </div>
       </div>
     </footer>
