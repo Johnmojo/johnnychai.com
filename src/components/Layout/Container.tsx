@@ -3,7 +3,8 @@
  * @date 6th September 2022
  */
 
-import { Header, Footer } from "@components/index";
+import Header from "@/components/Navigation/Header";
+import Footer from "@/components/Navigation/Footer";
 import { useState, useEffect, ReactNode } from "react";
 
 type Props = {

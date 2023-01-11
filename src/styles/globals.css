@@ -11,6 +11,14 @@
     clip-path: inset(0);
     transition: ease 0.5s;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 html,

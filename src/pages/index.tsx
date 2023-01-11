@@ -7,13 +7,9 @@ import { GetStaticProps } from "next";
 import { WorksData, BlogsData } from "@lib/types";
 import getWorks from "@lib/getWorks";
 import getBlogs from "@lib/getBlogs";
-import {
-  HeaderMeta,
-  Summary,
-  Hero,
-  BlogPreview,
-  WorkPreview
-} from "@components/index";
+import Metadata from "@/utils/Metadata";
+import { IndexHero } from "@/features/hero";
+import { Summary, BlogPreview, WorkPreview } from "@components/index";
 
 type Props = {
   worksData: WorksData[];
@@ -23,11 +19,11 @@ type Props = {
 const Home = ({ worksData, blogsData }: Props) => {
   return (
     <>
-      <HeaderMeta
+      <Metadata
         title="Home - Johnny Chai"
         description="Front End Web Developer based in Malaysia who is who is passionate about coding and solving problems through code and design."
       />
-      <Hero title="I'm Johnny, a front end developer based in Malaysia." />
+      <IndexHero title="I'm Johnny, a front end developer based in Malaysia." />
       <Summary />
       <WorkPreview
         data={worksData}

@@ -10,7 +10,7 @@ interface Props {
   description: string;
 }
 
-const HeaderMeta = ({ title, description }: Props) => {
+const Metadata = ({ title, description }: Props) => {
   return (
     <>
       <Head>
@@ -25,4 +25,4 @@ const HeaderMeta = ({ title, description }: Props) => {
   );
 };
 
-export default HeaderMeta;
+export default Metadata;
